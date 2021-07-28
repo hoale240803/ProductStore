@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProductStore.Common\ProductStore.Common.csproj" />
+    <ProjectReference Include="..\ProductStore.Data\ProductStore.Data.csproj" />
+    <ProjectReference Include="..\ProductStore.Model\ProductStore.Model.csproj" />
+    <ProjectReference Include="..\ProductStore.UnitTest\ProductStore.UnitTest.csproj" />
+  </ItemGroup>
+
+</Project>
