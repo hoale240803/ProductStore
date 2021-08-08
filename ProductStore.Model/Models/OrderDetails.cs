@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProductStore.Model.Models
 {
+    [Table("OrderDetails")]
     public class OrderDetails
     {
         [Key]
@@ -14,7 +15,7 @@ namespace ProductStore.Model.Models
         [ForeignKey("ProductID")]
         public virtual Products Product {set;get;}
         [ForeignKey("OrderID")]
-        public virtual Products Order { set; get; }
+        public virtual Orders Order { set; get; }
         public int Quantity { set; get; }
     }
 }

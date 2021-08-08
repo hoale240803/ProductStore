@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProductStore.Common\ProductStore.Common.csproj" />
+    <ProjectReference Include="..\ProductStore.Models\ProductStore.Models.csproj" />
+    <ProjectReference Include="..\ProductStore.Service\ProductStore.Service.csproj" />
+    <ProjectReference Include="..\ProductStore.UnitTest\ProductStore.UnitTest.csproj" />
+  </ItemGroup>
+ 
+
+</Project>

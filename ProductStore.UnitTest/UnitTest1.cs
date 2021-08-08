@@ -8,9 +8,7 @@ namespace ProductStore.UnitTest
         [TestMethod]
         public void TestMethod1()
         {
-            int a = 1;
-            int a1 = 1;
-            int a2 = 1;
+
         }
     }
 }

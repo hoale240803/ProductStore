@@ -1,9 +1,9 @@
-﻿using ProductStore.Model.Models;
+﻿using ProductStore.Model.Abstracts;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ProductStore.Model.Abstracts
+namespace ProductStore.Model.Models
 {
     [Table("Order")]
     public class Orders : Editable

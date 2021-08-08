@@ -1,6 +1,6 @@
 ﻿namespace ProductStore.Data.Infrastructure
 {
-    internal interface IUnitOfWork
+    public interface IUnitOfWork
     {
         void Commit();
     }

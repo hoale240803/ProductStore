@@ -14,8 +14,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ProductStore.Common\ProductStore.Common.csproj" />
-    <ProjectReference Include="..\ProductStore.Data\ProductStore.Data.csproj" />
-    <ProjectReference Include="..\ProductStore.Model\ProductStore.Model.csproj" />
     <ProjectReference Include="..\ProductStore.Service\ProductStore.Service.csproj" />
     <ProjectReference Include="..\ProductStore.UnitTest\ProductStore.UnitTest.csproj" />
   </ItemGroup>

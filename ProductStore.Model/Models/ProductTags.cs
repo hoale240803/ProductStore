@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProductStore.Model.Models
 {
+    [Table("ProductTags")]
     public class ProductTags
     {
         [Key]
@@ -12,7 +13,7 @@ namespace ProductStore.Model.Models
         [Key]
         [Column(Order = 2, TypeName = "varchar")]
         [MaxLength(50)]
-        public int TagID { set; get; }
+        public string TagID { set; get; }
 
         [ForeignKey("ProductID")]
         public Products Product { set; get; }

@@ -1,20 +1,15 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 
 namespace ProductStore.Model.Abstracts
 {
-    interface IEditable
+    public interface IEditable
     {
-        public DateTime? createdDate { get; set; }
-        [MaxLength(256)]
-        public string createBy { get; set; }
-        public DateTime? updatedDate { get; set; }
-        [MaxLength(256)]
-        public string updatedBy { get; set; }
-        string status { get; set; }
-        [MaxLength(256)]
+        public DateTime? CreatedDate { get; set; }
+        public string CreateBy { get; set; }
+        public DateTime? UpdatedDate { get; set; }
+        public string UpdatedBy { get; set; }
+        string Status { get; set; }
         public string MetaKeyword { get; set; }
-        [MaxLength(256)]
         public string MetaDescription { get; set; }
     }
 }

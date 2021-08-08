@@ -8,17 +8,17 @@ namespace ProductStore.Model.Abstracts
     /// </summary>
     public abstract class Editable : IEditable
     {
-        public DateTime? createdDate { get; set; }
+        public DateTime? CreatedDate { get; set; }
         [MaxLength(256)]
-        public string createBy { get; set; }
-        public DateTime? updatedDate { get; set; }
+        public string CreateBy { get; set; }
+        public DateTime? UpdatedDate { get; set; }
         [MaxLength(256)]
-        public string updatedBy { get; set; }
-        string status { get; set; }
+        public string UpdatedBy { get; set; }
+        [MaxLength(256)]
+        public string Status { get; set; }
         [MaxLength(256)]
         public string MetaKeyword { get; set; }
         [MaxLength(256)]
         public string MetaDescription { get; set; }
-        string IEditable.status { get ; set ; }
     }
 }
