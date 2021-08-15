@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace ProductStore.API.DBFirst.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
     [Authorize]
+    [ApiController]
+    [Route("api/[controller]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -36,6 +36,13 @@ namespace ProductStore.API.DBFirst.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "Administrator")]
+        public async Task<IActionResult> PostSecuredData()
+        {
+            return Ok("This Secured Data is available only for Administrators.");
         }
     }
 }

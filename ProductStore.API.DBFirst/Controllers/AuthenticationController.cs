@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using ProductStore.API.DBFirst.Authentication;
 using ProductStore.API.DBFirst.DataModels.Models;
+using ProductStore.API.DBFirst.Services.Authentications;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -20,11 +21,13 @@ namespace ProductStore.API.DBFirst.Controllers
     {
         private readonly UserManager<StoreUser> _userManager;
         private readonly IConfiguration _configuration;
+        private readonly IAuthentication _authentication;
 
-        public AuthenticationController(UserManager<StoreUser> userManager, IConfiguration configuration)
+        public AuthenticationController(UserManager<StoreUser> userManager, IConfiguration configuration, IAuthentication authentication)
         {
             _userManager = userManager;
             _configuration = configuration;
+            _authentication = authentication;
         }
 
         [HttpPost]
@@ -38,7 +41,7 @@ namespace ProductStore.API.DBFirst.Controllers
             {
                 return Unauthorized();
             }
-            //get list userRole 
+            //get list userRole
             var userRoles = await _userManager.GetRolesAsync(userName);
             //get userClaim
             var authClaims = new List<Claim>
@@ -76,14 +79,12 @@ namespace ProductStore.API.DBFirst.Controllers
             if (isUserNameExist != null)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "UserName already exists!" });
-
             }
             // check exist email
             var isEmailExist = await _userManager.FindByEmailAsync(user.Email);
             if (isEmailExist != null)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Email already exists!" });
-
             }
             // create StoreUser (user entity)
             StoreUser storeUser = new StoreUser
@@ -96,11 +97,57 @@ namespace ProductStore.API.DBFirst.Controllers
             var result = await _userManager.CreateAsync(storeUser, user.Password);
             if (!result.Succeeded)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", ListMessage= result.Errors });
+                return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", ListMessage = result.Errors });
             }
-               
+
             // response
             return Ok(new Response { Status = "Success", Message = "User created successfully!" });
+        }
+
+        [HttpPost("loginRefreshtoken")]
+        public async Task<IActionResult> GetTokenAsync(DataModels.Models.Authentication.LoginVM model)
+        {
+            var result = await _authentication.LoginAsync(model);
+
+            var cookieOptions = new CookieOptions
+            {
+                HttpOnly = true,
+                Expires = DateTime.UtcNow.AddDays(10),
+            };
+            if (result.RefreshToken != null)
+            {
+                Response.Cookies.Append("refreshToken", result.RefreshToken, cookieOptions);
+            }
+            return Ok(result);
+        }
+
+        [HttpPost("registerHasRole")]
+        //[ApiExplorerSettings(IgnoreApi = true)]
+        public async Task<ActionResult> RegisterAsync(DataModels.Models.Authentication.RegisterVM registerModel)
+        {
+            var result = await _authentication.RegisterAsync(registerModel);
+            return Ok(result);
+        }
+
+        [HttpPost("refresh-token")]
+        public async Task<IActionResult> RefreshToken()
+        {
+            var refreshToken = Request.Cookies["refreshToken"];
+            var response = await _authentication.RefreshTokenAsync(refreshToken);
+            //send refreshToken to cookie
+            if (!string.IsNullOrEmpty(response.RefreshToken))
+                SetRefreshTokenInCookie(response.RefreshToken);
+            return Ok(response);
+        }
+
+        private void SetRefreshTokenInCookie(string refreshToken)
+        {
+            var cookieOptions = new CookieOptions
+            {
+                HttpOnly = true,
+                Expires = DateTime.UtcNow.AddDays(10),
+            };
+            Response.Cookies.Append("refreshToken", refreshToken, cookieOptions);
         }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using ProductStore.API.DBFirst.Authentication;
-
 #nullable disable
 
 namespace ProductStore.API.DBFirst.DataModels
@@ -27,6 +26,7 @@ namespace ProductStore.API.DBFirst.DataModels
         //public virtual DbSet<OrdersProduct> OrdersProducts { get; set; }
         //public virtual DbSet<Product> Products { get; set; }
         //public virtual DbSet<ProductsCategory> ProductsCategories { get; set; }
+        public virtual DbSet<RefreshToken> RefreshTokens { get; set; }
 
         //public virtual DbSet<StoreUser> StoreUsers { get; set; }
 
@@ -399,6 +399,7 @@ namespace ProductStore.API.DBFirst.DataModels
             //        .HasColumnName("NAME");
             //});
 
+   
 
 
             OnModelCreatingPartial(modelBuilder);

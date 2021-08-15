@@ -10,6 +10,8 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using ProductStore.API.DBFirst.Authentication;
 using ProductStore.API.DBFirst.DataModels;
+using ProductStore.API.DBFirst.Services.Authentications;
+using System;
 using System.Text;
 
 namespace ProductStore.API.DBFirst
@@ -27,6 +29,8 @@ namespace ProductStore.API.DBFirst
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            //Adding DB Context with MS SQL
             services.AddDbContext<StoreContext>(item => item.UseSqlServer(Configuration.GetConnectionString("StoreDBConnection")));
             // For Identity  
             services.AddIdentity<StoreUser, IdentityRole>()
@@ -48,9 +52,12 @@ namespace ProductStore.API.DBFirst
                 {
                     ValidateIssuer = true,
                     ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ClockSkew = TimeSpan.Zero,
                     ValidAudience = Configuration["JWT:ValidAudience"],
                     ValidIssuer = Configuration["JWT:ValidIssuer"],
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:Secret"]))
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:Secret"])),
+
                 };
             });
             services.AddSwaggerGen(swagger =>
@@ -87,28 +94,31 @@ namespace ProductStore.API.DBFirst
                     }
                 });
             });
+            // REPOSITORY SERVICES
+            services.AddScoped<IAuthentication, Authen>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ASP.NET 5 Web API v1"));
             }
+
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                         name: "default",
-                         pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllers();
             });
         }
     }

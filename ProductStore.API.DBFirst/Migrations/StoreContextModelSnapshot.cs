@@ -216,6 +216,44 @@ namespace ProductStore.API.DBFirst.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("ProductStore.API.DBFirst.DataModels.RefreshToken", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("Expires")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsExpired")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("Revoked")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("StoreUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Token")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("StoreUserId");
+
+                    b.ToTable("RefreshTokens");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -265,6 +303,18 @@ namespace ProductStore.API.DBFirst.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("ProductStore.API.DBFirst.DataModels.RefreshToken", b =>
+                {
+                    b.HasOne("ProductStore.API.DBFirst.Authentication.StoreUser", null)
+                        .WithMany("RefreshTokens")
+                        .HasForeignKey("StoreUserId");
+                });
+
+            modelBuilder.Entity("ProductStore.API.DBFirst.Authentication.StoreUser", b =>
+                {
+                    b.Navigation("RefreshTokens");
                 });
 #pragma warning restore 612, 618
         }
