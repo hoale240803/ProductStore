@@ -7,7 +7,7 @@ namespace ProductStore.API.DBFirst.DataModels.Models
     {
         public string Status { get; set; }
         public string Message { get; set; }
-
         public IEnumerable<IdentityError> ListMessage { get; set; }
+   
     }
 }

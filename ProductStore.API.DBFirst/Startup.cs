@@ -95,7 +95,7 @@ namespace ProductStore.API.DBFirst
                 });
             });
             // REPOSITORY SERVICES
-            services.AddScoped<IAuthentication, Authen>();
+            services.AddScoped<IAuthentication, AuthenRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

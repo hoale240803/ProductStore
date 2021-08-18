@@ -1,11 +1,14 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using ProductStore.API.DBFirst.Authentication;
+using ProductStore.API.DBFirst.DataModels;
 using ProductStore.API.DBFirst.DataModels.Models;
 using ProductStore.API.DBFirst.Services.Authentications;
+using ProductStore.API.DBFirst.ViewModels.Authentication;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -148,6 +151,26 @@ namespace ProductStore.API.DBFirst.Controllers
                 Expires = DateTime.UtcNow.AddDays(10),
             };
             Response.Cookies.Append("refreshToken", refreshToken, cookieOptions);
+        }
+
+        [Authorize]
+        [HttpPost("tokens/{id}")]
+        public IActionResult GetRefreshTokens(string id)
+        {
+            var listToken = _authentication.GetById(id);
+            return Ok(listToken.Result);
+        }
+        [HttpPost("revoke-token")]
+        public async Task<IActionResult> RevokeToken([FromBody] RevokeTokenRequest model)
+        {
+            // accept token from request body or cookie
+            var token = model.Token ?? Request.Cookies["refreshToken"];
+            if (string.IsNullOrEmpty(token))
+                return BadRequest(new { message = "Token is required" });
+            var response = await _authentication.RevokeToken(token);
+            if (!response)
+                return NotFound(new { message = "Token not found" });
+            return Ok(new { message = "Token revoked" });
         }
     }
 }

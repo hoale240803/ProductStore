@@ -17,14 +17,14 @@ using System.Threading.Tasks;
 
 namespace ProductStore.API.DBFirst.Services.Authentications
 {
-    public class Authen : IAuthentication
+    public class AuthenRepo : IAuthentication
     {
         private readonly StoreContext _context;
         private readonly UserManager<StoreUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IConfiguration _configuration;
 
-        public Authen(UserManager<StoreUser> userManager, RoleManager<IdentityRole> roleManager, StoreContext context, IConfiguration configuration)
+        public AuthenRepo(UserManager<StoreUser> userManager, RoleManager<IdentityRole> roleManager, StoreContext context, IConfiguration configuration)
         {
             _context = context;
             _userManager = userManager;
@@ -32,9 +32,9 @@ namespace ProductStore.API.DBFirst.Services.Authentications
             _configuration = configuration;
         }
 
-        public StoreUser GetById(string id)
+        public Task<List<RefreshToken>> GetById(string id)
         {
-            throw new NotImplementedException();
+            return  Task.FromResult(_context.RefreshTokens.Where(x => x.UserId == id).ToList()); 
         }
 
         public async Task<AuthenticationVM> LoginAsync(LoginVM loginModel)
@@ -206,9 +206,57 @@ namespace ProductStore.API.DBFirst.Services.Authentications
             }
         }
 
-        public bool RevokeToken(string token)
+        public async Task<bool> RevokeToken(string token)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var transaction = _context.Database.BeginTransaction())
+                {
+                    var currentUser = _context.RefreshTokens.Where(x => x.Token == token).FirstOrDefault();
+
+                    var users = (_context.Users
+                   .Join(_context.RefreshTokens,
+                      user => user.Id,
+                      rt => rt.UserId,
+                      (user, rt) => new { User = user, ReToken = rt })
+                   .Where(x => x.User.Id == currentUser.UserId)).ToList();
+
+                    // return false if no user found with token
+                    if (users == null) return false;
+
+
+                    // return false if token is not active
+                    foreach (var user in users)
+                    {
+                        // revoke token and save
+                        user.ReToken.Revoked = DateTime.UtcNow;
+                        user.ReToken.IsActive = false;
+                        if (user.ReToken.Expires < DateTime.UtcNow)
+                        {
+                            user.ReToken.IsExpired = true;
+                            _context.RefreshTokens.UpdateRange(user.ReToken);
+
+                        }
+                        else
+                        {
+                            user.ReToken.IsExpired = false;
+                            _context.RefreshTokens.UpdateRange(user.ReToken);
+                        }
+
+                    }
+                    await _context.SaveChangesAsync();
+                    // Commit transaction if all commands succeed, transaction will auto-rollback
+                    // when disposed if either commands fails
+                    transaction.Commit();
+                    return true;
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+
         }
 
         private async Task<JwtSecurityToken> CreateJwtToken(StoreUser user)

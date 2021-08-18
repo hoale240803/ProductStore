@@ -1,7 +1,10 @@
 ﻿using ProductStore.API.DBFirst.Authentication;
+using ProductStore.API.DBFirst.DataModels;
 using ProductStore.API.DBFirst.DataModels.Models;
 using ProductStore.API.DBFirst.DataModels.Models.Authentication;
 using ProductStore.API.DBFirst.ViewModels.Authentication;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace ProductStore.API.DBFirst.Services.Authentications
@@ -16,8 +19,8 @@ namespace ProductStore.API.DBFirst.Services.Authentications
 
         Task<AuthenticationVM> RefreshTokenAsync(string jwtToken);
 
-        bool RevokeToken(string token);
+        Task<bool> RevokeToken(string token);
 
-        StoreUser GetById(string id);
+        Task<List<RefreshToken>> GetById(string id);
     }
 }
