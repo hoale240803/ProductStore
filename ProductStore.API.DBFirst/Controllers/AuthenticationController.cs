@@ -8,7 +8,10 @@ using ProductStore.API.DBFirst.Authentication;
 using ProductStore.API.DBFirst.DataModels;
 using ProductStore.API.DBFirst.DataModels.Models;
 using ProductStore.API.DBFirst.Services.Authentications;
+using ProductStore.API.DBFirst.Services.Authentications.Email;
 using ProductStore.API.DBFirst.ViewModels.Authentication;
+using ProductStore.API.DBFirst.ViewModels.Authentication.Email;
+using ProductStore.API.DBFirst.ViewModels.Authentication.ResetPassword;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -25,12 +28,14 @@ namespace ProductStore.API.DBFirst.Controllers
         private readonly UserManager<StoreUser> _userManager;
         private readonly IConfiguration _configuration;
         private readonly IAuthentication _authentication;
+        private readonly IEmailSender _emailSender;
 
-        public AuthenticationController(UserManager<StoreUser> userManager, IConfiguration configuration, IAuthentication authentication)
+        public AuthenticationController(UserManager<StoreUser> userManager, IConfiguration configuration, IAuthentication authentication, IEmailSender emailSender)
         {
             _userManager = userManager;
             _configuration = configuration;
             _authentication = authentication;
+            _emailSender = emailSender;
         }
 
         [HttpPost]
@@ -171,6 +176,50 @@ namespace ProductStore.API.DBFirst.Controllers
             if (!response)
                 return NotFound(new { message = "Token not found" });
             return Ok(new { message = "Token revoked" });
+        }
+
+        [HttpPost("forgot-password")]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordVM forgotPasswordModel)
+        {
+            if (!ModelState.IsValid)
+                return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Form not valid! Please try again!" });
+            var user = await _userManager.FindByEmailAsync(forgotPasswordModel.Email);
+            if (user == null)
+                return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Your email not exist" });
+
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+            string testEmail = "hoale240803@gmail.com";
+            var callback = Url.Action(nameof(ResetPassword), "Authentication", new { token, email = testEmail }, Request.Scheme);
+            var message = new MessageVM(new string[] { user.Email }, "Reset password token", callback, null);
+            await _emailSender.SendEmailAsync(message);
+
+            return Ok(token);
+        }
+
+
+
+        // RESET PASSWORD
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword(ResetPasswordVM resetPasswordModel)
+        {
+         
+            if (!ModelState.IsValid)
+                return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Form not valid! Please try again!" });
+
+            var user = await _userManager.FindByEmailAsync(resetPasswordModel.Email);
+            if (user == null)
+                return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Error System " });
+
+            var resetPassResult = await _userManager.ResetPasswordAsync(user, resetPasswordModel.Token, resetPasswordModel.Password);
+            if (!resetPassResult.Succeeded)
+            {
+                foreach (var error in resetPassResult.Errors)
+                {
+                    ModelState.TryAddModelError(error.Code, error.Description);
+                }
+                return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Reset password not success", ListMessage = resetPassResult.Errors });
+            }
+            return Ok(resetPassResult);
         }
     }
 }
