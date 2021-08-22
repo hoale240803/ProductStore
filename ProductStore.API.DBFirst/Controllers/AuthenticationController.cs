@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -18,6 +21,7 @@ using ProductStore.API.DBFirst.ViewModels.Authentication.ResetPassword;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,14 +37,16 @@ namespace ProductStore.API.DBFirst.Controllers
         private readonly IAuthentication _authentication;
         private readonly IEmailSender _emailSender;
         private readonly StoreContext _context;
+        private readonly SignInManager<IdentityUser> _signInManager;
 
-        public AuthenticationController(UserManager<StoreUser> userManager, IConfiguration configuration, IAuthentication authentication, IEmailSender emailSender, StoreContext context)
+        public AuthenticationController(UserManager<StoreUser> userManager, IConfiguration configuration, IAuthentication authentication, IEmailSender emailSender, StoreContext context, SignInManager<IdentityUser> signInManager)
         {
             _userManager = userManager;
             _configuration = configuration;
             _authentication = authentication;
             _emailSender = emailSender;
             _context = context;
+            _signInManager = signInManager;
         }
 
         [HttpPost]
@@ -268,8 +274,6 @@ namespace ProductStore.API.DBFirst.Controllers
             return Ok(token);
         }
 
-
-
         // RESET PASSWORD
         [HttpPost("reset-password")]
         public async Task<IActionResult> ResetPassword(ResetPasswordVM resetPasswordModel)
@@ -292,6 +296,69 @@ namespace ProductStore.API.DBFirst.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Reset password not success", ListMessage = resetPassResult.Errors });
             }
             return Ok(resetPassResult);
+        }
+        /// <summary>
+        /// TESTING NOT YET
+        /// </summary>
+        /// <returns></returns>
+        //[Route("google-login")]
+        //public IActionResult GoogleLogin()
+        //{
+        //    var properties = new AuthenticationProperties { RedirectUri = Url.Action("GoogleResponse") };
+        //    return Challenge(properties, GoogleDefaults.AuthenticationScheme);
+        //}
+
+        //[Route("google-response")]
+        //public async Task<IActionResult> GoogleResponse()
+        //{
+        //    var result = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+        //    var claims = result.Principal.Identities
+        //        .FirstOrDefault().Claims.Select(claim => new
+        //        {
+        //            claim.Issuer,
+        //            claim.OriginalIssuer,
+        //            claim.Type,
+        //            claim.Value
+        //        });
+
+        //    return Ok(claims);
+        //}
+
+
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public IActionResult ExternalLogin(string provider, string returnUrl = null)
+        {
+            // Request a redirect to the external login provider.
+            var redirectUrl = Url.Action(nameof(ExternalLoginCallback), "Authentication", new { returnUrl });
+            var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
+            return Challenge(properties, provider);
+        }
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<IActionResult> ExternalLoginCallback(string returnUrl = null, string remoteError = null)
+        {
+            if (remoteError != null)
+            {
+                 return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = $"Error from external provider: {remoteError}" });
+            }
+            var info = await _signInManager.GetExternalLoginInfoAsync();
+            if (info == null)
+            {
+                return RedirectToAction(nameof(ExternalLogin));
+            }
+            // Sign in the user with this external login provider if the user already has a login.
+            var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, isPersistent: false, bypassTwoFactor: true);
+            if (result.Succeeded)
+            {
+                return Ok(new Response { Status = "Success", Message = "Login with google success" });
+                //_logger.LogInformation("User logged in with {Name} provider.", info.LoginProvider);
+                //return RedirectToAction(nameof(returnUrl));
+            }
+            return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = $"Error from external provider: {remoteError}" });
+
         }
     }
 }

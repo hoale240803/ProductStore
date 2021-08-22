@@ -36,13 +36,15 @@ namespace ProductStore.API.DBFirst
             //Adding DB Context with MS SQL
             services.AddDbContext<StoreContext>(item => item.UseSqlServer(Configuration.GetConnectionString("StoreDBConnection")));
             // For Identity  
-            services.AddIdentity<StoreUser, IdentityRole>(opt=> {
+            services.AddIdentity<StoreUser, IdentityRole>(opt =>
+            {
                 opt.User.RequireUniqueEmail = true;
                 opt.SignIn.RequireConfirmedEmail = true;
 
             })
                 .AddEntityFrameworkStores<StoreContext>()
                 .AddDefaultTokenProviders();
+
             // Adding Authentication
             services.AddAuthentication(options =>
             {
@@ -50,6 +52,29 @@ namespace ProductStore.API.DBFirst
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
             })
+            // Adding social login
+
+            .AddGoogle(options =>
+            {
+                IConfigurationSection googleAuthNSection =
+                    Configuration.GetSection("Authentication:Google");
+                options.ClientId = googleAuthNSection["ClientId"];
+                options.ClientSecret = googleAuthNSection["ClientSecret"];
+            })
+            //.AddFacebook(options =>
+            //{
+            //    IConfigurationSection googleAuthNSection =
+            //        Configuration.GetSection("Authentication:Google");
+            //    options.ClientId = face ["ClientId"];
+            //    options.ClientSecret = googleAuthNSection["ClientSecret"];
+            //})
+            //.AddTwitter(options =>
+            //   {
+            //       IConfigurationSection twitterAuthNSection =
+            //           Configuration.GetSection("Authentication:Google");
+            //       options.ClientId = twitterAuthNSection["ClientId"];
+            //       options.ClientSecret = twitterAuthNSection["ClientSecret"];
+            //   })
             // Adding Jwt Bearer
             .AddJwtBearer(options =>
             {
@@ -67,6 +92,7 @@ namespace ProductStore.API.DBFirst
 
                 };
             });
+
             services.AddSwaggerGen(swagger =>
             {
                 //This is to generate the Default UI of Swagger Documentation
@@ -112,7 +138,7 @@ namespace ProductStore.API.DBFirst
 
             services.Configure<DataProtectionTokenProviderOptions>(opt =>
                 opt.TokenLifespan = TimeSpan.FromHours(2));
-  
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
