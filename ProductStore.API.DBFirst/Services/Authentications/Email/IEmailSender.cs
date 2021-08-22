@@ -8,5 +8,9 @@ namespace ProductStore.API.DBFirst.Services.Authentications.Email
         void SendEmail(MessageVM message);
 
         Task SendEmailAsync(MessageVM message);
+
+        Task SendConfirmedEmailAsync(MessageVM message);
+
+
     }
 }

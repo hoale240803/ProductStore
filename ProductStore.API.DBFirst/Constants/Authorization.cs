@@ -6,7 +6,8 @@
         {
             Administrator,
             Moderator,
-            User
+            User,
+            Visitor,
         }
 
         public const string default_username = "user";

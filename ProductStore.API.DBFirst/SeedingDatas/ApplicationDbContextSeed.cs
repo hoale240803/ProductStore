@@ -14,6 +14,7 @@ namespace ProductStore.API.DBFirst.SeedingDatas
             await roleManager.CreateAsync(new IdentityRole(Authorization.Roles.Administrator.ToString()));
             await roleManager.CreateAsync(new IdentityRole(Authorization.Roles.Moderator.ToString()));
             await roleManager.CreateAsync(new IdentityRole(Authorization.Roles.User.ToString()));
+            await roleManager.CreateAsync(new IdentityRole(Authorization.Roles.Visitor.ToString()));
             //Seed Default User
             var defaultUser = new StoreUser { UserName = Authorization.default_username, Email = Authorization.default_email, EmailConfirmed = true, PhoneNumberConfirmed = true };
             if (userManager.Users.All(u => u.Id != defaultUser.Id))

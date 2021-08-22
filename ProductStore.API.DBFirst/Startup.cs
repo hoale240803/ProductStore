@@ -36,7 +36,11 @@ namespace ProductStore.API.DBFirst
             //Adding DB Context with MS SQL
             services.AddDbContext<StoreContext>(item => item.UseSqlServer(Configuration.GetConnectionString("StoreDBConnection")));
             // For Identity  
-            services.AddIdentity<StoreUser, IdentityRole>()
+            services.AddIdentity<StoreUser, IdentityRole>(opt=> {
+                opt.User.RequireUniqueEmail = true;
+                opt.SignIn.RequireConfirmedEmail = true;
+
+            })
                 .AddEntityFrameworkStores<StoreContext>()
                 .AddDefaultTokenProviders();
             // Adding Authentication
@@ -99,12 +103,12 @@ namespace ProductStore.API.DBFirst
             });
             // REPOSITORY SERVICES
             services.AddScoped<IAuthentication, AuthenRepo>();
-            //EMAIL SERVICES
+            //EMAIL SERVICES (forgot & reset password)
             var emailConfig = Configuration
                 .GetSection("EmailConfiguration")
                 .Get<EmailConfiguration>();
-                        services.AddSingleton(emailConfig);
-                        services.AddScoped<IEmailSender, EmailRepo>();
+            services.AddSingleton(emailConfig);
+            services.AddScoped<IEmailSender, EmailRepo>();
 
             services.Configure<DataProtectionTokenProviderOptions>(opt =>
                 opt.TokenLifespan = TimeSpan.FromHours(2));

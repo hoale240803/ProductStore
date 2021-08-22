@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using ProductStore.API.DBFirst.Authentication;
@@ -9,6 +10,8 @@ using ProductStore.API.DBFirst.DataModels;
 using ProductStore.API.DBFirst.DataModels.Models;
 using ProductStore.API.DBFirst.Services.Authentications;
 using ProductStore.API.DBFirst.Services.Authentications.Email;
+using ProductStore.API.DBFirst.Utils.Errors;
+using ProductStore.API.DBFirst.ViewModels;
 using ProductStore.API.DBFirst.ViewModels.Authentication;
 using ProductStore.API.DBFirst.ViewModels.Authentication.Email;
 using ProductStore.API.DBFirst.ViewModels.Authentication.ResetPassword;
@@ -29,13 +32,15 @@ namespace ProductStore.API.DBFirst.Controllers
         private readonly IConfiguration _configuration;
         private readonly IAuthentication _authentication;
         private readonly IEmailSender _emailSender;
+        private readonly StoreContext _context;
 
-        public AuthenticationController(UserManager<StoreUser> userManager, IConfiguration configuration, IAuthentication authentication, IEmailSender emailSender)
+        public AuthenticationController(UserManager<StoreUser> userManager, IConfiguration configuration, IAuthentication authentication, IEmailSender emailSender, StoreContext context)
         {
             _userManager = userManager;
             _configuration = configuration;
             _authentication = authentication;
             _emailSender = emailSender;
+            _context = context;
         }
 
         [HttpPost]
@@ -130,10 +135,77 @@ namespace ProductStore.API.DBFirst.Controllers
         }
 
         [HttpPost("registerHasRole")]
-        //[ApiExplorerSettings(IgnoreApi = true)]
         public async Task<ActionResult> RegisterAsync(DataModels.Models.Authentication.RegisterVM registerModel)
         {
-            var result = await _authentication.RegisterAsync(registerModel);
+            using var transaction = _context.Database.BeginTransaction();
+            try
+            {
+                string token = "";
+                if (!ModelState.IsValid)
+                    return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Form not valid! Please try again!" });
+
+                var newUser = new StoreUser
+                {
+                    UserName = registerModel.Username,
+                    Email = registerModel.Email
+                };
+                var user = await _userManager.FindByEmailAsync(registerModel.Email);
+
+                if (user != null)
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "FAILED", Message = "Email exist" });
+                }
+
+                var result = await _userManager.CreateAsync(newUser, registerModel.Password);
+                if (!result.Succeeded)
+                {
+                    foreach (var error in result.Errors)
+                    {
+                        return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Confirm email not success", ListMessage = result.Errors });
+                    }
+                }
+                //generate token
+                token = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
+                byte[] tokenGeneratedBytes = Encoding.UTF8.GetBytes(token);
+                var codeEncoded = WebEncoders.Base64UrlEncode(tokenGeneratedBytes);
+
+                var confirmationLink = Url.Action(nameof(ConfirmEmail), "Authentication", new { codeEncoded, email = newUser.Email }, Request.Scheme);
+                var message = new MessageVM(new string[] { newUser.Email }, "Confirmation Email", confirmationLink, null);
+                // SEND CONFIRMED EMAIL
+                await _emailSender.SendConfirmedEmailAsync(message);
+
+                await _userManager.AddToRoleAsync(newUser, "Visitor");
+                transaction.Commit();
+                return Ok(new RegisterResponseVM { Message = "Register Success", Status = "Success", Token = codeEncoded, ListMessage = null });
+
+            }
+            catch (Exception ex)
+            {
+                transaction.Rollback();
+                throw new AppErrors(ex.Message, ex);
+                //return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Form not valid! Please try again!" });
+            }
+        }
+        [HttpPost("confirmed-email")]
+        public async Task<IActionResult> ConfirmEmail(string token, string email)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+            if (user == null)
+                return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Email not found" });
+
+            var codeDecodedBytes = WebEncoders.Base64UrlDecode(token);
+            var codeDecoded = Encoding.UTF8.GetString(codeDecodedBytes);
+            var result = await _userManager.ConfirmEmailAsync(user, codeDecoded);
+
+
+            if (!result.Succeeded)
+            {
+                foreach (var error in result.Errors)
+                {
+                    ModelState.TryAddModelError(error.Code, error.Description);
+                }
+                return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Confirm email not success", ListMessage = result.Errors });
+            }
             return Ok(result);
         }
 
@@ -188,8 +260,8 @@ namespace ProductStore.API.DBFirst.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Your email not exist" });
 
             var token = await _userManager.GeneratePasswordResetTokenAsync(user);
-            string testEmail = "hoale240803@gmail.com";
-            var callback = Url.Action(nameof(ResetPassword), "Authentication", new { token, email = testEmail }, Request.Scheme);
+            //string testEmail = "hoale240803@gmail.com";
+            var callback = Url.Action(nameof(ResetPassword), "Authentication", new { token, email = user.Email }, Request.Scheme);
             var message = new MessageVM(new string[] { user.Email }, "Reset password token", callback, null);
             await _emailSender.SendEmailAsync(message);
 
@@ -202,7 +274,7 @@ namespace ProductStore.API.DBFirst.Controllers
         [HttpPost("reset-password")]
         public async Task<IActionResult> ResetPassword(ResetPasswordVM resetPasswordModel)
         {
-         
+
             if (!ModelState.IsValid)
                 return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Form not valid! Please try again!" });
 

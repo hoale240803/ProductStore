@@ -5,8 +5,10 @@ using ProductStore.API.DBFirst.Authentication;
 using ProductStore.API.DBFirst.DataModels;
 using ProductStore.API.DBFirst.DataModels.Models;
 using ProductStore.API.DBFirst.DataModels.Models.Authentication;
+using ProductStore.API.DBFirst.Services.Authentications.Email;
 using ProductStore.API.DBFirst.Utils.GenerateToken;
 using ProductStore.API.DBFirst.ViewModels.Authentication;
+using ProductStore.API.DBFirst.ViewModels.Authentication.Email;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -23,13 +25,15 @@ namespace ProductStore.API.DBFirst.Services.Authentications
         private readonly UserManager<StoreUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IConfiguration _configuration;
+        private readonly IEmailSender _emailSender;
 
-        public AuthenRepo(UserManager<StoreUser> userManager, RoleManager<IdentityRole> roleManager, StoreContext context, IConfiguration configuration)
+        public AuthenRepo(UserManager<StoreUser> userManager, RoleManager<IdentityRole> roleManager, StoreContext context, IConfiguration configuration, IEmailSender emailSender)
         {
             _context = context;
             _userManager = userManager;
             _roleManager = roleManager;
             _configuration = configuration;
+            _emailSender = emailSender;
         }
 
         public Task<List<RefreshToken>> GetById(string id)
@@ -193,10 +197,12 @@ namespace ProductStore.API.DBFirst.Services.Authentications
                         return new Response { Status = "Failed", ListMessage = result.Errors };
                     }
                     await _userManager.AddToRoleAsync(user, "USER");
+                    // SEND CONFIRMED EMAIL
                     return new Response { Message = $"User Registered with username {user.UserName}", Status = "Success" };
                 }
                 else
                 {
+                    
                     return new Response { Message = $"Email {user.Email } is already registered.", Status = "Failed" };
                 }
             }
@@ -300,5 +306,6 @@ namespace ProductStore.API.DBFirst.Services.Authentications
                 throw new Exception(ex.Message);
             }
         }
+
     }
 }
