@@ -31,6 +31,8 @@ namespace ProductStore.API.DBFirst
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
+
             services.AddControllers();
 
             //Adding DB Context with MS SQL
@@ -38,12 +40,12 @@ namespace ProductStore.API.DBFirst
             // For Identity  
             services.AddIdentity<StoreUser, IdentityRole>(opt =>
             {
-                opt.User.RequireUniqueEmail = true;
-                opt.SignIn.RequireConfirmedEmail = true;
+                opt.User.RequireUniqueEmail = false;
+                opt.SignIn.RequireConfirmedEmail = false;
 
             })
-                .AddEntityFrameworkStores<StoreContext>()
-                .AddDefaultTokenProviders();
+            .AddEntityFrameworkStores<StoreContext>()
+            .AddDefaultTokenProviders();
 
             // Adding Authentication
             services.AddAuthentication(options =>
@@ -52,29 +54,6 @@ namespace ProductStore.API.DBFirst
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
             })
-            // Adding social login
-
-            .AddGoogle(options =>
-            {
-                IConfigurationSection googleAuthNSection =
-                    Configuration.GetSection("Authentication:Google");
-                options.ClientId = googleAuthNSection["ClientId"];
-                options.ClientSecret = googleAuthNSection["ClientSecret"];
-            })
-            //.AddFacebook(options =>
-            //{
-            //    IConfigurationSection googleAuthNSection =
-            //        Configuration.GetSection("Authentication:Google");
-            //    options.ClientId = face ["ClientId"];
-            //    options.ClientSecret = googleAuthNSection["ClientSecret"];
-            //})
-            //.AddTwitter(options =>
-            //   {
-            //       IConfigurationSection twitterAuthNSection =
-            //           Configuration.GetSection("Authentication:Google");
-            //       options.ClientId = twitterAuthNSection["ClientId"];
-            //       options.ClientSecret = twitterAuthNSection["ClientSecret"];
-            //   })
             // Adding Jwt Bearer
             .AddJwtBearer(options =>
             {
@@ -91,7 +70,32 @@ namespace ProductStore.API.DBFirst
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:Secret"])),
 
                 };
+            })
+            // Adding social login
+            .AddGoogle(options =>
+            {
+                IConfigurationSection googleAuthNSection =
+                    Configuration.GetSection("Authentication:Google");
+                options.ClientId = googleAuthNSection["ClientId"];
+                options.ClientSecret = googleAuthNSection["ClientSecret"];
+                options.CallbackPath = "/google-login";
             });
+            // Adding social login
+
+
+            //.AddFacebook(options =>
+            //{
+            //    IConfigurationSection googleAuthNSection =
+            //        Configuration.GetSection("Authentication:Google");
+            //    options.ClientId = face ["ClientId"];
+            //    options.ClientSecret = googleAuthNSection["ClientSecret"];
+            //})
+            //.AddTwitter(twitterOptions =>
+            //{
+            //    twitterOptions.ConsumerKey = Configuration["Authentication:Twitter:ConsumerAPIKey"];
+            //    twitterOptions.ConsumerSecret = Configuration["Authentication:Twitter:ConsumerSecret"];
+            //    twitterOptions.RetrieveUserDetails = true;
+            //});
 
             services.AddSwaggerGen(swagger =>
             {
@@ -127,17 +131,22 @@ namespace ProductStore.API.DBFirst
                     }
                 });
             });
-            // REPOSITORY SERVICES
-            services.AddScoped<IAuthentication, AuthenRepo>();
             //EMAIL SERVICES (forgot & reset password)
             var emailConfig = Configuration
                 .GetSection("EmailConfiguration")
                 .Get<EmailConfiguration>();
             services.AddSingleton(emailConfig);
             services.AddScoped<IEmailSender, EmailRepo>();
+            // REPOSITORY SERVICES
+            services.AddScoped<IAuthentication, AuthenRepo>();
+
 
             services.Configure<DataProtectionTokenProviderOptions>(opt =>
                 opt.TokenLifespan = TimeSpan.FromHours(2));
+
+
+
+
 
         }
 
@@ -154,8 +163,15 @@ namespace ProductStore.API.DBFirst
 
 
             app.UseHttpsRedirection();
-
             app.UseRouting();
+            // global cors policy
+            // global cors policy
+            app.UseCors(x => x
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .SetIsOriginAllowed(origin => true) // allow any origin
+                .AllowCredentials()); // allow credentials
+
             app.UseAuthentication();
             app.UseAuthorization();
 
@@ -163,6 +179,7 @@ namespace ProductStore.API.DBFirst
             {
                 endpoints.MapControllers();
             });
+
         }
     }
 }

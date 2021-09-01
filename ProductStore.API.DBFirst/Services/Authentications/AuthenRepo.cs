@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using ProductStore.API.DBFirst.Authentication;
@@ -40,7 +41,11 @@ namespace ProductStore.API.DBFirst.Services.Authentications
         {
             return  Task.FromResult(_context.RefreshTokens.Where(x => x.UserId == id).ToList()); 
         }
-
+        /// <summary>
+        /// LOGIN TWO STEP AUTHEN & REFRESH TOKEN
+        /// </summary>
+        /// <param name="loginModel"></param>
+        /// <returns></returns>
         public async Task<AuthenticationVM> LoginAsync(LoginVM loginModel)
         {
             try
@@ -54,7 +59,9 @@ namespace ProductStore.API.DBFirst.Services.Authentications
                     authenticationModel.Message = $"No Accounts Registered with {loginModel.Username}.";
                 }
                 //CHECK PASSWORD
-                if (await _userManager.CheckPasswordAsync(currentUser, loginModel.Password))
+                var resultLogin = await _userManager.CheckPasswordAsync(currentUser, loginModel.Password);
+
+                if (resultLogin)
                 {
                     authenticationModel.IsAuthenticated = true;
                     JwtSecurityToken jwtSecurityToken = await CreateJwtToken(currentUser);
@@ -90,6 +97,8 @@ namespace ProductStore.API.DBFirst.Services.Authentications
                         authenticationModel.RefreshToken = activeRefreshToken.ReToken.Token;
                         authenticationModel.RefreshTokenExpiration = activeRefreshToken.ReToken.Expires;
                     }
+
+
                     return authenticationModel;
                 }
                 authenticationModel.IsAuthenticated = false;
@@ -306,6 +315,9 @@ namespace ProductStore.API.DBFirst.Services.Authentications
                 throw new Exception(ex.Message);
             }
         }
+
+        
+
 
     }
 }

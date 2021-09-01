@@ -18,6 +18,7 @@ using ProductStore.API.DBFirst.ViewModels;
 using ProductStore.API.DBFirst.ViewModels.Authentication;
 using ProductStore.API.DBFirst.ViewModels.Authentication.Email;
 using ProductStore.API.DBFirst.ViewModels.Authentication.ResetPassword;
+using ProductStore.API.DBFirst.ViewModels.Authentication.TwoStepAuthen;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -37,16 +38,16 @@ namespace ProductStore.API.DBFirst.Controllers
         private readonly IAuthentication _authentication;
         private readonly IEmailSender _emailSender;
         private readonly StoreContext _context;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        //private readonly SignInManager<IdentityUser> _signInManager; SignInManager<IdentityUser> signInManager
 
-        public AuthenticationController(UserManager<StoreUser> userManager, IConfiguration configuration, IAuthentication authentication, IEmailSender emailSender, StoreContext context, SignInManager<IdentityUser> signInManager)
+        public AuthenticationController(UserManager<StoreUser> userManager, IConfiguration configuration, IAuthentication authentication, IEmailSender emailSender, StoreContext context)
         {
             _userManager = userManager;
             _configuration = configuration;
             _authentication = authentication;
             _emailSender = emailSender;
             _context = context;
-            _signInManager = signInManager;
+            //_signInManager = signInManager;
         }
 
         [HttpPost]
@@ -148,7 +149,7 @@ namespace ProductStore.API.DBFirst.Controllers
             {
                 string token = "";
                 if (!ModelState.IsValid)
-                    return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Form not valid! Please try again!" });
+                    return StatusCode(StatusCodes.Status400BadRequest, new Response { Status = "Error", Message = "Form not valid! Please try again!" });
 
                 var newUser = new StoreUser
                 {
@@ -159,7 +160,7 @@ namespace ProductStore.API.DBFirst.Controllers
 
                 if (user != null)
                 {
-                    return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "FAILED", Message = "Email exist" });
+                    return StatusCode(StatusCodes.Status400BadRequest, new Response { Status = "FAILED", Message = "Email exist" });
                 }
 
                 var result = await _userManager.CreateAsync(newUser, registerModel.Password);
@@ -167,7 +168,7 @@ namespace ProductStore.API.DBFirst.Controllers
                 {
                     foreach (var error in result.Errors)
                     {
-                        return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Confirm email not success", ListMessage = result.Errors });
+                        return StatusCode(StatusCodes.Status400BadRequest, new Response { Status = "Error", Message = "Confirm email not success", ListMessage = result.Errors });
                     }
                 }
                 //generate token
@@ -182,7 +183,7 @@ namespace ProductStore.API.DBFirst.Controllers
 
                 await _userManager.AddToRoleAsync(newUser, "Visitor");
                 transaction.Commit();
-                return Ok(new RegisterResponseVM { Message = "Register Success", Status = "Success", Token = codeEncoded, ListMessage = null });
+                return StatusCode(StatusCodes.Status200OK, new RegisterResponseVM { Message = "Register Success", Status = "200", Token = codeEncoded, ListMessage = null });
 
             }
             catch (Exception ex)
@@ -297,68 +298,88 @@ namespace ProductStore.API.DBFirst.Controllers
             }
             return Ok(resetPassResult);
         }
-        /// <summary>
-        /// TESTING NOT YET
-        /// </summary>
-        /// <returns></returns>
-        //[Route("google-login")]
-        //public IActionResult GoogleLogin()
+
+        //[HttpPost("google-login")]
+        //[AllowAnonymous]
+        //[ValidateAntiForgeryToken]
+        //public IActionResult ExternalLogin(string provider, string returnUrl = null)
         //{
-        //    var properties = new AuthenticationProperties { RedirectUri = Url.Action("GoogleResponse") };
-        //    return Challenge(properties, GoogleDefaults.AuthenticationScheme);
+        //    // Request a redirect to the external login provider.
+        //    var redirectUrl = Url.Action(nameof(ExternalLoginCallback), "Authentication", new { returnUrl });
+        //    var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
+        //    return Challenge(properties, provider);
+        //}
+        //[HttpGet("google-login")]
+        //[AllowAnonymous]
+        //public async Task<IActionResult> ExternalLoginCallback(string returnUrl = null, string remoteError = null)
+        //{
+        //    if (remoteError != null)
+        //    {
+        //        return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = $"Error from external provider: {remoteError}" });
+        //    }
+        //    var info = await _signInManager.GetExternalLoginInfoAsync();
+        //    if (info == null)
+        //    {
+        //        return RedirectToAction(nameof(ExternalLogin));
+        //    }
+        //    // Sign in the user with this external login provider if the user already has a login.
+        //    var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, isPersistent: false, bypassTwoFactor: true);
+        //    if (result.Succeeded)
+        //    {
+        //        return Ok(new Response { Status = "Success", Message = "Login with google success" });
+        //        //_logger.LogInformation("User logged in with {Name} provider.", info.LoginProvider);
+        //        //return RedirectToAction(nameof(returnUrl));
+        //    }
+        //    return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = $"Error from external provider: {remoteError}" });
+
         //}
 
-        //[Route("google-response")]
-        //public async Task<IActionResult> GoogleResponse()
+
+        //[HttpGet("login-two-step")]
+        //public async Task<IActionResult> LoginTwoStep(string email, bool rememberMe, string returnUrl = null)
         //{
-        //    var result = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-
-        //    var claims = result.Principal.Identities
-        //        .FirstOrDefault().Claims.Select(claim => new
-        //        {
-        //            claim.Issuer,
-        //            claim.OriginalIssuer,
-        //            claim.Type,
-        //            claim.Value
-        //        });
-
-        //    return Ok(claims);
+        //    var user = await _userManager.FindByEmailAsync(email);
+        //    if (user == null)
+        //    {
+        //        return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Email not found!" });
+        //    }
+        //    var providers = await _userManager.GetValidTwoFactorProvidersAsync(user);
+        //    if (!providers.Contains("Email"))
+        //    {
+        //        return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "System error" });
+        //    }
+        //    var token = await _userManager.GenerateTwoFactorTokenAsync(user, "Email");
+        //    var message = new MessageVM(new string[] { email }, "Authentication token", token, null);
+        //    await _emailSender.SendEmailAsync(message);
+        //    return Ok(new Response { Status="Success", Message="verifying code"});
         //}
+        //[HttpPost("login-two-step")]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> LoginTwoStep(TwoStepAuthenVM twoStepModel, string returnUrl = null)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Model error" });
+        //    }
+        //    var user = await _signInManager.GetTwoFactorAuthenticationUserAsync();
+        //    if (user == null)
+        //    {
+        //        return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Code Invalid!" });
+        //    }
+        //    var result = await _signInManager.TwoFactorSignInAsync("Email", twoStepModel.TwoFactorCode, twoStepModel.RememberMe, rememberClient: false);
 
-
-        [HttpPost]
-        [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public IActionResult ExternalLogin(string provider, string returnUrl = null)
-        {
-            // Request a redirect to the external login provider.
-            var redirectUrl = Url.Action(nameof(ExternalLoginCallback), "Authentication", new { returnUrl });
-            var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
-            return Challenge(properties, provider);
-        }
-        [HttpGet]
-        [AllowAnonymous]
-        public async Task<IActionResult> ExternalLoginCallback(string returnUrl = null, string remoteError = null)
-        {
-            if (remoteError != null)
-            {
-                 return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = $"Error from external provider: {remoteError}" });
-            }
-            var info = await _signInManager.GetExternalLoginInfoAsync();
-            if (info == null)
-            {
-                return RedirectToAction(nameof(ExternalLogin));
-            }
-            // Sign in the user with this external login provider if the user already has a login.
-            var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, isPersistent: false, bypassTwoFactor: true);
-            if (result.Succeeded)
-            {
-                return Ok(new Response { Status = "Success", Message = "Login with google success" });
-                //_logger.LogInformation("User logged in with {Name} provider.", info.LoginProvider);
-                //return RedirectToAction(nameof(returnUrl));
-            }
-            return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = $"Error from external provider: {remoteError}" });
-
-        }
+        //    if (result.IsLockedOut)
+        //    {
+        //        return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Your account was Lockdown!" });
+        //    }
+        //    else if(result.IsNotAllowed)
+        //    {
+        //        return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Your account was not allowed login!" });
+        //    }
+        //    else
+        //    {
+        //        return Ok(new Response { Status = "Success", Message = "Login two step successfully!" });
+        //    }
+        //}
     }
 }
