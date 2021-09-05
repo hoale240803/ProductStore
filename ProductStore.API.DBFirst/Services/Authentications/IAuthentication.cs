@@ -11,7 +11,7 @@ namespace ProductStore.API.DBFirst.Services.Authentications
 {
     public interface IAuthentication
     {
-        Task<Response> RegisterAsync(RegisterVM registerModel);
+        Task<bool> RegisterAsync(RegisterVM registerModel);
 
         Task<AuthenticationVM> LoginAsync(LoginVM loginModel);
 

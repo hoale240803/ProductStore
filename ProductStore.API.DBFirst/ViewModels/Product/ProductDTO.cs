@@ -1,24 +1,21 @@
-﻿using System;
+﻿using ProductStore.API.DBFirst.ViewModels.Media;
+using ProductStore.API.DBFirst.ViewModels.OrdersProduct;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-#nullable disable
-
-namespace ProductStore.API.DBFirst.DataModels
+namespace ProductStore.API.DBFirst.ViewModels.Product
 {
-    public partial class Product
+    public class ProductDTO
     {
-        public Product()
-        {
-            Media = new HashSet<Media>();
-            OrdersProducts = new HashSet<OrdersProduct>();
-        }
-        [Key]
         public int Id { get; set; }
+        public int IdMedia { get; set; }
+        [NotMapped]
         public int IdCategory { get; set; }
+        [NotMapped]
         public int? IdTransporter { get; set; }
+        [NotMapped]
         public string IdMaterials { get; set; }
+        [NotMapped]
         public int? IdCompany { get; set; }
         public string Country { get; set; }
         public string Name { get; set; }
@@ -31,14 +28,10 @@ namespace ProductStore.API.DBFirst.DataModels
         public int? Lenght { get; set; }
         public string Status { get; set; }
         public int? Height { get; set; }
-        [NotMapped]
-        public virtual ProductsCategory IdCategoryNavigation { get; set; }
-        [NotMapped]
-        public virtual Company IdCompanyNavigation { get; set; }
 
+    
+        public IEnumerable<MediaDTO> MediaDTO { get; set; }
         [NotMapped]
-        public virtual ICollection<Media> Media { get; set; }
-        [NotMapped]
-        public virtual ICollection<OrdersProduct> OrdersProducts { get; set; }
+        public IEnumerable<OrdersProductDTO> OrdersProductsDTO { get; set; }
     }
 }

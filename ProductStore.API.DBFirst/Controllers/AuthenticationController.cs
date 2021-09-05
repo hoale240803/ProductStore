@@ -98,13 +98,13 @@ namespace ProductStore.API.DBFirst.Controllers
             var isUserNameExist = await _userManager.FindByNameAsync(user.Username);
             if (isUserNameExist != null)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "UserName already exists!" });
+                return StatusCode(StatusCodes.Status500InternalServerError, new Response<Object> { Status = "Error", Message = "UserName already exists!" });
             }
             // check exist email
             var isEmailExist = await _userManager.FindByEmailAsync(user.Email);
             if (isEmailExist != null)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Email already exists!" });
+                return StatusCode(StatusCodes.Status500InternalServerError, new Response<Object> { Status = "Error", Message = "Email already exists!" });
             }
             // create StoreUser (user entity)
             StoreUser storeUser = new StoreUser
@@ -117,11 +117,11 @@ namespace ProductStore.API.DBFirst.Controllers
             var result = await _userManager.CreateAsync(storeUser, user.Password);
             if (!result.Succeeded)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", ListMessage = result.Errors });
+                return StatusCode(StatusCodes.Status500InternalServerError, new Response<Object> { Status = "Error", ListMessage = result.Errors });
             }
 
             // response
-            return Ok(new Response { Status = "Success", Message = "User created successfully!" });
+            return Ok(new Response<Object> { Status = "Success", Message = "User created successfully!" });
         }
 
         [HttpPost("loginRefreshtoken")]
@@ -149,7 +149,7 @@ namespace ProductStore.API.DBFirst.Controllers
             {
                 string token = "";
                 if (!ModelState.IsValid)
-                    return StatusCode(StatusCodes.Status400BadRequest, new Response { Status = "Error", Message = "Form not valid! Please try again!" });
+                    return StatusCode(StatusCodes.Status400BadRequest, new Response<Object> { Status = "Error", Message = "Form not valid! Please try again!" });
 
                 var newUser = new StoreUser
                 {
@@ -160,7 +160,7 @@ namespace ProductStore.API.DBFirst.Controllers
 
                 if (user != null)
                 {
-                    return StatusCode(StatusCodes.Status400BadRequest, new Response { Status = "FAILED", Message = "Email exist" });
+                    return StatusCode(StatusCodes.Status400BadRequest, new Response<Object> { Status = "FAILED", Message = "Email exist" });
                 }
 
                 var result = await _userManager.CreateAsync(newUser, registerModel.Password);
@@ -168,7 +168,7 @@ namespace ProductStore.API.DBFirst.Controllers
                 {
                     foreach (var error in result.Errors)
                     {
-                        return StatusCode(StatusCodes.Status400BadRequest, new Response { Status = "Error", Message = "Confirm email not success", ListMessage = result.Errors });
+                        return StatusCode(StatusCodes.Status400BadRequest, new Response<Object> { Status = "Error", Message = "Confirm email not success", ListMessage = result.Errors });
                     }
                 }
                 //generate token
@@ -198,7 +198,7 @@ namespace ProductStore.API.DBFirst.Controllers
         {
             var user = await _userManager.FindByEmailAsync(email);
             if (user == null)
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Email not found" });
+                return StatusCode(StatusCodes.Status500InternalServerError, new Response<Object> { Status = "404", Message = "Email not found" });
 
             var codeDecodedBytes = WebEncoders.Base64UrlDecode(token);
             var codeDecoded = Encoding.UTF8.GetString(codeDecodedBytes);
@@ -211,7 +211,7 @@ namespace ProductStore.API.DBFirst.Controllers
                 {
                     ModelState.TryAddModelError(error.Code, error.Description);
                 }
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Confirm email not success", ListMessage = result.Errors });
+                return StatusCode(StatusCodes.Status500InternalServerError, new Response<Object> { Status = "404", Message = "Confirm email not success", ListMessage = result.Errors });
             }
             return Ok(result);
         }
@@ -261,10 +261,10 @@ namespace ProductStore.API.DBFirst.Controllers
         public async Task<IActionResult> ForgotPassword(ForgotPasswordVM forgotPasswordModel)
         {
             if (!ModelState.IsValid)
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Form not valid! Please try again!" });
+                return StatusCode(StatusCodes.Status500InternalServerError, new Response<Object> { Status = "Error", Message = "Form not valid! Please try again!" });
             var user = await _userManager.FindByEmailAsync(forgotPasswordModel.Email);
             if (user == null)
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Your email not exist" });
+                return StatusCode(StatusCodes.Status500InternalServerError, new Response<Object> { Status = "Error", Message = "Your email not exist" });
 
             var token = await _userManager.GeneratePasswordResetTokenAsync(user);
             //string testEmail = "hoale240803@gmail.com";
@@ -281,11 +281,11 @@ namespace ProductStore.API.DBFirst.Controllers
         {
 
             if (!ModelState.IsValid)
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Form not valid! Please try again!" });
+                return StatusCode(StatusCodes.Status400BadRequest, new Response<Object> { Status = "400", Message = "Form not valid! Please try again!" });
 
             var user = await _userManager.FindByEmailAsync(resetPasswordModel.Email);
             if (user == null)
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Error System " });
+                return StatusCode(StatusCodes.Status404NotFound, new Response<Object> { Status = "404", Message = $"user {resetPasswordModel.Email} not found " });
 
             var resetPassResult = await _userManager.ResetPasswordAsync(user, resetPasswordModel.Token, resetPasswordModel.Password);
             if (!resetPassResult.Succeeded)
@@ -294,7 +294,7 @@ namespace ProductStore.API.DBFirst.Controllers
                 {
                     ModelState.TryAddModelError(error.Code, error.Description);
                 }
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Reset password not success", ListMessage = resetPassResult.Errors });
+                return StatusCode(StatusCodes.Status500InternalServerError, new Response<Object> { Status = "Error", Message = "Reset password not success", ListMessage = resetPassResult.Errors });
             }
             return Ok(resetPassResult);
         }

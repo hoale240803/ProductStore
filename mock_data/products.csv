@@ -1,0 +1,1001 @@
+ID,ID_MEDIA,ID_CATEGORY,ID_TRANSPORTER,ID_MATERIALS,ID_COMPANY,COUNTRY,NAME,PRICE,DESCRIPTION,QUANTITY,STOCK,WEIGHT,WIDTH,LENGHT,STATUS,HEIGHT
+1,68,43,91,57,10,Philippines,"Cormorant, great",6389913,turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam,7276,77026,73486,990,92508,VERIFYING,326
+2,19,82,91,65,28,Italy,Green-winged macaw,68955181,fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem,73963,32281,67677,210,20033,INACTIVE,891
+3,54,73,60,8,52,Malaysia,Common zebra,70803107,ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis,6931,76730,10653,458,59422,VERIFYING,752
+4,20,43,8,68,54,China,Red-headed woodpecker,60323298,sed vestibulum sit amet cursus id turpis integer aliquet massa id,16163,25128,29266,375,75115,VERIFYING,360
+5,58,90,34,12,77,Indonesia,Black-capped capuchin,78128371,at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac,51313,83159,82570,91,80720,INACTIVE,61
+6,19,77,6,66,18,Lebanon,"Squirrel, pine",22122769,dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut,85466,97221,60066,405,48975,REPORTING,428
+7,10,97,60,94,10,China,Ibex,1910552,feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id,8857,95223,35475,637,25301,AVAILABLE,982
+8,31,18,64,88,57,Mauritius,Asian lion,35366884,quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio,24475,74894,98586,926,87259,ACTIVE,71
+9,4,98,67,98,88,Indonesia,"Goose, andean",15503797,neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros,30035,51471,64132,772,3536,AVAILABLE,142
+10,35,63,82,62,17,Philippines,"Colobus, white-mantled",9989818,odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet,4852,26602,72289,576,79939,AVAILABLE,617
+11,89,93,10,7,31,Indonesia,Sea birds (unidentified),52622981,porttitor id consequat in consequat ut nulla sed accumsan felis,8623,40502,41231,422,55300,SOLD OUT,118
+12,73,90,31,47,50,China,Yellow-throated sandgrouse,49723797,cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra,17900,56201,44213,88,88356,SOLD OUT,841
+13,18,36,90,96,42,China,Asian water buffalo,15972883,luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui,56242,74415,21567,607,83388,INACTIVE,701
+14,5,42,63,97,6,United States,Common dolphin,20965556,ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a,35672,40268,93967,666,5126,INACTIVE,390
+15,98,59,40,38,33,Indonesia,Water moccasin,46944221,quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam,92737,53797,8130,989,87177,ACTIVE,64
+16,39,57,14,29,39,Indonesia,Common raccoon,53576367,malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet,89386,83874,7310,832,20075,VERIFYING,992
+17,49,98,76,79,72,Portugal,"Bird, secretary",63865869,pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer,1899,8624,27619,760,76769,INACTIVE,652
+18,35,45,61,96,30,China,Clark's nutcracker,547816,nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere,33194,61678,63155,961,95840,VERIFYING,263
+19,54,77,3,78,7,Indonesia,Rhesus macaque,98415271,tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida,56142,61584,12968,32,85361,INACTIVE,732
+20,97,6,33,87,8,South Africa,"Hedgehog, south african",11604152,pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas,29013,25173,6579,718,6202,SOLD OUT,648
+21,98,97,2,93,1,Indonesia,"Macaque, rhesus",71790123,ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie,15843,52925,41578,637,25369,VERIFYING,133
+22,14,31,36,82,95,Turkmenistan,"Fox, blue",78230904,potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet,39496,17547,11893,455,38942,AVAILABLE,15
+23,32,41,43,65,100,Indonesia,White-fronted capuchin,75984581,iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate,58394,61984,19527,393,2907,INACTIVE,373
+24,28,13,81,28,91,Ireland,Butterfly (unidentified),5424069,montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl,63477,77113,15313,437,47696,INACTIVE,964
+25,51,55,26,71,10,Slovenia,Yellow-brown sungazer,89953287,blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede,72570,43589,19935,760,48499,INACTIVE,478
+26,90,59,80,13,31,Ireland,Snowy sheathbill,76549398,nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est,73480,49067,6274,984,32471,REPORTING,960
+27,55,69,87,22,50,China,"Gull, southern black-backed",91033294,potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus,92522,39796,69094,9,30049,VERIFYING,717
+28,71,60,82,77,54,Poland,"Lemming, collared",10143512,condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam,40386,93729,38488,130,11530,SOLD OUT,120
+29,65,74,52,24,20,Russia,Cape clawless otter,4190069,posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis,87233,74477,573,959,89748,SOLD OUT,287
+30,66,63,43,87,68,China,"Dog, raccoon",24432722,lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc,37807,60477,62279,18,2301,INACTIVE,240
+31,24,59,38,46,91,Burkina Faso,Common zebra,6274553,posuere cubilia curae nulla dapibus dolor vel est donec odio justo,85122,61712,68221,175,50541,SOLD OUT,453
+32,94,47,28,3,37,Portugal,"Crane, brolga",51283723,vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in,75468,74802,69115,20,81993,INACTIVE,327
+33,38,40,98,91,25,Yemen,"Barbet, black-collared",56427768,vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non,22502,48792,70087,801,40815,INACTIVE,540
+34,32,8,70,59,88,Zambia,Red-winged blackbird,95096866,sit amet lobortis sapien sapien non mi integer ac neque,62749,86654,51011,184,23453,REPORTING,78
+35,57,42,4,90,10,Poland,Ring-tailed gecko,18345111,platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien,74117,49979,36505,23,36612,ACTIVE,518
+36,37,65,95,52,91,Brazil,Woodchuck,18963782,nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non,78890,20953,87473,248,31158,VERIFYING,937
+37,90,6,20,35,52,Armenia,Cormorant (unidentified),68192182,a nibh in quis justo maecenas rhoncus aliquam lacus morbi,15473,90732,2252,444,76148,REPORTING,952
+38,66,81,36,15,26,Indonesia,Butterfly (unidentified),46643969,pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit,9902,72275,75007,37,35127,AVAILABLE,300
+39,27,42,100,79,95,United States,Spectacled caiman,27571181,elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla,76185,97111,26385,734,928,SOLD OUT,501
+40,20,1,57,75,11,China,"Cormorant, neotropic",86548091,pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat,28492,94765,96921,515,67353,REPORTING,330
+41,76,10,41,37,22,Russia,"Lemur, sportive",9184716,molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec,43971,92436,16395,857,76923,SOLD OUT,220
+42,58,26,73,94,58,Indonesia,"Beaver, eurasian",84089998,vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris,97076,69333,83451,781,72013,REPORTING,233
+43,66,75,44,67,36,Peru,Groundhog,9898622,placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis,60608,91742,59780,344,68647,SOLD OUT,98
+44,51,54,63,27,90,China,Puku,17605508,rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat,40413,48650,71070,305,69732,ACTIVE,846
+45,1,85,4,19,62,Luxembourg,"Cat, miner's",23218916,morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus,79421,15595,15114,347,69394,ACTIVE,737
+46,91,69,39,82,35,Finland,"Lechwe, kafue flats",9032753,sem sed sagittis nam congue risus semper porta volutpat quam,7837,97268,21303,815,59217,ACTIVE,774
+47,18,20,86,87,33,Nicaragua,Lava gull,91144853,enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque,79697,72264,62539,178,31036,SOLD OUT,784
+48,38,70,57,11,17,Comoros,Ornate rock dragon,92409228,risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia,8447,61899,65954,459,28496,AVAILABLE,166
+49,85,39,56,98,82,Peru,Manatee,37793106,ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam,77318,39787,94247,897,4935,AVAILABLE,926
+50,51,77,58,78,51,Poland,"Stork, jabiru",12684263,suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero,49326,27626,55961,132,4755,INACTIVE,790
+51,28,45,13,46,6,Portugal,Black curlew,95444447,et eros vestibulum ac est lacinia nisi venenatis tristique fusce,23944,95013,24638,142,23049,INACTIVE,442
+52,41,1,61,90,88,China,"Flamingo, roseat",98970381,lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at,94550,89906,90433,862,6634,ACTIVE,172
+53,36,63,54,76,67,Greece,Savanna fox,98344116,ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin,19172,52196,5378,80,74925,SOLD OUT,968
+54,35,36,37,70,31,Argentina,Black-tailed prairie dog,35221573,pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis,67820,39099,87234,602,15229,VERIFYING,134
+55,2,60,51,7,78,China,Rufous-collared sparrow,86109678,volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus,73308,77611,67373,250,1801,SOLD OUT,384
+56,54,16,72,48,93,Czech Republic,"Shelduck, european",68833447,phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac,49117,64573,11837,188,13043,AVAILABLE,41
+57,58,76,69,51,23,Ireland,"Lizard, mexican beaded",14742913,euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem,23203,7467,29162,213,84331,AVAILABLE,141
+58,97,2,29,21,45,Indonesia,"Gull, dusky",68132721,arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis,88429,43696,72438,287,84541,VERIFYING,637
+59,79,65,23,2,95,Peru,Red-breasted cockatoo,13208540,magna at nunc commodo placerat praesent blandit nam nulla integer,24161,98991,48593,493,13275,REPORTING,563
+60,27,25,92,87,19,Indonesia,"Deer, red",82573287,suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec,19479,58897,28919,784,51220,SOLD OUT,435
+61,65,19,30,49,11,Dominica,Orca,57624909,tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet,94052,23542,28834,589,50899,ACTIVE,758
+62,35,65,79,12,24,Dominican Republic,Short-nosed bandicoot,716775,pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse,26669,2205,20423,746,2805,AVAILABLE,231
+63,8,13,53,10,83,Kazakhstan,"Bird, black-throated butcher",80762807,est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis,83377,77131,81304,200,70875,REPORTING,12
+64,4,97,19,82,68,Indonesia,"Goose, andean",54532346,duis bibendum morbi non quam nec dui luctus rutrum nulla,59843,68956,33218,46,76081,SOLD OUT,824
+65,86,80,91,24,70,Russia,"Vulture, white-headed",99870663,eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi,53388,85780,95652,251,15886,VERIFYING,645
+66,93,87,16,33,38,Nicaragua,"Sandpiper, spotted wood",97597766,sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero,17429,99840,28212,45,35917,SOLD OUT,523
+67,39,57,78,54,46,Colombia,"Lion, australian sea",82819050,elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien,91449,64218,63897,72,68907,AVAILABLE,361
+68,86,59,74,43,17,Croatia,South American meadowlark (unidentified),96517031,eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat,25124,81589,33787,23,53786,VERIFYING,474
+69,28,82,52,35,70,Russia,"Kookaburra, laughing",98871162,mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed,1261,95783,6169,973,31621,INACTIVE,916
+70,83,84,65,12,9,Lithuania,"Bustard, denham's",17702972,congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero,15025,50720,41993,531,36214,AVAILABLE,79
+71,26,33,57,26,84,Russia,Whip-tailed wallaby,41588677,primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut,61151,41983,223,816,63168,INACTIVE,447
+72,80,42,41,51,74,Russia,Secretary bird,77582786,non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea,27022,72499,2508,166,56004,VERIFYING,105
+73,57,28,47,8,20,China,Comb duck,71082610,cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque,21146,87790,51556,198,59798,ACTIVE,989
+74,12,39,47,100,96,Indonesia,White-browed sparrow weaver,46508860,nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in,96016,51169,15427,897,12562,INACTIVE,533
+75,14,41,17,19,70,France,"Buffalo, asian water",91821550,potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient,31465,9511,81706,273,16254,SOLD OUT,631
+76,83,66,74,7,3,Afghanistan,Asian water buffalo,266624,erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non,83826,15517,67165,810,25517,VERIFYING,620
+77,61,54,31,81,64,France,"Parrot, hawk-headed",20438699,quis odio consequat varius integer ac leo pellentesque ultrices mattis,12131,51396,56832,989,56950,ACTIVE,135
+78,34,66,9,30,51,Finland,"Grebe, little",293537,nisi volutpat eleifend donec ut dolor morbi vel lectus in quam,21698,64185,53,850,29880,AVAILABLE,809
+79,4,60,99,14,56,Thailand,"Goose, spur-winged",57488706,vel nisl duis ac nibh fusce lacus purus aliquet at,85237,18681,84233,398,97636,VERIFYING,126
+80,24,12,71,34,48,China,Asian water dragon,16358243,quam nec dui luctus rutrum nulla tellus in sagittis dui vel,97342,62087,44233,542,6385,AVAILABLE,187
+81,25,22,95,56,46,Honduras,Crested bunting,39556923,mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui,64810,89284,49845,545,57789,AVAILABLE,873
+82,66,57,86,55,69,Russia,"Heron, green",35772485,sapien sapien non mi integer ac neque duis bibendum morbi non,83098,77565,85536,158,38756,INACTIVE,576
+83,76,46,57,72,92,China,Burmese brown mountain tortoise,88759618,eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla,60276,11306,2672,555,23929,VERIFYING,51
+84,87,60,51,66,53,Netherlands,"Colobus, white-mantled",52489508,convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero,17360,92455,84799,32,26250,AVAILABLE,74
+85,11,25,22,18,86,Portugal,Canada goose,27195374,integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum,99056,37002,87816,740,53312,INACTIVE,725
+86,86,55,56,69,45,China,"Shrew, mandras tree",25793790,pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien,16656,81951,18747,434,13942,VERIFYING,837
+87,49,3,59,48,19,Philippines,Argalis,4749857,in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus,90211,14536,95343,689,44256,INACTIVE,769
+88,9,76,71,33,63,Sweden,Common rhea,53787274,volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc,54771,34964,72880,875,32918,REPORTING,230
+89,39,13,52,23,4,Portugal,"Coot, red-knobbed",55309153,natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel,94164,11780,37342,417,65865,REPORTING,610
+90,39,87,36,30,85,Philippines,"Kangaroo, red",54033724,lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque,82903,43091,47133,248,63539,INACTIVE,892
+91,21,65,80,15,87,China,"Fowl, helmeted guinea",66388060,donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam,36891,75405,86754,447,45712,INACTIVE,163
+92,63,90,93,89,93,Ukraine,"Gull, kelp",83464942,orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices,89042,37431,86490,191,94232,AVAILABLE,962
+93,23,38,84,56,23,Ukraine,Grey lourie,67477196,tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus,95517,9491,19272,425,58807,AVAILABLE,456
+94,33,72,75,24,39,Egypt,"Porcupine, african",65683407,phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie,65906,20241,8031,513,1693,AVAILABLE,426
+95,8,42,20,1,22,French Polynesia,Common brushtail possum,32437865,interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu,7690,6588,88023,202,22652,ACTIVE,352
+96,29,64,37,84,12,United States,Civet (unidentified),38631962,elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum,40223,68633,24370,36,74725,ACTIVE,582
+97,95,34,63,71,50,Sweden,Black-tailed deer,49143694,iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis,90441,87215,16536,985,17962,VERIFYING,717
+98,16,41,89,91,87,Brazil,"Heron, black-crowned night",99138724,feugiat non pretium quis lectus suspendisse potenti in eleifend quam,79045,85749,87223,738,1563,INACTIVE,267
+99,82,6,7,49,40,Russia,Baleen whale,12340762,ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus,78444,7099,26587,718,86091,ACTIVE,723
+100,65,84,68,82,90,Thailand,Long-necked turtle,45621971,sapien a libero nam dui proin leo odio porttitor id consequat in consequat,15946,3704,91026,305,20161,REPORTING,18
+101,9,54,2,39,71,France,"Robin, kalahari scrub",33130741,non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus,7397,10500,3136,686,22439,ACTIVE,7
+102,51,67,34,97,15,Peru,"Owl, australian masked",3998987,vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est,37882,70608,88366,651,73133,REPORTING,91
+103,90,68,5,3,48,Albania,Pied crow,40162254,eu sapien cursus vestibulum proin eu mi nulla ac enim in,66141,49332,67804,810,19076,ACTIVE,547
+104,16,49,5,100,24,Brazil,Bat-eared fox,94910103,at lorem integer tincidunt ante vel ipsum praesent blandit lacinia,33372,80950,69842,50,62584,AVAILABLE,655
+105,62,91,79,19,89,China,"Weaver, lesser masked",57006825,orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum,40396,10762,35274,127,68904,ACTIVE,85
+106,47,35,54,72,49,Albania,Western grey kangaroo,8999171,cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit,28578,57753,2225,689,23160,REPORTING,512
+107,81,2,50,83,46,Poland,"Francolin, swainson's",68947325,vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue,8128,15126,57901,435,29897,AVAILABLE,929
+108,46,26,77,42,21,Japan,Yellow-headed caracara,6939158,quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse,61470,59508,87975,819,16595,INACTIVE,116
+109,29,51,53,15,71,Nigeria,"Cat, ringtail",49955793,sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at,69706,12212,94732,119,36940,ACTIVE,319
+110,29,7,14,1,98,Philippines,"Duck, white-faced whistling",28821260,accumsan tortor quis turpis sed ante vivamus tortor duis mattis,4848,7648,13396,414,65956,SOLD OUT,544
+111,36,91,67,69,74,France,"Baboon, chacma",96611404,nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus,31662,58514,62402,58,97197,INACTIVE,554
+112,99,92,14,8,67,Japan,American crow,25111997,nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa,52714,78174,71832,106,61560,VERIFYING,228
+113,66,52,40,40,16,France,Saddle-billed stork,96579802,nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam,99748,55986,90889,226,27081,SOLD OUT,996
+114,65,2,35,76,41,Indonesia,Yellow mongoose,10691877,nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat,23773,9083,35140,594,32251,INACTIVE,585
+115,17,24,61,35,52,Colombia,Red-billed toucan,8672906,sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et,98465,88993,41508,299,48909,INACTIVE,329
+116,45,51,56,64,22,Iran,"Duck, white-faced whistling",53640508,ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit,72283,32423,18240,960,79704,VERIFYING,29
+117,26,29,28,42,10,Afghanistan,Aardwolf,97677321,id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique,17354,91358,91331,415,2938,INACTIVE,851
+118,63,16,46,63,74,Russia,Horned lark,18155548,mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris,30006,84757,53579,173,88944,AVAILABLE,652
+119,1,70,22,61,95,China,"Grenadier, purple",60079390,vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes,37831,81798,85035,497,41190,REPORTING,537
+120,49,89,95,52,45,Malaysia,Gerenuk,90395233,tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien,55472,92496,11982,741,37159,SOLD OUT,924
+121,43,70,88,50,39,Cuba,Secretary bird,62252958,sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla,10849,15121,57858,206,56621,ACTIVE,983
+122,43,61,14,97,7,China,"Trumpeter, dark-winged",42160364,rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec,83776,41086,65116,715,90790,AVAILABLE,107
+123,63,91,54,43,34,China,Turtle (unidentified),40888310,quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed,47813,61808,94411,84,8284,SOLD OUT,638
+124,57,68,5,47,63,Colombia,Common eland,89083565,nulla quisque arcu libero rutrum ac lobortis vel dapibus at diam nam,98922,33247,74530,226,15661,INACTIVE,250
+125,74,24,2,37,41,Russia,Superb starling,16337394,tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis,1365,46956,66757,184,62229,ACTIVE,894
+126,79,73,48,67,16,Philippines,Common zebra,81469837,libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu,94373,82661,38509,61,30935,REPORTING,465
+127,4,39,55,73,48,Yemen,"Buffalo, asian water",12341504,pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis,40879,86679,39443,702,93120,ACTIVE,773
+128,11,24,86,28,4,Ireland,Columbian rainbow boa,11082943,viverra eget congue eget semper rutrum nulla nunc purus phasellus,44445,13770,76550,397,40622,INACTIVE,645
+129,3,93,44,72,69,Portugal,"Heron, grey",95650519,in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel,86289,41111,42609,253,45327,VERIFYING,347
+130,96,100,92,54,47,Azerbaijan,"Cow, scottish highland",50101573,curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien,14949,90959,60145,875,79315,VERIFYING,754
+131,42,58,9,69,91,Pakistan,Black-crowned night heron,91396553,curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo,27984,25329,58116,963,80998,REPORTING,420
+132,95,77,63,11,96,Laos,"Langur, gray",98420892,dictumst etiam faucibus cursus urna ut tellus nulla ut erat,76999,80953,49799,798,43482,ACTIVE,135
+133,4,10,81,7,36,Yemen,"Squirrel, european red",15280633,eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium,22141,54592,12499,13,12775,AVAILABLE,299
+134,34,91,76,57,100,Portugal,Laughing kookaburra,89451989,cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor,30921,37262,15781,92,66581,INACTIVE,169
+135,64,93,9,27,70,Brazil,"Possum, western pygmy",61341734,lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque,17356,26911,63109,568,10216,INACTIVE,118
+136,97,74,42,2,71,Portugal,"Gecko, barking",46860096,justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet,9083,63646,90726,27,55553,INACTIVE,628
+137,22,80,33,58,62,France,"Crake, african black",51845271,eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus,74529,87665,46895,108,51387,ACTIVE,467
+138,94,37,2,64,1,Czech Republic,"Butterfly, tropical buckeye",70293295,dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede,98323,85281,46503,667,5715,VERIFYING,230
+139,80,54,47,38,11,China,North American river otter,57877253,condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu,29174,71079,80050,960,44715,SOLD OUT,182
+140,10,90,44,96,26,China,Malabar squirrel,96777268,ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at diam,19869,43080,16200,992,30249,ACTIVE,263
+141,15,73,67,56,52,Iran,River wallaby,27564241,ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus,37811,90506,52154,422,31340,VERIFYING,817
+142,89,37,62,69,37,Russia,"Egret, great",77866623,vehicula consequat morbi a ipsum integer a nibh in quis,39416,97095,48470,276,88559,REPORTING,587
+143,81,4,57,76,69,Macedonia,Southern hairy-nosed wombat,36595339,aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque,14431,62342,22955,522,94759,VERIFYING,746
+144,29,14,83,65,64,Netherlands,"Kangaroo, black-faced",40520317,ligula sit amet eleifend pede libero quis orci nullam molestie nibh,78067,19418,83946,525,88136,INACTIVE,160
+145,98,56,39,7,62,China,"Raven, white-necked",26559955,curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac,89973,4613,97034,788,74666,REPORTING,772
+146,87,12,19,87,69,Indonesia,Openbill stork,19833223,consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien,97259,99785,79062,181,27513,ACTIVE,485
+147,97,52,52,89,66,Uruguay,"Otter, brazilian",29180281,nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi,51112,59178,40740,617,11460,AVAILABLE,9
+148,29,52,7,88,69,Indonesia,Dabchick,54675237,non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit,71214,2672,26057,362,69595,VERIFYING,59
+149,23,98,2,6,43,China,"Porcupine, prehensile-tailed",9887254,libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac,69889,59145,42072,192,66632,SOLD OUT,651
+150,63,50,18,74,14,Slovenia,Asian elephant,39257270,vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis,3931,23852,43089,535,5737,ACTIVE,893
+151,91,10,55,56,35,Malaysia,Bonnet macaque,82602278,nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id,97121,96845,64522,550,42591,SOLD OUT,270
+152,69,78,81,84,53,Peru,"Goldeneye, common",598540,fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis,97354,92179,96565,519,62826,REPORTING,241
+153,34,52,2,49,44,France,"Tortoise, radiated",5871677,proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis,13346,88812,26239,831,86685,INACTIVE,398
+154,58,26,53,77,49,Greece,"Starling, cape",76767458,habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at,90553,5168,7708,493,24813,ACTIVE,474
+155,31,70,63,1,46,Peru,"White-eye, cape",82752474,pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam,54057,41089,52520,429,61316,VERIFYING,521
+156,67,29,37,29,38,Laos,Llama,9125135,leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque,89358,52363,84999,352,57904,SOLD OUT,906
+157,30,33,67,72,58,China,Black-capped capuchin,75640421,maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat,62350,80600,96803,591,93616,REPORTING,822
+158,69,73,31,24,50,Netherlands,"Marshbird, brown and yellow",26951989,ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit,26686,37218,64696,63,11105,REPORTING,613
+159,95,67,2,45,64,South Korea,"Monkey, rhesus",6284788,magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient,82163,98945,81343,694,31988,VERIFYING,200
+160,23,100,44,37,82,Russia,"Macaw, blue and gold",87119194,duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque,64944,59245,63186,944,88920,SOLD OUT,7
+161,59,54,19,18,92,Mayotte,"Pie, indian tree",5704713,aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi,60783,61869,69698,559,56614,SOLD OUT,396
+162,41,59,2,87,98,Russia,Carpet snake,56440762,blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id,53511,4219,54583,102,49872,ACTIVE,45
+163,77,43,88,74,23,Ukraine,Sportive lemur,37081253,scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec,38911,61467,93976,33,32051,SOLD OUT,835
+164,99,46,61,38,46,China,Whip-tailed wallaby,95029152,quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices,28664,59268,24518,65,54028,ACTIVE,24
+165,4,66,58,28,74,Indonesia,Cape white-eye,93675080,quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus,43640,58979,93444,278,19194,ACTIVE,902
+166,14,73,36,54,14,Portugal,Grey mouse lemur,35885203,porta volutpat erat quisque erat eros viverra eget congue eget,24961,87764,41064,493,90006,AVAILABLE,776
+167,6,30,53,29,13,Philippines,Ground monitor (unidentified),40627497,nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium,1243,66514,23240,798,68828,SOLD OUT,107
+168,19,80,75,64,81,France,"Echidna, short-beaked",57119041,ac enim in tempor turpis nec euismod scelerisque quam turpis,7564,70523,77457,863,24223,VERIFYING,43
+169,75,92,61,84,38,Indonesia,"Deer, roe",35505878,id ligula suspendisse ornare consequat lectus in est risus auctor,7120,51491,53681,348,35833,ACTIVE,631
+170,53,27,64,47,21,Finland,Yellow-throated sandgrouse,85365809,sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed,20506,62807,62287,371,40806,ACTIVE,789
+171,65,56,30,36,4,China,Tarantula,98324845,erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi,6238,16048,69748,248,96121,SOLD OUT,176
+172,91,50,58,33,97,Mayotte,European red squirrel,13454573,eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue,58469,88085,46736,12,66210,INACTIVE,462
+173,24,55,74,84,2,China,Blue-footed booby,66373241,luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus,38022,97463,8477,893,6577,INACTIVE,250
+174,61,11,15,13,46,Yemen,"Shrike, southern white-crowned",66974955,dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium,85615,12917,29653,25,52200,VERIFYING,259
+175,10,62,45,96,33,China,"Bustard, kori",49072860,ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus,52954,61859,90866,251,58915,VERIFYING,327
+176,50,69,45,6,41,Malaysia,"Fox, grey",20815650,rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis,99982,79128,42637,403,10995,VERIFYING,479
+177,21,43,51,36,70,Japan,"Caiman, spectacled",30840510,interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit,26971,32040,45527,145,96510,ACTIVE,899
+178,98,94,9,41,18,China,Spur-winged goose,78894898,et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui,22072,45112,67132,793,22540,AVAILABLE,271
+179,40,93,74,23,54,Guatemala,"Monitor, water",64309755,convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris,71087,45050,64559,902,25788,AVAILABLE,534
+180,94,92,2,35,38,Brazil,"Iguana, marine",20651735,posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis,94481,4096,1885,311,1341,SOLD OUT,755
+181,90,41,24,55,2,Sweden,"Sungazer, yellow-brown",49500070,phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at,80418,44381,43484,294,68283,INACTIVE,826
+182,38,95,7,23,89,Czech Republic,"Heron, yellow-crowned night",38898033,odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet,53571,72507,20026,33,89597,INACTIVE,948
+183,82,20,37,3,25,Norway,"Dog, african wild",69857242,placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel,44749,6566,39178,190,32432,VERIFYING,876
+184,42,25,10,62,6,Iran,Levaillant's barbet,26978647,ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at,77117,52453,86165,676,39896,REPORTING,610
+185,67,24,87,86,39,France,"Cat, tiger",17931745,morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus,69193,3213,1189,153,504,SOLD OUT,675
+186,29,31,84,100,18,Philippines,Gambel's quail,51688953,posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at,1052,68242,19873,788,78382,SOLD OUT,170
+187,64,79,65,30,53,Peru,Blue catfish,44166693,bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede,87024,60475,40399,229,75118,AVAILABLE,550
+188,71,80,81,35,88,Indonesia,"Otter, brazilian",16729086,felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed,33912,71996,12780,277,98528,AVAILABLE,716
+189,24,44,9,97,21,France,Bird (unidentified),19396295,diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra,78900,61434,16726,601,71815,ACTIVE,196
+190,27,2,30,7,100,Philippines,Stick insect,79475748,donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum,67447,68536,11283,362,67087,REPORTING,59
+191,47,8,54,81,4,Japan,"Dog, bush",25834720,interdum venenatis turpis enim blandit mi in porttitor pede justo eu,495,59767,27796,872,48386,INACTIVE,607
+192,25,20,47,51,56,Sri Lanka,"Rhea, common",69666940,vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien,94300,89895,36800,884,47646,INACTIVE,196
+193,92,65,70,68,19,China,African darter,24325743,pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna,88119,27748,50318,307,42291,VERIFYING,293
+194,24,99,3,75,90,Philippines,Canadian tiger swallowtail butterfly,75037164,potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam,74474,51894,99358,640,43628,AVAILABLE,914
+195,10,17,85,40,60,Mexico,"Stilt, black-winged",63092056,sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar,47750,2087,65698,301,47639,ACTIVE,750
+196,54,44,27,27,83,Slovenia,"Kingfisher, pied",64884893,ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus,3043,62674,97941,570,6053,REPORTING,111
+197,36,100,88,32,8,Philippines,"Flamingo, roseat",36761140,nulla sed accumsan felis ut at dolor quis odio consequat varius integer,37493,35246,78321,129,92431,SOLD OUT,167
+198,42,86,37,41,32,Philippines,"Alligator, american",47298732,nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel,6425,76949,50589,367,25151,SOLD OUT,848
+199,12,66,10,8,53,Samoa,"Goose, spur-winged",56173156,pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi,22605,54864,88965,173,6785,AVAILABLE,422
+200,76,39,55,20,23,Indonesia,Wolf spider,84134396,suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl,265,49277,3262,537,352,REPORTING,778
+201,11,84,94,25,92,Morocco,White-throated toucan,60731532,erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi,84140,25311,93743,753,68940,AVAILABLE,336
+202,78,85,54,20,40,Russia,"Antelope, sable",25258115,ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla,36539,99935,5153,27,97825,REPORTING,388
+203,6,87,71,44,37,Sweden,Nubian bee-eater,5232517,scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede,86842,80288,78402,875,85168,VERIFYING,336
+204,11,14,68,73,50,Brazil,White-tailed jackrabbit,30989483,donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum,47333,19458,75224,395,28162,REPORTING,573
+205,41,58,24,79,67,Brazil,Nine-banded armadillo,44721797,ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at,35286,73828,84332,216,64004,ACTIVE,498
+206,73,35,36,37,97,Indonesia,Long-crested hawk eagle,57285571,sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est,85210,47789,16421,867,49009,REPORTING,455
+207,62,60,33,40,59,China,Nile crocodile,90519156,dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis,57386,58787,33579,281,92284,SOLD OUT,538
+208,10,23,7,9,48,Brazil,"Pelican, australian",25831128,ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien,68934,69365,90799,248,31225,ACTIVE,825
+209,50,5,48,37,72,China,"Bleu, blue-breasted cordon",704707,donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet,17817,65365,37478,171,84929,AVAILABLE,223
+210,44,23,8,97,31,Russia,"Loris, slender",6305045,sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt,76836,80939,80480,942,20755,VERIFYING,27
+211,97,72,95,36,30,Comoros,"Kudu, greater",39830013,velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis,53035,87537,2526,672,2599,AVAILABLE,241
+212,23,44,43,13,70,United States,Nyala,88151377,ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit,85809,30965,71632,74,94206,SOLD OUT,106
+213,93,50,66,33,13,Austria,"Hawk-eagle, crowned",65081929,molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur,86044,90690,8218,350,87337,INACTIVE,353
+214,71,41,39,63,8,Sweden,Hoffman's sloth,7413917,luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio,31551,76232,46244,766,66174,ACTIVE,482
+215,81,34,12,13,87,Croatia,Fringe-eared oryx,64957523,potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus,90324,83543,33747,932,35089,REPORTING,487
+216,62,89,73,97,47,Netherlands,Komodo dragon,28573632,massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio,53205,71509,48913,828,57676,AVAILABLE,807
+217,70,91,92,7,14,Argentina,Water moccasin,17009576,imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer,60891,5327,50790,935,26479,SOLD OUT,651
+218,16,82,55,43,36,Russia,"Shrike, common boubou",98009683,mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem,83445,8530,38757,399,7192,VERIFYING,369
+219,49,21,96,16,66,Portugal,Snowy egret,60023290,suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus,38544,58622,14160,40,23595,INACTIVE,821
+220,60,99,22,30,36,Ukraine,Blue-faced booby,88722485,dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat,86559,68332,68930,881,14868,INACTIVE,126
+221,100,38,38,56,64,Bolivia,"Fox, silver-backed",51766558,sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl,13929,42482,40429,146,52252,AVAILABLE,318
+222,54,73,18,70,13,Lebanon,Southern lapwing,45748808,vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis,15008,16898,52971,607,11017,ACTIVE,458
+223,24,25,86,59,57,Philippines,Laughing kookaburra,26172906,ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy,32949,18814,32135,974,87996,AVAILABLE,443
+224,14,79,57,46,28,Mexico,"Catfish, blue",14047611,curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend,56031,38544,65534,159,16891,AVAILABLE,670
+225,44,18,47,50,39,Japan,Mountain duck,84433342,non mi integer ac neque duis bibendum morbi non quam nec dui luctus,8327,17883,46284,667,7503,ACTIVE,682
+226,53,37,22,29,77,Mexico,Levaillant's barbet,30001893,libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut,30995,3092,4841,948,52884,AVAILABLE,292
+227,58,14,41,65,60,Syria,"Vulture, griffon",82724081,ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc,30478,53627,33881,466,122,VERIFYING,601
+228,98,99,58,22,30,Philippines,Blue shark,46752602,ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla,3755,81862,34403,486,91123,SOLD OUT,156
+229,66,75,20,36,99,Tunisia,Tailless tenrec,13115332,congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus,33162,74188,10069,652,91335,INACTIVE,410
+230,59,9,85,69,32,Morocco,"Ibis, glossy",68720846,ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris,94774,92814,83528,203,35822,SOLD OUT,407
+231,63,30,45,89,22,Russia,"Grenadier, common",34055556,nec dui luctus rutrum nulla tellus in sagittis dui vel nisl,34961,28361,7664,524,14416,VERIFYING,55
+232,62,84,66,34,73,China,"Tern, white-winged",60276110,justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id,19354,83114,68163,667,17940,INACTIVE,53
+233,30,44,3,65,53,Indonesia,Ocelot,32319416,lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla,12128,56428,53839,250,51722,INACTIVE,375
+234,23,4,65,83,76,Peru,Asian foreset tortoise,60842595,eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat,78831,92071,98921,224,81933,AVAILABLE,681
+235,20,92,26,65,41,China,Kalahari scrub robin,40001271,aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque,21570,75911,37769,713,61804,ACTIVE,869
+236,76,96,93,16,15,Ethiopia,"Brocket, brown",70065804,iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla,40747,76453,26726,355,51604,SOLD OUT,608
+237,55,65,95,84,4,Gambia,Radiated tortoise,89754811,interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at diam,21288,68462,93846,929,56669,INACTIVE,369
+238,97,30,29,3,38,Mexico,"Bee-eater, nubian",87848640,pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean,553,58979,92144,151,2049,REPORTING,706
+239,56,25,4,84,69,Thailand,Ground monitor (unidentified),21582232,leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet,2988,52873,96843,906,35315,REPORTING,557
+240,30,28,21,15,98,Russia,Chilean flamingo,51382627,metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu,83954,93624,93087,796,47622,AVAILABLE,44
+241,21,50,51,37,83,United States,Jabiru stork,95897715,nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices,32836,49206,6033,335,54728,REPORTING,426
+242,56,46,71,35,41,Cuba,Galapagos hawk,19089759,ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra,14227,57049,80517,907,9115,INACTIVE,708
+243,17,83,15,100,61,Bulgaria,Brown hyena,60578094,sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam,65128,19417,9032,780,7584,INACTIVE,743
+244,67,87,62,89,34,Russia,Euro wallaby,15042436,congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue,67215,13496,7985,951,25709,REPORTING,445
+245,55,80,82,70,76,China,"Beaver, eurasian",96342593,risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum,54356,77629,68300,487,34205,SOLD OUT,769
+246,45,25,21,38,26,China,"Ferret, black-footed",62643910,ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien,29492,54339,40852,618,41713,VERIFYING,133
+247,13,64,100,83,23,China,Sociable weaver,99782785,sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et,68177,80846,48356,707,61021,ACTIVE,786
+248,45,17,74,53,78,Sweden,"Skunk, striped",68095007,ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero,56396,19425,37006,337,13407,INACTIVE,924
+249,4,49,23,49,2,Sweden,Hawk-headed parrot,59510748,pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus,54883,66765,77990,383,5967,REPORTING,322
+250,71,85,70,53,21,Brazil,"Cardinal, black-throated",97855796,diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac,77821,84459,24243,606,49908,INACTIVE,950
+251,44,74,30,39,77,Serbia,"Grebe, little",4216737,ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in,14689,2293,22363,402,97665,VERIFYING,795
+252,71,51,22,4,53,China,Egyptian cobra,44030635,arcu libero rutrum ac lobortis vel dapibus at diam nam tristique tortor eu pede,34610,67473,70052,745,1037,REPORTING,787
+253,91,70,42,60,97,Poland,"Shelduck, common",34209648,magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in,60524,7568,96631,453,58922,SOLD OUT,692
+254,50,73,83,39,39,Russia,"Wolf, mexican",83201085,nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum,28736,93358,85176,115,40177,INACTIVE,692
+255,51,76,56,59,9,Poland,Southern black-backed gull,26703740,mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc,15861,15087,5871,582,49536,INACTIVE,649
+256,84,22,91,92,9,Portugal,Mandras tree shrew,34959591,maecenas leo odio condimentum id luctus nec molestie sed justo,28636,74038,94923,252,26866,AVAILABLE,912
+257,2,80,37,21,62,United States,Columbian rainbow boa,86569881,ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit,73486,94612,25038,847,17540,VERIFYING,405
+258,24,76,88,82,27,Russia,"Sparrow, rufous-collared",43280891,pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue,33618,59630,28021,293,17820,SOLD OUT,556
+259,61,14,61,55,83,Sweden,Urial,96797266,justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum,26861,77183,76718,805,81633,VERIFYING,598
+260,57,16,71,76,61,Sweden,Herring gull,17945609,sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin,69565,25784,65787,21,65939,VERIFYING,915
+261,15,86,52,86,90,China,Great egret,1617860,donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac,80385,79308,15859,530,39331,VERIFYING,880
+262,45,55,48,8,40,Canada,Oriental white-backed vulture,43978106,proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue,35212,84297,2886,647,10152,AVAILABLE,685
+263,21,20,70,19,66,Peru,"Cardinal, black-throated",69213132,sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis,95693,11023,29148,516,60363,INACTIVE,163
+264,25,20,28,63,96,Senegal,Azara's zorro,46659942,vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus,10978,26646,77964,2,76786,ACTIVE,256
+265,13,3,61,19,21,Costa Rica,"Bandicoot, southern brown",97281390,justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est,32373,50157,77536,130,57007,AVAILABLE,268
+266,99,36,2,98,20,China,Osprey,19307624,nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum,56111,32724,55545,996,99634,INACTIVE,689
+267,35,33,82,90,25,Ukraine,"Roller, lilac-breasted",3317803,posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam,50169,3162,45007,992,16692,INACTIVE,207
+268,50,88,48,98,20,China,Agile wallaby,49876531,habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at,26597,97803,89837,732,1053,SOLD OUT,268
+269,53,3,49,61,8,Brazil,"Bear, polar",72397145,lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed,29998,64721,10861,736,23786,SOLD OUT,646
+270,58,84,57,36,25,Venezuela,"Lory, rainbow",26221924,consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in,82611,54448,38876,105,30811,ACTIVE,576
+271,19,89,74,43,17,France,"Dragon, frilled",99316374,non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non,10169,70232,85089,417,66563,REPORTING,603
+272,44,79,39,19,41,China,Smith's bush squirrel,99790848,aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis,58254,36390,97722,310,13545,VERIFYING,390
+273,76,90,97,4,14,Peru,Common langur,10456486,enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem,35803,58490,53163,555,42083,REPORTING,465
+274,32,51,45,20,75,Indonesia,Long-tailed spotted cat,49877701,faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat,64132,42546,47800,42,16989,SOLD OUT,359
+275,67,70,99,98,72,China,White-browed owl,21630240,nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue,51712,46095,66595,596,740,INACTIVE,417
+276,14,25,20,38,58,Indonesia,"Tarantula, salmon pink bird eater",78576888,ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus,81259,18912,30776,784,63375,INACTIVE,743
+277,32,39,96,79,90,Portugal,"Colobus, magistrate black",771615,porttitor pede justo eu massa donec dapibus duis at velit eu est congue,69503,93557,23987,331,32515,ACTIVE,763
+278,78,22,44,65,75,Thailand,"Barbet, black-collared",99948168,morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla,24498,21255,78907,27,51924,VERIFYING,958
+279,9,68,54,2,20,Serbia,White-necked stork,32252686,mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit,22669,34226,55880,274,48715,INACTIVE,583
+280,61,75,97,20,3,Colombia,"Armadillo, common long-nosed",50406876,platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante,23539,32809,21412,488,36914,ACTIVE,339
+281,25,12,23,26,14,Philippines,Suricate,95135190,pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices,67638,63162,36730,9,33667,INACTIVE,535
+282,40,57,28,87,36,China,"Hartebeest, coke's",52263980,ut volutpat sapien arcu sed augue aliquam erat volutpat in congue,23094,52534,94217,535,60401,ACTIVE,445
+283,47,97,40,100,33,Brazil,Small Indian mongoose,1188803,a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula,66312,28040,27830,954,44147,SOLD OUT,57
+284,83,85,33,64,18,Philippines,Grison,98091272,et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum,37466,4185,45905,368,10969,SOLD OUT,339
+285,99,21,80,23,60,South Africa,Short-beaked echidna,83257419,cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit,28329,11332,82259,994,76184,SOLD OUT,356
+286,16,27,40,9,44,China,Long-nosed bandicoot,1521906,suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis,39212,72705,17185,402,28375,INACTIVE,712
+287,13,2,54,42,71,China,"Sparrow, rufous-collared",35956764,ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam,30244,17116,48570,380,90844,AVAILABLE,818
+288,96,85,37,89,18,Finland,"Monitor, white-throated",55831403,proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis,21424,20608,95519,568,29217,AVAILABLE,465
+289,54,26,42,61,3,Colombia,Ant (unidentified),84423763,justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci,77452,93090,78713,447,21455,VERIFYING,648
+290,54,3,90,76,7,China,"Woodpecker, downy",2539570,cum sociis natoque penatibus et magnis dis parturient montes nascetur,59325,45867,80975,95,20039,VERIFYING,366
+291,55,78,53,64,46,Palestinian Territory,Chimpanzee,57464613,duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit,57404,61188,32876,671,68789,VERIFYING,578
+292,47,25,95,4,33,Indonesia,"Lizard, goanna",96568559,suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque,62260,83725,96904,126,19190,AVAILABLE,761
+293,80,32,57,19,8,Brazil,"Gecko, barking",13802003,commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus,16643,49749,89316,422,77434,SOLD OUT,267
+294,32,73,24,27,90,Russia,Striped dolphin,9892074,urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec,2907,29348,37839,714,7041,ACTIVE,85
+295,27,46,16,1,43,Thailand,"Mouse, four-striped grass",57622765,sagittis dui vel nisl duis ac nibh fusce lacus purus,92428,85240,84219,230,18655,AVAILABLE,461
+296,20,90,98,34,4,China,Egyptian goose,46677111,mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel,2113,25132,32844,174,43483,REPORTING,150
+297,60,46,96,37,88,Peru,"Porcupine, north american",35257314,nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras,526,70963,16551,995,24205,ACTIVE,921
+298,8,29,27,74,34,Portugal,Gerenuk,90923919,vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec,33184,90980,40398,938,21279,REPORTING,880
+299,23,6,2,32,49,Indonesia,Ring-tailed possum,53973645,nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit,46623,95671,97606,782,62322,REPORTING,737
+300,2,89,48,77,39,Mexico,Capybara,94870778,in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat,44071,62129,94507,107,36734,SOLD OUT,612
+301,77,50,91,44,66,Kazakhstan,Red-shouldered glossy starling,53677011,ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate,13802,13475,33354,570,55044,SOLD OUT,347
+302,1,86,30,32,21,China,Hudsonian godwit,11169901,condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit,18881,32894,56673,908,43133,INACTIVE,790
+303,45,4,21,53,98,Poland,"Stork, woolly-necked",13869134,neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia,76709,46861,4631,486,12037,SOLD OUT,336
+304,81,22,91,14,32,Kuwait,Chilean flamingo,17566764,est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis,86864,67403,32837,926,95049,ACTIVE,317
+305,20,17,40,5,85,China,"Eagle, bald",35525438,sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus,64264,34476,41379,155,65297,VERIFYING,905
+306,76,93,17,50,2,Brazil,"Screamer, southern",86748755,turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas,47465,68376,90476,982,20919,REPORTING,544
+307,27,97,47,16,30,Portugal,Blackbuck,19474436,dapibus duis at velit eu est congue elementum in hac habitasse platea,74304,42686,38666,817,45018,REPORTING,767
+308,8,4,34,40,2,Greenland,"Monitor, water",99517990,praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula,22503,5871,30246,92,49709,INACTIVE,676
+309,38,36,68,66,69,Zimbabwe,Uinta ground squirrel,57222049,nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur,27624,45346,71465,498,56070,AVAILABLE,439
+310,99,92,67,71,74,China,Greater flamingo,5900643,curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac,34250,22437,51603,588,80128,SOLD OUT,418
+311,96,98,20,5,66,France,Tawny frogmouth,12037790,convallis nunc proin at turpis a pede posuere nonummy integer non velit,27168,83215,11408,465,84601,VERIFYING,443
+312,93,35,61,64,77,Portugal,"Armadillo, seven-banded",64143070,justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet,39865,60125,93917,365,33866,ACTIVE,100
+313,28,42,83,40,93,Norway,Crested barbet,33169790,ut massa quis augue luctus tincidunt nulla mollis molestie lorem,50683,28985,78140,64,41117,REPORTING,594
+314,6,10,6,28,3,Zimbabwe,American beaver,20643244,suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut,58858,85461,19139,418,61922,REPORTING,921
+315,4,80,4,18,27,Philippines,"Sifaka, verreaux's",84538152,dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor,16869,46537,93876,469,79489,INACTIVE,160
+316,87,5,70,45,7,Azerbaijan,Gecko (unidentified),87021367,posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet,94438,48913,34264,689,77741,AVAILABLE,160
+317,87,68,35,84,14,Vietnam,Asiatic wild ass,91238133,vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum,66673,5838,25110,379,13091,SOLD OUT,229
+318,30,45,97,39,1,Indonesia,"Starling, greater blue-eared",18342472,congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque,29890,23725,11522,573,19152,ACTIVE,999
+319,75,80,37,85,11,Indonesia,Springbuck,52130531,vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna,40886,92134,1076,587,70171,SOLD OUT,808
+320,59,66,41,18,4,Malaysia,Monitor lizard (unidentified),83000352,elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula,48320,56530,94999,733,62956,ACTIVE,547
+321,34,99,91,45,96,Russia,Common eland,24763632,accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean,53652,35344,26122,349,42555,ACTIVE,229
+322,28,23,54,34,24,Poland,"Elk, Wapiti",81168696,leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique,20096,36884,2326,477,77077,SOLD OUT,68
+323,13,34,21,79,73,Mauritius,"Turtle, eastern box",74544209,eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in,1426,24114,93309,327,4841,AVAILABLE,639
+324,72,66,83,53,79,China,"Whale, long-finned pilot",78908434,in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis,72871,48802,41714,839,63823,INACTIVE,346
+325,60,64,77,80,60,Russia,"Badger, eurasian",24690644,vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci,43366,89317,80601,437,37993,AVAILABLE,710
+326,52,92,32,50,49,China,"Gull, silver",69559794,cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem,45060,40294,40247,422,10215,VERIFYING,812
+327,45,27,56,76,80,Brazil,"Hawk, red-tailed",111827,lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna,99327,14668,51005,261,51736,INACTIVE,534
+328,28,15,52,88,38,Poland,"Bird, red-billed tropic",60639661,feugiat et eros vestibulum ac est lacinia nisi venenatis tristique,61838,53838,33345,807,29014,AVAILABLE,699
+329,46,90,36,42,6,Vietnam,Praying mantis (unidentified),39763448,nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo,70704,66739,49243,121,1246,AVAILABLE,785
+330,74,64,61,56,76,Poland,"Kangaroo, eastern grey",37580950,vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non,73699,95905,36137,561,83116,ACTIVE,823
+331,64,95,82,69,26,China,Monitor lizard (unidentified),25315950,nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in,46477,73237,8391,137,43003,AVAILABLE,970
+332,43,2,38,72,77,Venezuela,Agile wallaby,99477509,mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id,7234,11052,19294,112,7276,INACTIVE,114
+333,19,38,74,74,21,Greece,Purple grenadier,32795743,eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis,24012,98785,77513,936,52445,REPORTING,241
+334,76,16,43,49,51,Indonesia,"Seal, harbor",94038434,nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce,660,9426,73079,92,3460,REPORTING,670
+335,87,78,57,5,29,Bulgaria,"Possum, ring-tailed",36834048,quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur,97147,2785,19611,771,60288,REPORTING,247
+336,87,40,27,89,48,China,Alpaca,27378614,quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras,56952,65657,66323,327,24305,REPORTING,948
+337,19,71,49,19,33,Philippines,Mississippi alligator,66488476,orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti,76521,11964,90184,68,62580,ACTIVE,167
+338,42,65,22,88,65,China,"Otter, brazilian",32683555,at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam,32235,26586,18354,942,16457,ACTIVE,639
+339,88,74,88,73,90,Thailand,Asian lion,20488688,odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique,95370,35242,64197,43,10317,SOLD OUT,82
+340,19,84,83,4,6,China,Red-tailed wambenger,80081989,in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor,18329,13744,13802,942,54648,SOLD OUT,833
+341,61,61,42,72,57,Germany,"Dolphin, striped",80529254,gravida nisi at nibh in hac habitasse platea dictumst aliquam augue,98061,58690,19414,608,29405,ACTIVE,219
+342,10,59,94,36,97,Syria,Mexican wolf,52126436,suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus,72682,18285,75066,269,22191,SOLD OUT,183
+343,47,10,83,19,45,Ukraine,"Lion, southern sea",6281492,rutrum rutrum neque aenean auctor gravida sem praesent id massa,88159,49313,22447,453,5823,AVAILABLE,708
+344,85,68,47,45,37,China,Pale white-eye,37346465,dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque,14823,45474,41267,413,87742,AVAILABLE,187
+345,51,30,11,6,80,Ethiopia,"Capuchin, brown",90634499,aenean sit amet justo morbi ut odio cras mi pede malesuada,83573,4642,10312,10,88352,VERIFYING,991
+346,56,39,83,76,40,China,California sea lion,79588783,dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo,56678,83363,71715,165,98600,INACTIVE,764
+347,26,16,18,46,56,France,Dama wallaby,2171975,parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum,66300,13354,60796,450,14637,ACTIVE,62
+348,76,61,83,21,48,Philippines,"Vulture, griffon",17723847,ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien,71946,64548,32922,962,32980,INACTIVE,605
+349,46,25,45,63,73,Afghanistan,"Bustard, denham's",60153794,morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem,53784,67932,71501,937,91274,SOLD OUT,854
+350,99,32,92,20,23,India,"Owl, great horned",53142854,aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate,58788,3882,46210,27,26994,VERIFYING,421
+351,90,84,28,64,7,Indonesia,"Snake, racer",60623726,justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam,12013,38500,95962,328,14369,ACTIVE,451
+352,8,41,30,62,59,Russia,Argalis,47397929,amet sem fusce consequat nulla nisl nunc nisl duis bibendum,87766,15879,58042,561,12487,AVAILABLE,150
+353,27,76,42,34,70,China,"Pheasant, ring-necked",82228998,ornare consequat lectus in est risus auctor sed tristique in tempus sit amet,83033,88493,75437,538,51699,SOLD OUT,289
+354,30,13,78,25,32,China,"Lemming, collared",9476416,imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue,33375,59797,67576,735,23457,INACTIVE,196
+355,15,77,16,19,84,Japan,Bee-eater (unidentified),15990249,quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas,16590,33766,99114,237,92193,REPORTING,534
+356,32,89,52,14,1,Latvia,"Dolphin, bottle-nose",27763242,venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl,97775,44487,40344,401,57524,SOLD OUT,999
+357,77,62,33,86,84,Mexico,White-winged tern,18196899,a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed,56233,22802,47298,568,31039,INACTIVE,122
+358,82,11,35,30,28,Finland,Sun gazer,10199832,quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque,67680,36182,85572,698,43375,REPORTING,123
+359,27,4,80,71,6,Madagascar,Field flicker,30291819,vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum,42676,38614,89245,158,69963,ACTIVE,11
+360,14,61,33,96,66,Philippines,Small-spotted genet,39752437,nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor,15644,27355,20605,758,28217,INACTIVE,131
+361,17,29,49,72,1,Democratic Republic of the Congo,Hawk-headed parrot,26006718,donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non,31126,33549,45633,924,14286,AVAILABLE,546
+362,2,93,40,20,89,Russia,"Buffalo, asian water",13862818,ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis,30891,89754,66606,188,69151,VERIFYING,169
+363,34,66,85,7,73,France,Sea birds (unidentified),74062495,potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet,876,44183,4802,557,13063,INACTIVE,12
+364,11,30,58,33,70,France,"Jackal, golden",34883,non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel,21621,9477,37431,921,67461,VERIFYING,298
+365,2,14,51,90,83,Indonesia,"Langur, hanuman",86152431,vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra,62622,52680,62854,131,35846,REPORTING,6
+366,9,38,40,20,99,Mexico,Brown brocket,17224319,posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui,11099,71038,97455,86,4593,INACTIVE,894
+367,9,60,60,45,45,Argentina,Bennett's wallaby,83332106,ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices,81843,59852,44846,981,11813,ACTIVE,646
+368,87,59,59,6,19,Peru,"Robin, kalahari scrub",64711557,odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique,11967,40483,78353,239,22769,REPORTING,689
+369,66,57,54,1,95,Philippines,"Lemur, sportive",8235276,rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo,20719,61624,34945,829,23728,VERIFYING,418
+370,76,83,26,69,72,Nigeria,Nubian bee-eater,94016886,donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum,25108,19948,4533,724,49354,SOLD OUT,563
+371,38,73,98,30,43,Thailand,Hudsonian godwit,41715004,et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean,31241,82550,94866,409,46981,VERIFYING,250
+372,95,92,38,26,76,Portugal,"Racer, american",27111110,lobortis ligula sit amet eleifend pede libero quis orci nullam molestie,39667,33022,73681,846,65303,VERIFYING,386
+373,45,75,4,33,65,Sweden,Serval,30550279,potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus,61257,28816,83850,748,43937,AVAILABLE,585
+374,33,11,71,54,73,Brazil,"Fox, savanna",98270823,ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut,26781,22810,28030,312,24180,REPORTING,575
+375,48,82,79,28,60,Nicaragua,Nyala,76644324,tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum,11083,507,94087,133,35017,INACTIVE,233
+376,3,93,33,39,53,Argentina,Common mynah,63437244,magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et,3076,47852,43428,446,36925,REPORTING,461
+377,93,73,10,92,9,Indonesia,"Owl, madagascar hawk",12834052,curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer,2725,95453,39212,841,36073,AVAILABLE,975
+378,48,3,4,18,71,China,Cape starling,44911989,nam dui proin leo odio porttitor id consequat in consequat ut nulla,83501,10682,65545,4,19762,ACTIVE,320
+379,27,90,28,5,60,China,Roan antelope,23748358,ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla,28296,37921,10819,523,29034,VERIFYING,625
+380,76,32,95,73,3,United States,Black rhinoceros,35401801,vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet,23101,90194,84876,122,20561,INACTIVE,987
+381,48,64,90,10,65,Indonesia,Tiger,4259510,a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis,20939,81862,53634,99,1811,AVAILABLE,826
+382,70,79,39,62,94,Czech Republic,"Hawk, galapagos",39642431,pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus,19986,68171,59052,733,92088,REPORTING,600
+383,22,3,27,32,25,France,White-lipped peccary,32305957,tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar,58773,28102,55552,312,10575,ACTIVE,563
+384,4,73,12,35,4,Czech Republic,"Bear, black",36111376,pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed,42818,66550,60607,331,65488,AVAILABLE,951
+385,59,95,52,52,3,United States,Common boubou shrike,14521134,at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id,87486,59149,57658,18,91651,REPORTING,67
+386,44,5,79,93,87,Serbia,White-throated monitor,25832048,pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl,87770,81817,80921,708,10792,ACTIVE,54
+387,79,48,8,22,54,Thailand,Spur-winged goose,49460027,congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget,64028,38139,74664,415,71820,ACTIVE,287
+388,100,99,36,56,83,China,"Phascogale, brush-tailed",85625044,eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper,43804,80128,68020,280,9291,INACTIVE,193
+389,85,83,96,45,88,China,Caracara (unidentified),38786429,luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida,2882,63788,63698,184,36320,ACTIVE,250
+390,57,63,63,57,54,China,"Lion, steller sea",45818171,etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut,93709,52373,80758,708,65964,SOLD OUT,649
+391,36,79,63,97,57,Canada,Nubian bee-eater,13561116,donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices,69218,78744,83750,644,65762,REPORTING,74
+392,8,57,95,85,92,Japan,"Sandpiper, spotted wood",79939831,ac est lacinia nisi venenatis tristique fusce congue diam id ornare,247,1347,48022,498,12570,ACTIVE,406
+393,19,84,61,11,55,Brazil,Miner's cat,90532378,nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt,1836,29254,37225,315,82118,VERIFYING,221
+394,81,46,74,37,31,China,"Hornbill, southern ground",77365100,et magnis dis parturient montes nascetur ridiculus mus etiam vel augue,65051,79399,20203,964,26670,VERIFYING,461
+395,30,39,66,71,34,Indonesia,"Deer, barasingha",605373,vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis,38960,35589,96801,42,99628,SOLD OUT,541
+396,43,32,9,47,95,Poland,"Phalarope, northern",3844822,scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede,15917,69833,35156,84,58662,REPORTING,925
+397,6,51,50,30,83,China,"Mynah, indian",14207843,suspendisse potenti nullam porttitor lacus at turpis donec posuere metus,99352,47,40544,682,39496,ACTIVE,25
+398,15,74,80,73,19,Malaysia,Sulfur-crested cockatoo,29241968,neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante,1383,69055,15464,987,90510,AVAILABLE,815
+399,76,83,51,28,73,Russia,Crested porcupine,74086817,volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse,9299,25940,36655,952,79943,AVAILABLE,937
+400,25,62,24,87,22,Indonesia,"Cliffchat, mocking",84221754,nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante,51541,15720,22121,736,57947,REPORTING,211
+401,39,49,5,74,23,Slovenia,Egyptian goose,75832969,vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur,19497,61969,50830,286,64708,SOLD OUT,376
+402,9,84,35,47,28,Brazil,Sambar,38516936,eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit,23701,81973,33098,505,27807,ACTIVE,617
+403,7,45,72,44,33,France,Spotted hyena,8795515,pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla,45819,22324,2565,98,58546,AVAILABLE,751
+404,6,13,35,28,2,China,"Gazelle, thomson's",77522328,a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium,49137,62219,23036,954,25690,SOLD OUT,624
+405,17,15,69,98,72,Portugal,"Crane, stanley",31311898,auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis,61981,86293,73960,297,41835,REPORTING,235
+406,19,15,14,19,72,Uzbekistan,"Hawk, red-tailed",58836794,hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque,67252,92043,41240,313,34901,VERIFYING,593
+407,47,15,88,86,85,Indonesia,"Goose, spur-winged",39256709,morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet,15986,30603,88487,923,82433,ACTIVE,723
+408,50,46,18,26,75,China,Miner's cat,70210529,iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut,20756,29492,63553,987,57152,VERIFYING,359
+409,75,85,25,89,99,China,Tiger cat,67465948,duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer,11553,19039,90504,371,41389,SOLD OUT,35
+410,67,79,19,87,62,Brazil,Huron,86278853,urna ut tellus nulla ut erat id mauris vulputate elementum nullam,24058,1516,98891,886,3480,SOLD OUT,802
+411,46,78,27,85,23,Czech Republic,"Lion, california sea",71835205,aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut,4398,76826,45264,476,31121,VERIFYING,99
+412,96,31,16,13,61,China,Prehensile-tailed porcupine,50491155,ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec,8819,29709,35154,325,76189,INACTIVE,693
+413,71,19,4,66,2,China,Madagascar fruit bat,28441688,consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at,14032,85183,683,557,75584,INACTIVE,591
+414,97,34,26,88,4,United States,"Bird, pied butcher",13664653,tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis,15215,90054,59489,798,43938,AVAILABLE,971
+415,42,96,64,29,7,Brazil,Western bearded dragon,19673291,nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante,73892,17538,19052,515,49211,INACTIVE,901
+416,5,87,67,87,67,Czech Republic,Red-tailed phascogale,76039018,nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget,57823,83068,14805,931,84346,ACTIVE,864
+417,6,85,20,33,12,Peru,Black curlew,93426885,lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque,10150,36272,56065,961,13307,AVAILABLE,728
+418,92,91,30,6,98,Russia,Paca,34599427,nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et,83238,57570,70678,738,99855,VERIFYING,655
+419,62,94,7,42,40,China,Snake-necked turtle,98240431,in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum,154,48461,2141,88,71221,AVAILABLE,560
+420,78,4,24,6,49,Czech Republic,Long-tailed skua,34014619,dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum,14504,18534,87793,574,81017,ACTIVE,2
+421,67,64,30,16,88,Mongolia,Stick insect,32212901,cubilia curae nulla dapibus dolor vel est donec odio justo,50520,9309,37195,448,77717,ACTIVE,948
+422,11,52,100,18,22,Estonia,"Trumpeter, green-winged",37561019,nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci,81713,86653,53463,182,81257,ACTIVE,331
+423,37,1,72,9,56,Indonesia,Collared lizard,24161025,nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi,91812,45328,36015,372,18312,SOLD OUT,208
+424,6,66,57,47,81,Ukraine,"Deer, swamp",90094421,non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce,30502,48843,34130,562,82367,INACTIVE,824
+425,89,85,29,23,22,China,Aardwolf,91013242,rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus,80094,44629,86678,155,53345,REPORTING,517
+426,27,17,5,28,27,China,Chacma baboon,79254464,eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum,81664,58757,69258,977,1024,VERIFYING,532
+427,67,67,43,78,20,Pakistan,Sociable weaver,46166127,consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia,78209,77462,14957,893,78118,INACTIVE,882
+428,86,18,34,89,60,Poland,"Capuchin, black-capped",89460052,cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et,71444,15065,59880,855,10739,INACTIVE,955
+429,9,27,67,83,29,China,"Spider, wolf",41601127,volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in,71017,63470,78624,168,31532,REPORTING,327
+430,36,53,83,35,24,Russia,Common genet,47998027,elementum ligula vehicula consequat morbi a ipsum integer a nibh,59121,11906,77244,366,11848,VERIFYING,34
+431,71,27,76,57,19,Indonesia,"Booby, blue-footed",98907159,at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue,44419,88072,46179,787,81384,AVAILABLE,61
+432,15,21,50,56,17,Philippines,Greater sage grouse,17674137,suspendisse ornare consequat lectus in est risus auctor sed tristique in,51894,94003,49660,114,25935,SOLD OUT,164
+433,20,67,46,34,36,Japan,White-faced tree rat,47416733,adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in,69013,98350,58845,694,79427,SOLD OUT,184
+434,7,9,90,89,40,France,Squirrel glider,77814851,vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra,98333,47732,40861,215,68691,VERIFYING,824
+435,61,72,28,51,42,Ukraine,Mexican boa,96964350,dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis,69163,58218,85087,274,17395,ACTIVE,354
+436,56,86,96,88,81,Greece,"Dove, white-winged",63516983,hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel,93579,19705,16279,662,16675,AVAILABLE,756
+437,13,84,82,79,54,Russia,"Wallaby, agile",57290638,metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget,4409,61605,12803,823,3319,ACTIVE,49
+438,59,58,66,14,82,Chile,Woylie,23620290,nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at,63332,82555,9999,304,15472,SOLD OUT,529
+439,65,79,76,49,54,China,"Albatross, galapagos",47604612,justo morbi ut odio cras mi pede malesuada in imperdiet et,33854,43740,73315,721,2010,SOLD OUT,723
+440,41,70,59,64,53,Indonesia,Andean goose,42757252,fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend,82664,74767,58231,501,81857,REPORTING,998
+441,80,7,78,5,93,Canada,Olive baboon,44349782,lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in,79093,75343,34012,931,99681,SOLD OUT,502
+442,56,53,69,38,79,Chad,"Otter, giant",67437135,nisi at nibh in hac habitasse platea dictumst aliquam augue quam,31592,62403,32398,243,97630,VERIFYING,68
+443,14,42,49,4,77,United Arab Emirates,South American meadowlark (unidentified),97846854,potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis,79691,73745,2562,699,28993,VERIFYING,375
+444,89,6,23,13,48,Indonesia,Tiger cat,76693102,lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat,7511,34077,96352,436,56441,INACTIVE,700
+445,9,4,54,91,79,Egypt,Gerenuk,31781617,vestibulum proin eu mi nulla ac enim in tempor turpis nec,14671,41022,65466,364,87299,SOLD OUT,975
+446,93,61,73,9,100,Indonesia,"Fox, savanna",15588377,curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor,30700,18549,26236,360,9420,VERIFYING,945
+447,3,8,96,44,32,China,Pallas's fish eagle,26804623,integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo,13110,43059,94505,500,37667,VERIFYING,662
+448,59,76,12,4,33,Ukraine,"Tern, white-winged",74202074,magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed,97936,18505,51101,447,51485,VERIFYING,50
+449,31,46,66,58,17,France,"Goose, spur-winged",59613280,convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus,26963,26651,289,785,21541,ACTIVE,165
+450,23,3,46,61,22,Poland,African wild dog,79097671,integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor,46429,44108,71472,791,59189,ACTIVE,221
+451,4,4,42,27,84,Venezuela,Bushbuck,3501097,lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis,33274,75275,29382,930,41858,ACTIVE,478
+452,89,1,7,16,59,Cape Verde,African jacana,2458565,eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a,12367,47385,94154,540,59255,AVAILABLE,997
+453,26,32,51,18,71,Vietnam,Jaguarundi,12013341,tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis,73640,40942,90744,561,20573,ACTIVE,610
+454,60,67,15,13,34,Macedonia,"Heron, little",50707531,ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae,70465,35127,63938,339,63536,REPORTING,461
+455,15,29,19,24,62,Portugal,Southern hairy-nosed wombat,72749598,sit amet justo morbi ut odio cras mi pede malesuada in,49411,36616,29574,259,45913,INACTIVE,85
+456,56,47,52,16,95,Indonesia,"Swan, trumpeter",93734880,dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis,23984,72954,58608,743,41974,INACTIVE,470
+457,64,63,57,76,81,China,Openbill stork,58765892,et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo,67954,53789,98198,396,77464,SOLD OUT,230
+458,75,21,65,34,20,China,Black-backed jackal,19064653,volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris,82537,50543,77932,867,46963,VERIFYING,492
+459,3,70,39,52,57,China,"Buffalo, asian water",8727912,aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero,28913,85256,20577,96,96794,INACTIVE,541
+460,61,49,33,69,59,Indonesia,Collared peccary,15324860,tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed,39024,19616,62248,115,84010,SOLD OUT,97
+461,80,15,58,73,89,Colombia,Common palm civet,41976456,commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin,7813,79958,80475,635,37124,SOLD OUT,159
+462,51,43,23,45,5,Philippines,"Hare, arctic",4414482,gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum,26456,33844,72941,89,60141,INACTIVE,95
+463,18,54,99,57,33,Vietnam,Klipspringer,62084026,vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien,58895,92468,61853,404,75555,REPORTING,583
+464,26,52,98,24,47,Philippines,African lynx,35303716,dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit,20819,64356,91941,219,62586,AVAILABLE,81
+465,83,77,17,80,31,China,Blue racer,22552227,odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique,31886,8124,18020,609,92357,VERIFYING,556
+466,47,70,32,69,11,Italy,Small-clawed otter,89490222,dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi,31457,25067,35986,283,66253,VERIFYING,655
+467,48,91,89,31,56,Russia,"Squirrel, antelope ground",66640130,diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in,56441,31846,50260,36,67095,REPORTING,643
+468,77,99,65,39,57,United States,Northern elephant seal,38700024,enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper,71914,20062,22839,854,46671,ACTIVE,451
+469,59,90,73,27,58,Indonesia,"Vulture, lappet-faced",52274948,sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia,37706,57139,82584,689,509,REPORTING,633
+470,88,74,86,55,99,France,Asiatic jackal,91854424,et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent,56096,9031,95842,554,61755,ACTIVE,266
+471,98,9,16,85,18,South Africa,"Dolphin, striped",76841957,nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse,14431,78854,57952,406,48342,SOLD OUT,717
+472,42,45,47,17,27,China,"Deer, red",93768352,eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet,17335,61457,929,663,49507,ACTIVE,369
+473,2,54,33,35,25,Philippines,"Antechinus, brown",36396087,ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et,26227,49739,6332,403,62245,AVAILABLE,623
+474,94,27,22,73,45,Kazakhstan,"Possum, ring-tailed",91403784,nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis,39300,28482,9329,806,38089,ACTIVE,72
+475,90,80,13,67,56,Ukraine,"Tern, white-winged black",57213244,aenean fermentum donec ut mauris eget massa tempor convallis nulla neque,78242,85626,59900,563,61607,VERIFYING,25
+476,70,8,50,12,4,Russia,Crested screamer,90817757,lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue,10706,5741,92827,587,56629,SOLD OUT,775
+477,100,92,58,52,7,China,Gerenuk,37898804,luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet,18256,85967,81436,789,71492,VERIFYING,834
+478,22,45,92,15,27,Thailand,"Eland, common",75140549,imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris,76372,240,41088,573,93108,ACTIVE,896
+479,67,3,1,47,76,Tanzania,"Tern, white-winged black",9075709,orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti,1990,74295,31424,215,68265,REPORTING,354
+480,32,13,83,42,2,Panama,"Eagle, bateleur",61071755,ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat,69138,51428,97956,311,69154,AVAILABLE,62
+481,98,12,22,64,41,China,Bare-faced go away bird,24356031,nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et,53270,26246,71311,1000,22817,INACTIVE,380
+482,65,85,77,24,57,Poland,Australian brush turkey,23463797,mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper,43057,74180,4839,430,74023,ACTIVE,492
+483,83,94,19,25,46,Indonesia,Eastern cottontail rabbit,44328436,proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante,32068,24584,49955,46,60002,INACTIVE,669
+484,8,1,19,97,45,Bulgaria,Bleeding heart monkey,27270151,dolor vel est donec odio justo sollicitudin ut suscipit a,684,62879,94469,69,36193,VERIFYING,41
+485,40,5,81,92,49,Pakistan,Black-tailed deer,19180400,sed nisl nunc rhoncus dui vel sem sed sagittis nam congue,92305,79452,7796,927,58367,REPORTING,14
+486,41,40,20,62,58,Philippines,Spotted-tailed quoll,70415902,parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean,67037,19158,46323,706,7176,ACTIVE,715
+487,9,98,74,86,17,Pakistan,White-rumped vulture,65836217,phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus,48402,11340,81818,941,57571,SOLD OUT,564
+488,25,63,55,81,81,Kazakhstan,Ovenbird,75099273,est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum,8276,66151,31857,57,3719,ACTIVE,292
+489,57,4,82,70,69,China,Brown lemur,61309936,at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat,69784,79010,55314,942,89570,REPORTING,144
+490,11,24,46,28,10,Indonesia,"Duck, white-faced whistling",51058094,enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis,69318,5389,92038,167,11342,REPORTING,78
+491,77,33,40,47,37,Greece,Puku,11559161,quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec,7208,18034,12326,221,89337,ACTIVE,976
+492,64,20,89,63,48,Sweden,Steller sea lion,12556799,pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin,46650,51146,38592,665,46847,ACTIVE,368
+493,39,9,79,62,88,Morocco,"Raccoon, common",48366553,libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in,71224,78532,81319,792,6424,REPORTING,253
+494,11,20,66,29,23,Argentina,"Fox, crab-eating",75413034,neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel,32415,73779,96695,911,14075,INACTIVE,619
+495,56,67,87,47,20,Indonesia,"Mongoose, banded",26827416,volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum,27258,38411,69541,769,46058,AVAILABLE,980
+496,66,2,82,89,63,Brazil,"Mongoose, javan gold-spotted",48475044,molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst,40195,50701,71707,210,84173,AVAILABLE,449
+497,57,31,82,94,18,Poland,"Grebe, little",86741588,curae duis faucibus accumsan odio curabitur convallis duis consequat dui,29585,6312,59000,856,67524,AVAILABLE,134
+498,54,6,2,82,33,Palestinian Territory,"Robin, white-throated",68035213,mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus,91797,34429,5383,145,54345,ACTIVE,350
+499,70,24,78,100,82,Pakistan,"Skink, blue-tongued",30300678,mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque,74616,82569,13804,525,64921,INACTIVE,497
+500,17,31,37,85,81,Colombia,"Penguin, fairy",42786746,nulla mollis molestie lorem quisque ut erat curabitur gravida nisi,26525,16540,25785,710,65073,ACTIVE,764
+501,44,2,11,76,31,Indonesia,"Bee-eater, carmine",73656256,sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl,40205,60201,18712,474,48632,AVAILABLE,196
+502,16,66,83,29,18,Russia,Jungle kangaroo,92493633,ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit,39984,173,866,239,12107,REPORTING,480
+503,98,70,67,37,54,Serbia,Aardwolf,5883238,orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu,26692,16845,49535,828,45737,VERIFYING,646
+504,44,16,95,77,70,China,Euro wallaby,52592018,ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis,6920,49274,64581,845,55224,VERIFYING,42
+505,4,89,75,60,11,China,Savanna baboon,69540704,lacinia aenean sit amet justo morbi ut odio cras mi,23527,81596,85104,861,73577,VERIFYING,125
+506,3,35,33,30,51,Dominican Republic,"Crane, sandhill",27659965,nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat,79536,66703,85186,218,48560,VERIFYING,678
+507,50,77,44,31,88,Poland,"Squirrel, malabar",60054792,tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis,23987,44566,64717,724,87837,VERIFYING,462
+508,21,38,42,76,33,Croatia,Green-winged trumpeter,35996589,proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus,31832,93306,32030,370,22815,SOLD OUT,574
+509,99,33,48,60,11,Canada,Wattled crane,98927175,nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec,91823,43786,93789,614,14935,VERIFYING,897
+510,93,61,29,61,74,Colombia,Southern boubou,58014660,cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget,43595,17951,89507,976,41710,ACTIVE,936
+511,36,87,22,50,43,China,King vulture,40412619,odio in hac habitasse platea dictumst maecenas ut massa quis,5847,23405,8563,393,43909,VERIFYING,684
+512,74,26,21,86,24,Ukraine,"Genet, common",6119868,urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla,34106,96592,10386,798,98295,SOLD OUT,581
+513,12,93,31,23,79,China,"Corella, long-billed",14212110,amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed,99624,38311,83816,6,45393,VERIFYING,669
+514,54,75,14,95,16,Portugal,"Elephant, african",32070905,ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo,98682,65982,33342,976,43667,AVAILABLE,619
+515,60,85,43,42,96,Brazil,Komodo dragon,47140881,magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget,53336,97141,89550,605,20439,REPORTING,417
+516,48,100,26,32,44,Indonesia,"Egret, cattle",77189069,ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent,59912,60689,27529,714,87389,INACTIVE,421
+517,6,28,47,56,57,Philippines,"Langur, common",82905673,in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum,27869,25102,76556,147,84639,REPORTING,833
+518,9,9,8,100,62,Indonesia,Rufous-collared sparrow,23813372,ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas,7220,31933,50777,782,91353,SOLD OUT,49
+519,56,70,6,64,76,Philippines,"Armadillo, nine-banded",44918390,mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse,24544,99585,21845,198,79674,SOLD OUT,700
+520,36,46,27,91,47,Haiti,Arboral spiny rat,34779119,orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris,54359,54848,92152,169,13363,AVAILABLE,423
+521,34,57,30,11,39,China,Common boubou shrike,99242978,convallis eget eleifend luctus ultricies eu nibh quisque id justo,80289,27065,59095,687,51510,VERIFYING,373
+522,8,45,3,99,42,China,Savanna fox,87412491,sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem,55306,57561,68877,921,93058,VERIFYING,359
+523,79,29,73,71,82,Brazil,Galapagos tortoise,84134155,ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero,26236,92264,46790,173,85089,SOLD OUT,760
+524,47,38,52,85,22,South Africa,"Elephant, african",39872936,quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt,52175,34975,36346,633,28520,REPORTING,616
+525,79,42,32,93,69,Ghana,"Loris, slender",69205954,vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis,65837,25319,53071,355,18059,ACTIVE,317
+526,33,41,81,93,49,Argentina,"Creeper, black-tailed tree",79237785,consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede,45700,79485,12270,401,21732,VERIFYING,518
+527,30,15,80,85,50,Brazil,Wild turkey,76910445,donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac,52977,6291,78530,244,68625,INACTIVE,361
+528,40,72,85,79,83,Philippines,"Squirrel, richardson's ground",298880,vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci,85880,87728,13256,656,70586,VERIFYING,773
+529,19,2,84,51,82,Russia,Blue and gold macaw,27347704,et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat,60715,40506,63651,404,97508,AVAILABLE,558
+530,77,5,55,46,14,China,"Otter, canadian river",78928073,turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque,53379,3538,37577,855,39449,AVAILABLE,373
+531,90,51,96,1,27,Czech Republic,Moose,36907037,etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus,31257,8752,54166,31,82859,ACTIVE,830
+532,57,2,87,50,90,Indonesia,Blue-tongued skink,19785001,lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque,39380,40487,25774,739,63991,ACTIVE,83
+533,43,16,23,86,26,Dominican Republic,Black-tailed deer,8769883,nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non,1823,62310,71797,230,56235,ACTIVE,764
+534,4,44,97,41,40,Fiji,Vine snake (unidentified),30294087,cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet,75914,17181,60939,157,92021,REPORTING,423
+535,85,47,75,37,86,Indonesia,"Baboon, gelada",927047,leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet,13169,4912,99823,231,832,AVAILABLE,940
+536,100,60,6,68,91,China,"Bat, madagascar fruit",52551678,condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum,65185,57796,76195,226,71801,VERIFYING,260
+537,83,67,21,35,64,Indonesia,"Woodpecker, red-headed",73344883,nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis,47185,67913,49862,918,53055,AVAILABLE,263
+538,34,8,23,7,23,Sweden,Small-spotted genet,67440211,auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc,58965,27643,25240,45,16631,INACTIVE,655
+539,24,61,37,67,8,Indonesia,Striated heron,61927828,sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam,38446,14775,82615,356,85968,SOLD OUT,212
+540,99,50,50,12,45,Liberia,Sun gazer,68589532,consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id,48307,7605,83789,28,58529,ACTIVE,180
+541,99,48,70,3,11,Thailand,Eastern box turtle,93165847,augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula,43275,73708,88924,160,50064,REPORTING,975
+542,45,79,67,18,19,Philippines,Southern lapwing,73329417,sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue,44151,10314,33726,697,85976,SOLD OUT,854
+543,5,17,54,89,34,Philippines,Andean goose,75192308,mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis,40859,15355,68861,738,47479,REPORTING,836
+544,14,3,3,15,57,China,"Dik, kirk's dik",20769518,eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla,42738,79644,73787,871,97044,REPORTING,20
+545,81,75,88,67,2,Afghanistan,"Heron, black-crowned night",97824712,curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue,30879,94480,11843,347,1044,VERIFYING,485
+546,46,5,46,7,91,Denmark,Topi,41302244,nec condimentum neque sapien placerat ante nulla justo aliquam quis,38154,72201,99102,85,71679,REPORTING,718
+547,99,10,46,64,1,Brazil,"Boa, malagasy ground",63523934,vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque,86358,11371,9761,948,12905,ACTIVE,510
+548,48,15,9,4,20,China,"Peccary, white-lipped",2198998,integer pede justo lacinia eget tincidunt eget tempus vel pede,63283,69802,93519,289,9469,INACTIVE,960
+549,80,27,80,14,75,Portugal,Lapwing (unidentified),41468159,commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus,40197,63018,25631,45,16882,ACTIVE,851
+550,45,86,78,76,47,Philippines,Wattled crane,47497543,elit ac nulla sed vel enim sit amet nunc viverra,27593,63632,63575,208,1294,SOLD OUT,63
+551,93,72,18,90,87,United States,"Admiral, indian red",41390085,non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci,50784,64893,16424,210,90659,AVAILABLE,387
+552,35,54,89,85,63,Bosnia and Herzegovina,Gaur,77025657,amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam,53792,28047,80231,627,36748,VERIFYING,231
+553,69,99,28,9,56,Brazil,Green heron,38055446,morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est,67071,66979,8316,382,59459,ACTIVE,268
+554,73,70,97,24,39,China,Gecko (unidentified),18074495,posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus,11167,92679,60463,6,53104,AVAILABLE,717
+555,47,22,81,19,69,Brazil,"Waxbill, blue",84562873,eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus,34477,66883,31009,993,42077,SOLD OUT,582
+556,47,42,64,11,68,Cameroon,"Wallaby, red-necked",94578973,id lobortis convallis tortor risus dapibus augue vel accumsan tellus,17706,84171,92812,53,95891,INACTIVE,686
+557,95,4,24,62,45,Palestinian Territory,Caracara (unidentified),73461108,in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis,93424,34256,18362,522,122,VERIFYING,471
+558,10,50,98,78,33,Ukraine,"Wallaby, whip-tailed",98070294,id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris,56395,94526,87504,757,70265,REPORTING,976
+559,80,15,6,80,41,Russia,Southern hairy-nosed wombat,57860355,sit amet nulla quisque arcu libero rutrum ac lobortis vel,937,86343,59621,188,425,VERIFYING,440
+560,97,42,97,71,34,Argentina,Sage hen,43277923,sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere,42623,33827,15404,266,8405,INACTIVE,472
+561,71,39,43,35,78,United States,"Marten, american",95850972,convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum,658,7443,26921,560,37841,INACTIVE,682
+562,56,98,83,63,35,France,Canada goose,4194859,odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat,99167,3146,18306,344,86478,REPORTING,44
+563,61,52,91,40,48,China,"Cockatoo, roseate",51235194,diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed,26565,49793,2370,624,27859,SOLD OUT,63
+564,19,63,78,36,6,Indonesia,Bonnet macaque,20583856,tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla,19120,88446,84412,804,29258,SOLD OUT,188
+565,88,90,25,58,2,China,"Spider, wolf",67891353,etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius,26564,32875,93200,630,33653,REPORTING,684
+566,55,35,5,48,91,Nigeria,"Heron, green",77741444,semper porta volutpat quam pede lobortis ligula sit amet eleifend,87247,57819,8039,857,4734,REPORTING,622
+567,73,96,8,10,85,China,"Shark, blue",74538444,nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia,48323,79355,90458,323,4433,ACTIVE,132
+568,47,82,30,79,74,Indonesia,Japanese macaque,81227338,eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in,52926,15790,61629,615,72544,VERIFYING,525
+569,22,19,11,4,58,Indonesia,"Raven, cape",629462,sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque,75018,43259,13428,714,98831,ACTIVE,301
+570,34,63,73,73,47,Russia,Northern phalarope,81104909,in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu,77702,70312,46517,870,5447,VERIFYING,140
+571,84,75,26,35,43,Japan,"Bird, secretary",70119312,odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim,27716,77646,47228,119,87504,ACTIVE,624
+572,82,38,94,52,97,Ecuador,"Otter, african clawless",59797667,interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat,28274,61869,80950,358,81311,INACTIVE,357
+573,56,17,13,5,70,Venezuela,"Cardinal, red-capped",71360765,felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec,84397,63816,164,393,92409,REPORTING,920
+574,93,28,11,92,14,Finland,Masked booby,32539212,enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id,847,48195,71502,551,23839,VERIFYING,855
+575,68,28,62,48,82,Portugal,Great skua,68967335,cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros,74388,24740,99535,905,95738,VERIFYING,285
+576,52,24,37,7,12,Finland,Long-crested hawk eagle,64615463,dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis,29087,90030,1823,402,32711,SOLD OUT,944
+577,50,27,11,16,83,Peru,Baleen whale,16731470,id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam,37514,33313,15001,498,21249,SOLD OUT,192
+578,78,20,4,94,37,France,"Sheathbill, snowy",5869726,dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum,50436,67456,17044,404,74883,REPORTING,801
+579,35,9,79,49,59,Indonesia,Emerald-spotted wood dove,62014664,potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut,20919,33271,14931,349,83463,ACTIVE,617
+580,83,56,4,97,9,China,Silver-backed jackal,44399740,vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae,90083,32740,56217,5,80884,REPORTING,517
+581,33,81,44,50,73,France,Water moccasin,24715549,vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget,42905,7730,48451,881,18015,ACTIVE,384
+582,4,78,54,2,2,Philippines,Numbat,27755916,nibh in quis justo maecenas rhoncus aliquam lacus morbi quis,10946,20306,88246,857,59860,ACTIVE,977
+583,99,80,95,62,38,Japan,Coyote,837517,sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam,46245,68311,62099,91,38593,REPORTING,520
+584,85,14,40,19,32,Madagascar,Gelada baboon,83210821,ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit,11290,59716,42352,221,57153,INACTIVE,454
+585,94,31,40,87,71,Brazil,Civet (unidentified),89501336,at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet,75494,47231,35451,372,11518,REPORTING,548
+586,79,100,95,80,13,Belarus,"Wombat, common",90946654,vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing,20247,84249,30078,212,68094,AVAILABLE,582
+587,74,46,5,69,49,Indonesia,Three-banded plover,41307043,nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque,28463,3452,19046,539,2987,VERIFYING,100
+588,25,42,33,64,82,China,Brown capuchin,77438041,semper porta volutpat quam pede lobortis ligula sit amet eleifend pede,28617,10761,5934,250,43862,REPORTING,489
+589,16,59,93,19,24,Argentina,Suricate,20773277,ipsum primis in faucibus orci luctus et ultrices posuere cubilia,86138,55817,55619,290,93863,VERIFYING,542
+590,66,51,96,99,42,Portugal,Cape white-eye,67775530,bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis,333,99841,18635,26,91657,SOLD OUT,374
+591,62,73,70,28,33,United States,Barrows goldeneye,14132639,primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi,7036,94891,40478,113,41942,REPORTING,947
+592,19,13,71,59,79,Brazil,"Tern, arctic",86956416,nibh in lectus pellentesque at nulla suspendisse potenti cras in,51870,1127,66025,267,95112,AVAILABLE,398
+593,64,84,81,21,1,Japan,Galapagos tortoise,34969161,eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur,21213,43494,5206,328,84241,ACTIVE,656
+594,29,62,31,46,58,France,"Pelican, eastern white",19024380,consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede,18262,29487,50700,534,52404,SOLD OUT,17
+595,80,51,72,57,43,Indonesia,"Squirrel, grey-footed",60750634,a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut,50877,95968,72032,877,90521,REPORTING,851
+596,46,91,33,57,7,Russia,"Wagtail, african pied",72443070,donec semper sapien a libero nam dui proin leo odio porttitor,41069,30504,40084,883,98812,SOLD OUT,601
+597,69,11,48,29,75,Sudan,"Squirrel, arctic ground",95706889,velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo,62305,22844,1842,887,61759,ACTIVE,78
+598,46,1,36,60,75,Peru,"Lion, south american sea",57796885,sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum,6921,87665,76976,577,65934,ACTIVE,419
+599,78,73,27,21,48,Russia,Nine-banded armadillo,62333340,mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non,10830,68355,61914,829,73606,AVAILABLE,220
+600,38,60,59,53,15,United States,Bare-faced go away bird,58165622,eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt,82154,39213,39065,306,88858,AVAILABLE,685
+601,52,78,59,70,29,Israel,Sarus crane,48329927,integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum,25529,21008,1572,176,12620,INACTIVE,288
+602,14,50,32,56,47,China,Cattle egret,98485653,sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non,86259,97099,36254,364,53850,REPORTING,131
+603,89,28,100,91,51,China,"Whale, killer",1152525,nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio,22481,73560,3659,189,94116,AVAILABLE,736
+604,18,82,15,67,81,Pakistan,Buttermilk snake,19087277,vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc,94765,92292,23333,476,21034,VERIFYING,26
+605,82,58,53,83,70,Malaysia,Cuis,78867696,lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis,78540,86411,15666,59,5665,ACTIVE,369
+606,21,83,50,82,43,Ireland,Woodrat (unidentified),7457937,non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales,99074,14697,23513,544,8563,REPORTING,892
+607,58,87,50,74,7,China,Blue crane,54151985,congue etiam justo etiam pretium iaculis justo in hac habitasse,74174,77533,80891,886,56994,INACTIVE,710
+608,51,95,29,21,72,Argentina,"Dove, laughing",62307887,a suscipit nulla elit ac nulla sed vel enim sit,16197,80714,28446,426,4208,INACTIVE,517
+609,37,95,92,39,76,Indonesia,Black-backed jackal,21775805,vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere,54704,13368,46311,958,42397,SOLD OUT,778
+610,32,25,78,66,4,China,Indian porcupine,79557874,amet sem fusce consequat nulla nisl nunc nisl duis bibendum,62068,8354,79457,483,50984,ACTIVE,492
+611,89,50,54,18,48,France,"Cormorant, pied",32380302,erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus,64600,17497,25218,387,89360,REPORTING,413
+612,43,22,62,67,13,China,"Cockatoo, red-breasted",15420430,mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec,60489,92492,45178,643,2490,VERIFYING,409
+613,42,90,29,2,74,Argentina,Arctic tern,62683936,condimentum curabitur in libero ut massa volutpat convallis morbi odio,84072,53842,58396,703,81177,AVAILABLE,108
+614,30,98,42,22,63,Czech Republic,"Flicker, field",46098272,convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla,45233,14033,28764,606,27046,ACTIVE,227
+615,2,46,95,1,50,Afghanistan,Great horned owl,68669950,viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam,25850,96760,67720,13,74697,INACTIVE,368
+616,11,29,7,38,34,Serbia,Southern hairy-nosed wombat,46859855,erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut,92372,78030,81165,780,4794,REPORTING,858
+617,37,68,36,81,81,Russia,"Gecko, barking",92537185,sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at,80572,87982,41796,33,13038,ACTIVE,162
+618,22,15,76,82,75,Portugal,"Wallaby, dama",39604631,quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie,86202,78174,19269,820,28005,VERIFYING,356
+619,66,4,31,13,84,Syria,Indian red admiral,79194,at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna,9532,37247,65049,886,28055,INACTIVE,495
+620,97,19,5,35,5,Indonesia,Dusky rattlesnake,44773098,maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum,35922,10941,54484,932,99938,VERIFYING,595
+621,6,43,45,13,25,Argentina,"Monkey, vervet",76575114,sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed,86936,86652,50362,628,8280,SOLD OUT,787
+622,100,15,82,62,50,Indonesia,"Raven, white-necked",26628417,donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices,50196,96295,89900,147,11841,VERIFYING,221
+623,66,42,29,94,46,Sweden,"Shrike, common boubou",20285746,nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus,48492,22074,65135,192,84976,VERIFYING,586
+624,40,2,96,5,41,Portugal,Fork-tailed drongo,93130593,nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh,59935,63636,90847,303,24259,REPORTING,419
+625,48,19,35,29,93,Philippines,Paradoxure,42347553,sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes,18435,99777,88254,357,723,INACTIVE,822
+626,83,97,16,23,8,Indonesia,"Seal, harbor",90071440,odio justo sollicitudin ut suscipit a feugiat et eros vestibulum,80471,46574,41985,551,60734,REPORTING,68
+627,33,6,54,40,57,China,"Starling, superb",2829558,luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis,66787,51278,69272,985,29045,INACTIVE,815
+628,61,15,13,54,62,Poland,White-throated robin,50307908,duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend,26187,3341,56789,985,50180,SOLD OUT,824
+629,82,64,61,83,29,Uzbekistan,"Wallaby, red-necked",12241395,mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget,1141,79618,48996,550,51740,VERIFYING,505
+630,25,81,64,96,15,Spain,White spoonbill,95673697,accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla,23580,17791,40338,860,28187,VERIFYING,888
+631,15,50,73,68,11,Poland,Silver gull,22430020,tempus semper est quam pharetra magna ac consequat metus sapien ut nunc,14440,79340,1313,86,24613,SOLD OUT,323
+632,51,40,33,43,72,Indonesia,"Stork, woolly-necked",24018996,potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes,82154,73970,32352,551,64832,SOLD OUT,380
+633,93,7,95,46,65,France,"Lemur, brown",86664988,turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis,3812,17769,77507,802,26123,VERIFYING,226
+634,62,46,75,17,6,China,American black bear,38124166,vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices,19735,87001,19683,86,2400,INACTIVE,568
+635,42,85,34,3,35,Japan,"Raccoon, crab-eating",10717798,egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis,9985,40561,68503,7,35227,ACTIVE,823
+636,49,73,39,70,96,China,"Gull, swallow-tail",39532686,blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus,21179,99488,61613,135,71101,REPORTING,213
+637,100,7,1,75,73,Peru,Red-necked phalarope,18043646,lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede,40872,30808,72255,739,91050,INACTIVE,254
+638,93,52,46,29,40,China,"Flamingo, chilean",67230346,amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus,45418,39951,35223,192,3567,REPORTING,474
+639,12,43,55,15,66,China,Crested bunting,89389417,consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit,95559,36591,71438,385,93403,SOLD OUT,933
+640,49,4,62,49,10,Portugal,Whip-tailed wallaby,10012163,ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est,39523,68046,50948,226,26608,AVAILABLE,819
+641,63,8,70,26,98,China,"Nighthawk, common",5144507,eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum,57608,50490,66188,84,19278,SOLD OUT,17
+642,56,26,99,94,92,France,Black-capped capuchin,51274163,consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque,32447,53818,15987,756,18096,VERIFYING,76
+643,94,97,37,98,76,Philippines,Common goldeneye,14805475,porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer,78403,1703,75343,268,87332,VERIFYING,646
+644,53,98,68,31,84,Russia,"Porcupine, prehensile-tailed",56636108,pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu,44408,24494,79924,753,50732,SOLD OUT,355
+645,59,62,87,56,30,Croatia,"Wombat, southern hairy-nosed",34460664,integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus,24717,24766,89369,425,60725,AVAILABLE,894
+646,26,94,24,85,51,Indonesia,Fork-tailed drongo,24260746,ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia,6623,70478,58657,571,20200,VERIFYING,607
+647,40,11,64,91,15,Indonesia,"Bulbul, black-eyed",36471578,dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur,99279,45441,67266,816,72094,REPORTING,668
+648,32,27,25,91,60,South Africa,"Racer, american",72553343,ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in,59926,14769,97074,391,96440,INACTIVE,538
+649,42,78,42,36,9,United States,Crab-eating fox,75951682,sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna,51573,82421,31540,44,13031,SOLD OUT,431
+650,18,64,82,21,34,Brazil,White-tailed deer,16599705,donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum,38933,90134,13221,705,97902,SOLD OUT,679
+651,52,25,84,66,60,Russia,Galapagos mockingbird,61227131,elementum nullam varius nulla facilisi cras non velit nec nisi vulputate,44662,55350,99927,815,97101,AVAILABLE,573
+652,13,93,29,36,58,Bulgaria,"Baboon, gelada",58575772,quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie,6404,45607,36787,701,65292,ACTIVE,444
+653,98,69,17,88,23,United States,"Eagle, pallas's fish",23685021,augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis,25771,7467,81014,962,10294,ACTIVE,485
+654,76,70,27,82,45,Philippines,White-tailed jackrabbit,70919,sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis,57920,69364,66817,756,15758,REPORTING,836
+655,45,91,31,65,12,Albania,Magistrate black colobus,77660224,nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede,1506,71009,45243,451,72357,INACTIVE,567
+656,49,95,16,23,19,Nauru,Prairie falcon,84780597,accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla,17148,38930,22522,416,88953,REPORTING,168
+657,79,90,60,6,96,China,"Hartebeest, coke's",87453593,eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci,16185,67840,90139,213,47323,REPORTING,546
+658,90,4,52,94,7,China,European wild cat,87682316,erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec,77056,30655,37652,463,55642,VERIFYING,756
+659,59,89,67,4,50,China,"Vulture, king",88044042,dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti,33656,16935,29925,786,271,REPORTING,332
+660,56,20,56,81,42,Macedonia,"Squirrel, nelson ground",33466434,odio cras mi pede malesuada in imperdiet et commodo vulputate justo in,97468,36619,38699,617,32248,REPORTING,955
+661,66,12,15,73,65,Peru,Crab-eating fox,53413862,magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus,5000,88095,24482,488,86374,INACTIVE,922
+662,79,16,71,46,73,China,Wattled crane,10485156,aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio,7082,65899,62491,193,64885,INACTIVE,175
+663,43,64,5,1,19,Czech Republic,"Reedbuck, bohor",81762939,in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam,82878,24397,69909,960,87690,AVAILABLE,898
+664,10,96,28,9,74,Ukraine,"Dolphin, bottle-nose",27125268,mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis,51093,60147,52214,296,44149,AVAILABLE,260
+665,94,88,42,66,59,China,Chilean flamingo,88947514,duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in,76185,39228,10257,550,48847,ACTIVE,630
+666,7,92,59,77,49,Canada,"Rat, desert kangaroo",88220548,ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis,75612,11562,46849,152,5970,VERIFYING,639
+667,16,50,96,37,41,Malta,"Heron, yellow-crowned night",65247976,ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare,15721,53716,32795,438,58247,INACTIVE,555
+668,60,90,68,41,12,Russia,Caracal,17712966,lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus,89418,45759,82185,297,41056,REPORTING,563
+669,46,80,57,21,45,Costa Rica,Long-finned pilot whale,19580499,rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet,73414,16970,57215,643,29528,ACTIVE,481
+670,83,95,64,5,88,Netherlands,Red-billed buffalo weaver,38548911,at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut,89925,7497,22164,188,53469,ACTIVE,751
+671,45,80,68,2,92,Peru,"Booby, blue-footed",38883393,eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at,74312,47547,29847,963,94199,REPORTING,342
+672,89,3,70,56,66,Portugal,"Bird, magnificent frigate",73350051,duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in,19171,18111,42286,626,16657,VERIFYING,84
+673,61,33,82,45,41,Brazil,Indian peacock,18575019,pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra,63918,2502,21913,635,61448,SOLD OUT,790
+674,66,43,80,75,84,Indonesia,Small Indian mongoose,87417974,metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et,3948,4887,60597,171,30662,ACTIVE,331
+675,26,85,70,96,42,Poland,"Dove, little brown",26231935,vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in,4853,11419,39737,902,58984,SOLD OUT,257
+676,37,68,19,78,48,Nicaragua,"Butterfly, tropical buckeye",79486529,tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel,79637,51393,54935,687,87154,ACTIVE,542
+677,37,77,24,16,6,Finland,"Lory, rainbow",93373002,sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus,89792,45463,31632,472,73847,SOLD OUT,565
+678,90,75,22,81,8,Morocco,"Partridge, coqui",62930155,nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra,66151,9910,77490,580,24291,AVAILABLE,354
+679,54,16,79,81,62,China,Pine snake (unidentified),44552754,molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula,24936,38524,75337,395,57094,INACTIVE,953
+680,3,96,67,5,55,Indonesia,Red-billed buffalo weaver,17616826,lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum,4198,21893,93278,956,92836,VERIFYING,960
+681,36,21,53,87,15,Ukraine,"Sloth, two-toed tree",18903404,pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque,525,12995,9487,598,10901,ACTIVE,802
+682,68,76,30,71,81,Indonesia,Anaconda (unidentified),92727220,eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes,56239,9867,4382,384,24074,ACTIVE,317
+683,46,52,2,38,32,Philippines,"Fox, bat-eared",27388195,ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent,68636,54822,10790,134,65574,SOLD OUT,991
+684,81,72,37,14,34,Brazil,Genoveva,56726199,id luctus nec molestie sed justo pellentesque viverra pede ac diam,31080,97808,56578,542,10799,SOLD OUT,20
+685,12,78,3,16,66,Poland,"Squirrel, antelope ground",98948775,lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend,72699,72834,63669,885,3328,SOLD OUT,739
+686,67,72,93,75,19,China,"Mongoose, banded",55422808,curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam,10575,58577,33116,197,33659,INACTIVE,679
+687,34,33,29,26,66,Iran,Crested screamer,68420524,faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus,95116,69234,51264,418,51932,REPORTING,419
+688,29,4,64,85,79,Indonesia,Ring-tailed possum,94771684,amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus,33478,29718,78098,234,7105,AVAILABLE,515
+689,16,17,79,100,64,Japan,Ringtail,2643922,lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero,15743,43709,21119,474,2221,INACTIVE,554
+690,14,60,92,21,8,China,"Kangaroo, jungle",67354689,nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla,45710,24048,99986,596,13619,AVAILABLE,376
+691,39,29,88,8,100,Brazil,Eastern cottontail rabbit,2237344,odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque,47220,47475,94424,331,18494,REPORTING,408
+692,99,31,76,78,85,China,"Trumpeter, green-winged",65608495,orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio,16668,88872,89026,626,55623,ACTIVE,739
+693,64,28,3,95,79,Russia,Old world fruit bat (unidentified),49429293,massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est,17502,11469,94976,589,44264,REPORTING,772
+694,3,54,4,88,88,Russia,Rose-ringed parakeet,95716515,convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum,14960,47485,96590,968,89907,INACTIVE,439
+695,44,30,20,82,25,China,White-winged tern,97971067,nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula,99141,92768,87207,481,85364,REPORTING,163
+696,95,6,55,69,13,Poland,Blacksmith plover,95794674,eu massa donec dapibus duis at velit eu est congue,13235,86198,38839,277,91523,VERIFYING,621
+697,12,83,100,77,83,Philippines,Tammar wallaby,22759054,quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget,51826,27633,33533,235,46711,REPORTING,857
+698,95,19,37,17,77,Japan,Savannah deer,64969977,amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi,83813,47395,57014,812,50307,SOLD OUT,412
+699,27,72,20,31,68,Russia,"Fox, crab-eating",15035121,semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque,39357,85051,78060,646,96582,VERIFYING,122
+700,41,95,17,23,96,China,Blue-breasted cordon bleu,44128381,praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam,54491,82441,57974,981,71080,INACTIVE,317
+701,8,40,85,78,64,Egypt,Topi,42270477,in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id,87624,71110,7075,237,71385,AVAILABLE,99
+702,21,29,42,34,75,Sweden,Giant anteater,16880106,aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate,36334,56780,26935,97,60573,INACTIVE,936
+703,33,74,91,93,90,Portugal,North American red fox,49014725,aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa,98413,65640,6255,21,43972,ACTIVE,177
+704,29,68,9,76,65,Nepal,Magistrate black colobus,31680574,habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla,56376,48353,10482,190,89882,AVAILABLE,690
+705,75,45,89,41,73,Pakistan,Knob-nosed goose,91832969,habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur,98357,467,53099,724,9501,REPORTING,784
+706,75,70,53,3,76,China,Indian giant squirrel,31623728,id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit,63199,50987,21251,36,35802,AVAILABLE,817
+707,58,89,56,36,11,Russia,"Vulture, oriental white-backed",14969649,eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna,79301,86367,3210,169,64929,AVAILABLE,268
+708,60,73,61,4,72,United States,Mallard,39667788,elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien,47702,62939,27768,660,85667,REPORTING,775
+709,37,77,78,75,93,Indonesia,Tyrant flycatcher,31962969,nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper,43666,81015,5289,251,48270,VERIFYING,377
+710,37,32,8,63,70,Malaysia,Green-winged macaw,94362176,odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique,33198,61081,15070,438,44874,ACTIVE,446
+711,34,13,6,87,55,South Korea,"Crab, red lava",47218306,ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque,25352,48605,2006,290,68737,ACTIVE,10
+712,14,90,61,88,28,Colombia,Tarantula,96061100,sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl,82144,51117,27935,537,24811,INACTIVE,692
+713,86,79,76,67,27,Poland,Feathertail glider,33997020,eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget,30834,46396,31304,283,10043,INACTIVE,620
+714,28,19,63,63,40,France,"Boa, mexican",65194745,tempor convallis nulla neque libero convallis eget eleifend luctus ultricies,83312,3949,89789,941,26631,AVAILABLE,673
+715,80,48,46,36,43,Indonesia,"Lion, california sea",14115999,semper porta volutpat quam pede lobortis ligula sit amet eleifend,52550,98501,35428,20,86418,AVAILABLE,499
+716,38,42,35,98,42,Japan,South American sea lion,25665627,amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in,71574,66826,54901,939,4721,REPORTING,327
+717,83,56,47,53,91,Bangladesh,"Cat, miner's",12275449,sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam,88879,62928,4900,812,67107,ACTIVE,653
+718,21,44,4,43,25,Indonesia,"Pelican, australian",50840727,nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel,82064,4417,55793,360,24487,SOLD OUT,862
+719,73,5,40,45,56,China,Leadbeateri's ground hornbill,91724305,luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis,54929,86479,8948,168,27201,INACTIVE,739
+720,99,68,37,53,51,South Korea,Russian dragonfly,9088865,volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna,30915,7991,50719,650,96110,VERIFYING,213
+721,28,11,93,53,25,Pakistan,"Dove, galapagos",34638808,facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus,33553,32345,28649,18,55777,REPORTING,54
+722,65,56,48,70,45,Brazil,"Vulture, white-rumped",43995164,adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere,22218,3749,86384,794,52648,AVAILABLE,448
+723,54,21,66,7,15,Poland,Crab-eating fox,45681670,viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis,55181,56189,2028,451,67738,INACTIVE,176
+724,33,76,68,19,100,China,"Barbet, crested",57083194,tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus,60571,97132,76831,7,71696,REPORTING,786
+725,10,53,5,79,21,France,Yellow-crowned night heron,99611995,sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at diam nam tristique tortor,93935,46961,90615,354,20969,SOLD OUT,260
+726,10,53,79,10,25,Czech Republic,Great white pelican,35872492,donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend,83165,89641,30915,930,79684,VERIFYING,416
+727,69,35,43,45,36,Honduras,"Dog, raccoon",75324830,morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet,46794,9279,71082,515,54249,INACTIVE,942
+728,8,13,79,42,76,China,Common mynah,54187281,justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque,73526,88957,16690,555,49549,ACTIVE,169
+729,38,77,34,86,31,Thailand,Jaguar,62018857,mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam,13811,79897,5548,567,90756,INACTIVE,909
+730,41,68,88,92,86,Indonesia,Southern elephant seal,89223444,at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam,83299,50232,80789,927,37584,SOLD OUT,9
+731,73,80,64,60,34,Azerbaijan,"Squirrel, eurasian red",62468194,metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam,49622,256,80116,346,89197,INACTIVE,738
+732,3,33,88,12,65,France,Olive baboon,88762350,felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut,72993,65946,53295,755,20845,REPORTING,674
+733,60,98,22,84,86,Portugal,White-throated toucan,7721667,posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus,80080,99426,63030,635,99064,VERIFYING,959
+734,97,62,91,30,9,China,Two-toed tree sloth,60529842,faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est,9246,14314,67015,108,20059,ACTIVE,929
+735,5,59,38,2,39,Indonesia,"Wallaby, red-necked",64178949,aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam,90175,33969,52965,234,54371,ACTIVE,767
+736,25,8,6,26,3,Philippines,"Hyena, brown",91468405,fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien,7265,32036,47696,202,90982,VERIFYING,224
+737,16,85,46,95,76,Poland,"Turkey, australian brush",32576423,magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et,48787,65027,6443,490,95969,AVAILABLE,157
+738,31,16,9,49,46,Malawi,"Bunting, crested",41278821,at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque,34696,1240,62112,764,68703,SOLD OUT,193
+739,58,71,86,84,93,Philippines,"Fox, crab-eating",4588843,lectus in est risus auctor sed tristique in tempus sit amet sem fusce,82614,46969,19872,388,45992,ACTIVE,789
+740,97,17,87,7,65,Nigeria,Cape raven,68821147,sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis,7590,48375,26009,652,81561,AVAILABLE,383
+741,51,14,27,9,99,Brazil,Rock dove,74017085,quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in,7013,54203,52164,633,50329,INACTIVE,515
+742,6,3,48,44,19,Macao,"Lion, south american sea",32786621,posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi,65015,52440,81531,616,36726,ACTIVE,10
+743,18,59,6,33,76,Indonesia,Waved albatross,97932001,in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque,67630,73657,70996,123,3824,INACTIVE,776
+744,23,70,64,22,84,Indonesia,"Capuchin, black-capped",7062939,ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia,96058,58295,65720,545,30791,ACTIVE,198
+745,93,99,85,10,8,Iran,"Gecko, barking",70123982,vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio,79990,63892,86115,223,54665,REPORTING,445
+746,42,70,75,40,7,Zambia,Jabiru stork,79860297,at velit vivamus vel nulla eget eros elementum pellentesque quisque,20610,11657,3106,253,13652,AVAILABLE,716
+747,35,27,79,86,93,Indonesia,"Spider, wolf",25318459,parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum,28711,82059,30108,209,5966,SOLD OUT,819
+748,24,62,71,75,5,Tajikistan,Red-legged pademelon,22983485,mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae,49678,24528,61638,647,64010,VERIFYING,332
+749,57,47,17,40,9,Indonesia,"Iguana, land",6962145,erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien,76332,63894,76369,24,69481,SOLD OUT,645
+750,78,7,91,62,13,Canada,Little brown dove,37195231,pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl,21105,63342,81976,471,47837,AVAILABLE,183
+751,62,73,15,99,83,United States,Two-toed sloth,31230046,neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus,53021,9269,28612,178,51062,REPORTING,529
+752,74,19,88,7,58,Albania,"Vulture, bengal",3938497,dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum,56790,64081,2683,522,37517,AVAILABLE,390
+753,23,41,74,2,18,Portugal,"Legaan, ground",60719043,primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio,81986,67181,37362,324,20047,SOLD OUT,871
+754,86,11,17,42,97,China,Grison,56078293,etiam faucibus cursus urna ut tellus nulla ut erat id mauris,27673,68493,77453,368,73650,ACTIVE,25
+755,96,98,43,91,1,Peru,"Owl, madagascar hawk",72624992,pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing,83023,64899,53966,416,2823,ACTIVE,216
+756,14,74,33,32,10,Canada,"Wallaby, whip-tailed",55909594,enim sit amet nunc viverra dapibus nulla suscipit ligula in,91219,61295,55596,672,89628,VERIFYING,369
+757,54,19,45,100,71,Indonesia,"Crane, black-crowned",75890571,gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin,82493,66275,98569,550,4256,ACTIVE,260
+758,26,26,60,1,90,France,Roseate cockatoo,33648964,rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo,21170,13809,14257,475,36550,VERIFYING,245
+759,31,69,48,57,98,Indonesia,Black-faced kangaroo,66504563,ligula nec sem duis aliquam convallis nunc proin at turpis,49036,93924,88140,621,90053,ACTIVE,691
+760,37,79,39,48,6,France,"Bee-eater, carmine",63421629,in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat,59562,8423,71576,593,78157,SOLD OUT,514
+761,37,1,54,85,64,Philippines,Asian water dragon,53763815,vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio,47559,12571,6986,525,99376,REPORTING,446
+762,39,36,67,40,84,Philippines,"Loris, slender",46180773,pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam,60202,12567,99165,165,12352,VERIFYING,965
+763,42,71,40,19,69,Indonesia,Vicuna,1781592,eget orci vehicula condimentum curabitur in libero ut massa volutpat,24612,75024,86774,578,9635,SOLD OUT,360
+764,62,21,70,39,17,Brazil,Ovenbird,10189280,ut massa volutpat convallis morbi odio odio elementum eu interdum eu,98210,32285,70308,962,98960,ACTIVE,254
+765,37,67,87,7,14,Greece,Brazilian otter,24026912,turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue,84012,40893,59329,320,68941,SOLD OUT,857
+766,21,29,96,20,8,China,Thomson's gazelle,98431247,condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros,38632,35512,22621,943,43157,VERIFYING,789
+767,60,55,50,91,57,Indonesia,"Viper, egyptian",63537272,quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea,23529,17900,97960,371,75826,ACTIVE,381
+768,38,31,75,72,1,Indonesia,White-throated robin,87969622,viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit,70675,82509,35346,445,95288,VERIFYING,528
+769,84,33,96,49,27,Cuba,"Lizard, goanna",7803842,nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat,22237,58094,54655,746,2513,SOLD OUT,987
+770,14,93,85,12,41,Thailand,Adouri (unidentified),30128298,a pede posuere nonummy integer non velit donec diam neque,83181,21535,1598,420,78352,ACTIVE,814
+771,84,66,8,56,92,United States,"Leopard, indian",24243655,nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla,60548,11479,50771,967,95984,VERIFYING,144
+772,12,88,8,4,27,Indonesia,Glossy ibis,22321110,faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est,79303,4317,70147,740,40432,ACTIVE,508
+773,98,97,60,38,57,Kuwait,"Nuthatch, red-breasted",22518905,tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat,5932,70381,15881,506,95523,SOLD OUT,314
+774,64,99,85,83,90,Croatia,Spur-winged goose,60329509,dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem,26325,9204,6753,886,64122,ACTIVE,663
+775,38,88,84,44,81,Portugal,Indian jackal,10734725,penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque,51262,26951,61415,932,35855,REPORTING,362
+776,82,38,90,19,54,Madagascar,Eastern diamondback rattlesnake,46020232,nam congue risus semper porta volutpat quam pede lobortis ligula sit,89276,18042,32251,303,36944,ACTIVE,513
+777,12,59,74,46,37,China,Antelope ground squirrel,48381170,ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis,7671,76915,46645,604,1833,INACTIVE,263
+778,20,29,31,4,98,Nigeria,"Kangaroo, jungle",78407717,eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi,47529,40948,13945,49,7087,VERIFYING,615
+779,12,30,33,90,37,China,Mouflon,89891366,blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu,95530,66562,54742,560,88615,SOLD OUT,166
+780,92,11,30,31,68,Portugal,"Lion, african",99819063,est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla,5668,19596,74349,534,64555,ACTIVE,27
+781,76,50,80,59,72,Colombia,Yellow-brown sungazer,16255681,quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus,6897,28534,18054,892,4796,INACTIVE,341
+782,88,36,70,95,16,Philippines,Bateleur eagle,83731409,proin eu mi nulla ac enim in tempor turpis nec euismod,83063,96368,63965,433,57717,VERIFYING,773
+783,73,52,50,17,54,China,"Deer, barasingha",6373179,sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar,83942,57937,49164,445,28031,INACTIVE,332
+784,82,72,100,45,7,Russia,Crowned hawk-eagle,13534711,quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci,84379,63064,40621,856,56692,INACTIVE,365
+785,46,65,56,61,60,Portugal,"Falcon, peregrine",3724485,est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien,33955,77393,86151,623,19944,REPORTING,382
+786,25,59,22,60,74,Indonesia,Savanna fox,29871939,vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et,21263,8873,19873,472,26548,ACTIVE,437
+787,59,92,49,33,78,Philippines,"Hornbill, yellow-billed",90132114,at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis,59333,68409,1676,70,68373,AVAILABLE,757
+788,72,38,89,74,24,Indonesia,Yellow-necked spurfowl,43858495,ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia,31498,26244,11877,449,83005,VERIFYING,449
+789,83,90,44,77,98,Russia,"Otter, oriental short-clawed",23009187,fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl,83672,88748,60605,990,35958,SOLD OUT,23
+790,48,7,43,5,65,China,Snake-necked turtle,37257707,sed interdum venenatis turpis enim blandit mi in porttitor pede,1413,91773,2818,818,67953,ACTIVE,92
+791,28,95,99,49,34,Finland,Lappet-faced vulture,52038108,cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit,39963,53833,58533,384,20747,VERIFYING,970
+792,60,43,20,68,96,Belarus,Giant girdled lizard,66144318,ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit,70549,18250,54112,203,99305,ACTIVE,289
+793,89,16,71,79,50,Ghana,"Alligator, american",69654970,etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus,40382,62712,23244,250,93293,SOLD OUT,723
+794,20,42,54,21,61,Lebanon,Chilean flamingo,23870141,purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio,65973,94762,87086,407,56945,INACTIVE,507
+795,71,56,19,94,59,China,"Deer, barasingha",11526965,ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id,902,96577,82972,682,69373,INACTIVE,659
+796,55,20,30,50,38,Portugal,Tarantula,17883398,mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in,17905,15281,21113,121,20215,INACTIVE,199
+797,92,51,28,22,66,Greece,North American beaver,79909460,ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci,81194,95091,22533,129,6701,ACTIVE,25
+798,80,50,17,95,13,Indonesia,Brazilian tapir,92351145,sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus,833,53586,16036,601,45822,VERIFYING,286
+799,44,84,11,5,42,Nigeria,Oribi,44942748,eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas,32141,87299,56369,190,67673,SOLD OUT,106
+800,43,60,87,44,42,China,Blue-tongued skink,29377740,lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia,49217,35857,30439,533,37789,VERIFYING,366
+801,28,51,14,5,52,Brazil,"Boubou, southern",86744345,nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo,77099,12019,80966,992,81895,INACTIVE,628
+802,49,88,75,19,5,Indonesia,"Seal, northern fur",22162348,vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla,13626,79421,32630,947,11081,INACTIVE,254
+803,6,30,26,40,70,Ukraine,"Toucan, white-throated",85093828,elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum,95680,81401,59572,378,79109,INACTIVE,493
+804,64,25,21,19,45,France,Tayra,12074001,interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at,47132,30113,3769,741,54323,INACTIVE,439
+805,54,55,43,49,58,Canada,"Lemur, sportive",16918742,dui maecenas tristique est et tempus semper est quam pharetra magna,3821,55634,42819,273,70541,AVAILABLE,333
+806,70,29,65,92,96,Greece,"Parakeet, rose-ringed",65375996,parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa,26210,67254,30731,971,96920,INACTIVE,726
+807,73,68,34,95,49,Netherlands,Sable antelope,31242304,nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede,6676,16322,79451,917,78591,VERIFYING,481
+808,31,4,78,14,77,Indonesia,Cheetah,63155083,diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus,51543,12822,99598,195,78590,SOLD OUT,895
+809,12,96,16,22,13,Portugal,Indian red admiral,35075989,consequat lectus in est risus auctor sed tristique in tempus sit amet,65119,46817,95738,408,46102,SOLD OUT,681
+810,26,41,57,18,59,China,Vine snake (unidentified),93934274,vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa,25319,39168,4435,878,99035,VERIFYING,498
+811,22,72,22,4,28,China,Little cormorant,79887882,vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit,56354,2876,20646,903,88187,AVAILABLE,273
+812,52,34,80,87,53,Brazil,River wallaby,46964307,in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing,28680,20398,89121,474,71721,REPORTING,271
+813,56,6,51,67,74,Western Sahara,Cape Barren goose,19945242,sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus,92133,49052,37101,748,85455,VERIFYING,659
+814,32,58,32,21,9,China,"Lark, horned",73738149,ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero,65032,13028,18854,733,6123,SOLD OUT,859
+815,6,13,30,4,30,Cameroon,Two-toed sloth,37980198,eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat,6716,50882,66432,8,30172,ACTIVE,947
+816,22,95,93,29,69,Bulgaria,Brolga crane,55339777,risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante,13836,79959,4959,903,96685,INACTIVE,328
+817,28,12,73,70,19,Sweden,"Baboon, olive",26633909,venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus,37178,67373,11254,551,57484,INACTIVE,130
+818,14,5,17,97,29,Indonesia,Woodchuck,23835061,mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy,92810,8086,49560,604,74857,AVAILABLE,452
+819,30,96,19,75,45,Indonesia,"Penguin, little blue",84422104,morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet,30132,94742,88146,252,31441,VERIFYING,985
+820,76,81,54,68,98,Venezuela,Musk ox,41056966,primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam,1161,56016,12479,579,84189,VERIFYING,723
+821,71,72,65,82,27,Indonesia,Osprey,91982717,amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus,39523,20160,88110,626,56070,AVAILABLE,673
+822,32,38,49,51,44,China,Paddy heron (unidentified),79625973,aenean fermentum donec ut mauris eget massa tempor convallis nulla neque,15436,70503,45154,700,3502,INACTIVE,683
+823,52,17,84,75,6,Indonesia,"Capuchin, black-capped",99827732,aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac,9270,47997,61315,791,54052,INACTIVE,735
+824,21,1,20,93,70,Indonesia,"Dragon, ornate rock",16285013,nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in,19263,95694,62933,941,57900,AVAILABLE,876
+825,99,32,30,98,29,Russia,Magnificent frigate bird,20642494,non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis,49807,31086,99970,915,96147,VERIFYING,604
+826,84,85,12,7,35,Philippines,"Lemming, arctic",72591294,vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis,86583,18227,87807,866,83676,REPORTING,856
+827,96,94,76,28,90,Poland,Red phalarope,17672031,eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at,23861,19998,62280,7,84158,AVAILABLE,196
+828,70,13,70,22,73,Portugal,Polar bear,63202761,lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien,30467,67588,75576,558,73016,INACTIVE,668
+829,28,3,44,73,42,Morocco,Sea birds (unidentified),38528408,pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis,46055,89791,75785,117,96832,VERIFYING,691
+830,34,49,61,55,42,Russia,"Eagle, bald",60713429,id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel,22080,65394,18611,630,51488,REPORTING,772
+831,62,88,62,49,2,Georgia,"Weaver, white-browed sparrow",74356138,vulputate luctus cum sociis natoque penatibus et magnis dis parturient,51283,1184,9455,41,85757,AVAILABLE,157
+832,4,65,47,82,100,China,Crested bunting,69310953,est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis,89573,95078,83148,141,86548,REPORTING,818
+833,49,53,70,32,91,El Salvador,Southern elephant seal,62583432,in magna bibendum imperdiet nullam orci pede venenatis non sodales,31630,11950,28785,352,48587,REPORTING,235
+834,25,51,40,89,74,Russia,"Wallaby, dama",75632152,pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna,77245,46652,45266,798,21118,REPORTING,421
+835,2,1,42,21,51,Saudi Arabia,Golden eagle,68022974,turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut,30417,71307,63574,358,73714,AVAILABLE,385
+836,85,52,31,74,29,Indonesia,Eastern box turtle,14503155,a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla,98683,45781,70129,334,31084,ACTIVE,80
+837,24,33,38,57,52,Bangladesh,Red-tailed hawk,85694392,ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla,56087,26358,20098,700,22555,AVAILABLE,556
+838,48,32,86,61,34,China,Black rhinoceros,87864901,adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non,7649,69621,98146,619,97877,ACTIVE,965
+839,76,48,84,17,22,Poland,Asian water buffalo,10644177,interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan,55710,31976,76364,231,64514,AVAILABLE,774
+840,92,55,15,92,78,China,Indian giant squirrel,16105023,vehicula consequat morbi a ipsum integer a nibh in quis justo,33246,78380,89521,362,22946,AVAILABLE,434
+841,28,7,51,71,22,China,"Whale, long-finned pilot",96356306,nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in,75734,61822,52749,952,10490,VERIFYING,294
+842,3,99,13,81,18,China,Russian dragonfly,90048446,pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed,35716,25286,78186,782,21517,REPORTING,402
+843,5,65,40,31,36,Colombia,Greater kudu,86891028,faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus,27477,35917,66088,752,55799,SOLD OUT,106
+844,17,68,55,53,58,Philippines,Mexican beaded lizard,48165611,justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget,1835,99864,95844,21,58350,AVAILABLE,751
+845,5,19,28,51,67,Belarus,Elegant crested tinamou,96807784,ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed,62725,52042,4254,396,97921,AVAILABLE,643
+846,56,60,56,15,87,Pakistan,Purple moorhen,99490631,vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae,49524,30907,79494,648,99221,ACTIVE,949
+847,38,81,42,45,67,Bosnia and Herzegovina,Worm snake (unidentified),96162771,accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris,97434,82185,12181,637,40479,AVAILABLE,903
+848,65,51,68,83,47,Russia,"Lemur, sportive",40993529,dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut,38019,65966,26494,316,232,SOLD OUT,244
+849,100,66,28,11,53,China,Indian star tortoise,85510074,ultrices vel augue vestibulum ante ipsum primis in faucibus orci,52624,6125,84787,53,5488,AVAILABLE,237
+850,46,74,49,11,44,Philippines,"Bear, polar",29761654,ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis,85941,84787,60836,484,67130,VERIFYING,231
+851,11,6,12,79,70,Bangladesh,"Bettong, brush-tailed",65978589,faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus,85037,23977,95339,273,32836,VERIFYING,182
+852,25,47,86,36,33,United States,Arctic fox,29437768,ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in,12055,96943,27986,642,37474,ACTIVE,539
+853,35,7,83,34,14,Brazil,Toddy cat,57790229,at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur,94341,59905,71664,678,13985,VERIFYING,873
+854,91,19,53,22,93,Nigeria,Mexican boa,86866818,neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet,25418,46750,18430,130,54450,AVAILABLE,920
+855,80,98,44,49,64,China,"Vulture, griffon",90078896,id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat,36207,91655,27187,137,30933,ACTIVE,263
+856,42,35,99,38,83,Nigeria,"Bird, red-billed tropic",36801765,quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus,83567,92381,46905,692,28346,INACTIVE,17
+857,21,53,29,66,35,Angola,"Sloth, two-toed",42651460,ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas,70214,86672,16361,402,63924,INACTIVE,392
+858,64,68,4,78,30,Portugal,"Turtle, eastern box",26755070,lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna,56139,33505,73417,36,93303,ACTIVE,756
+859,45,73,34,45,67,Indonesia,"Wolf, common",8344793,malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit,57823,3318,82385,34,17891,VERIFYING,340
+860,47,99,7,93,2,China,"Wolf, mexican",51020090,montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida,67575,35685,7258,902,17501,REPORTING,605
+861,59,76,49,56,62,Paraguay,"Opossum, american virginia",54899748,nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit,72711,74951,71603,983,84349,REPORTING,132
+862,25,97,20,97,18,Mexico,Olive baboon,10367007,posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat,16047,63597,72185,758,30494,REPORTING,387
+863,99,21,38,39,28,Indonesia,"Deer, red",52884132,erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec,88794,10248,75188,319,23853,REPORTING,63
+864,18,25,99,60,86,Belarus,Bontebok,91715952,morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est,95745,34993,79495,83,80811,SOLD OUT,777
+865,11,83,30,43,36,Sweden,Brown and yellow marshbird,56726940,aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede,32881,17995,11154,237,83407,ACTIVE,264
+866,87,79,33,90,47,Ireland,Small Indian mongoose,89266446,suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero,19774,65138,26461,219,80242,VERIFYING,708
+867,37,5,6,69,28,China,Collared peccary,80871991,mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse,77616,87853,53921,129,72191,VERIFYING,319
+868,40,46,79,70,80,Brazil,"Baboon, gelada",14664273,posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend,21607,10757,6847,733,14107,AVAILABLE,527
+869,57,57,21,59,22,Russia,"Lechwe, kafue flats",3362071,aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus,66099,7003,4361,570,21503,VERIFYING,248
+870,81,69,4,6,72,Russia,Tiger cat,49144247,in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque,2914,33642,74376,975,37323,INACTIVE,497
+871,90,45,97,31,78,Greece,American buffalo,77682273,vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in,29667,67943,60449,34,26870,ACTIVE,321
+872,44,1,89,36,47,Russia,"Penguin, fairy",86467975,ligula nec sem duis aliquam convallis nunc proin at turpis a,15867,75820,5381,100,22510,VERIFYING,646
+873,11,20,15,33,93,Serbia,Red sheep,83234345,curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo,33064,3913,72673,94,93374,VERIFYING,82
+874,79,93,46,29,72,Philippines,"Lion, steller's sea",43729394,id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et,10105,30532,85212,650,99721,REPORTING,946
+875,60,22,87,85,93,Canada,Savanna fox,37740398,dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo,66782,6373,97278,736,10079,ACTIVE,26
+876,26,15,97,45,33,Sweden,Bobcat,49969200,felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec,58821,60496,67807,6,30881,AVAILABLE,711
+877,31,57,50,87,50,Vietnam,Common wombat,70282024,hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie,67912,44515,15668,927,33048,INACTIVE,716
+878,36,48,26,12,76,Indonesia,Western bearded dragon,14946303,fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed,87676,9743,9403,392,13727,SOLD OUT,53
+879,75,79,63,23,34,Colombia,American bighorn sheep,65304329,consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id,67140,80184,85373,360,51465,ACTIVE,18
+880,34,2,17,4,27,Belarus,Black-collared barbet,22045061,at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur,25021,20659,38859,994,3989,VERIFYING,800
+881,96,18,55,69,2,Canada,"Lizard, blue-tongued",30788988,magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien,59612,87512,47118,717,62203,ACTIVE,937
+882,47,16,15,89,76,China,"Goat, mountain",327161,odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit,82389,13364,31394,513,83299,SOLD OUT,147
+883,22,23,73,5,13,Indonesia,Cottonmouth,84727298,ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis,59814,12800,64161,697,28510,ACTIVE,757
+884,83,81,82,96,35,Namibia,"Bear, grizzly",41160104,sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat,33132,68286,72946,464,62228,REPORTING,796
+885,56,87,35,10,73,Israel,Oriental short-clawed otter,46555194,ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus,33758,66889,7308,417,37915,AVAILABLE,239
+886,97,87,41,96,63,Comoros,Reindeer,32779425,nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit,19524,18506,41168,595,16791,VERIFYING,703
+887,38,31,49,82,42,Western Sahara,Vervet monkey,80076329,vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in,23180,18465,27054,505,23230,REPORTING,308
+888,12,74,83,85,84,China,"Otter, small-clawed",97996093,id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis,84925,8082,34785,147,29334,VERIFYING,646
+889,64,16,1,28,13,Russia,Giant anteater,86928523,eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et,11136,13296,68994,202,48302,ACTIVE,480
+890,80,15,39,18,17,Mauritius,Frilled dragon,88908277,aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non,859,46865,54399,664,45303,SOLD OUT,752
+891,40,29,97,79,89,Israel,"Nighthawk, common",79124875,sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus,33241,47305,83274,122,83271,REPORTING,964
+892,7,7,23,57,82,Philippines,Seven-banded armadillo,95643154,lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam,73046,35812,2517,802,45220,ACTIVE,36
+893,56,87,97,48,4,Ireland,"Crow, pied",61486757,sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget,97795,12917,77879,309,36610,INACTIVE,376
+894,23,65,73,81,16,Malaysia,Sea birds (unidentified),29774769,faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non,27817,32170,74629,241,69883,REPORTING,117
+895,96,58,57,93,54,France,"Egret, great",56929930,quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti,27669,22921,43591,326,70500,REPORTING,919
+896,67,4,40,44,24,Nigeria,"Blackbird, red-winged",44596405,duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend,61112,72075,42385,255,85504,VERIFYING,211
+897,20,26,22,49,98,Costa Rica,"Hedgehog, south african",73826800,at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget,94408,5779,51133,937,62516,AVAILABLE,246
+898,40,43,62,15,90,Russia,Python (unidentified),93977363,id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate,15224,76987,91923,983,99332,INACTIVE,613
+899,75,14,98,85,71,China,"Goldeneye, barrows",96516829,semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante,67168,75846,77700,794,30061,ACTIVE,309
+900,71,83,11,14,51,Indonesia,Yellow-billed hornbill,12609221,blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu,65859,2233,19347,173,71576,INACTIVE,806
+901,53,1,92,46,87,Thailand,Giraffe,23365136,sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit,82246,15493,24051,605,84985,VERIFYING,300
+902,90,63,25,83,22,Argentina,Marabou stork,19827239,non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu,72318,11354,67374,69,14530,REPORTING,556
+903,90,28,70,61,69,Vietnam,"Gecko, barking",33787794,congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede,32581,16356,54300,166,46496,REPORTING,454
+904,11,51,82,65,1,Indonesia,Red-knobbed coot,36381970,interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue,45999,98598,63972,598,93617,VERIFYING,269
+905,79,49,55,41,1,Armenia,"Armadillo, seven-banded",78797068,justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse,63258,87509,59168,418,90556,REPORTING,703
+906,80,9,6,71,66,Czech Republic,"Coatimundi, white-nosed",72601064,imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit,11728,43798,29608,301,1396,ACTIVE,463
+907,2,75,100,32,53,Ukraine,Long-tailed jaeger,27276220,ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris,72896,24512,53713,454,25596,SOLD OUT,503
+908,11,39,90,30,70,United States,Bonnet macaque,7494847,rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit,32476,41967,66571,286,31948,SOLD OUT,331
+909,29,43,88,43,91,United States,Saddle-billed stork,28083892,nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede,43193,63758,49217,753,30085,VERIFYING,472
+910,6,62,25,13,99,Dominican Republic,Cape raven,1084819,volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque,68127,88228,14815,319,97734,VERIFYING,39
+911,9,57,45,75,55,Indonesia,Oriental white-backed vulture,29157102,integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar,95220,94699,93272,931,22107,REPORTING,649
+912,39,3,85,83,49,Cuba,Lapwing (unidentified),55047177,vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices,15075,20158,11130,263,60022,INACTIVE,963
+913,49,78,83,70,72,Norway,"Caiman, spectacled",37338232,amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt,99781,47762,35060,983,70292,REPORTING,89
+914,50,90,26,53,19,Russia,Huron,17220936,cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis,23435,36124,89379,856,66643,REPORTING,583
+915,100,87,7,34,32,Serbia,"Cockatoo, red-breasted",79773313,in porttitor pede justo eu massa donec dapibus duis at velit eu,20812,83861,42124,140,33295,AVAILABLE,853
+916,27,23,37,16,86,Philippines,"Plover, three-banded",25230182,turpis eget elit sodales scelerisque mauris sit amet eros suspendisse,20670,24785,61437,107,31523,VERIFYING,794
+917,96,13,11,27,16,Indonesia,"Deer, red",87021764,eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla,83016,73702,69332,279,1642,SOLD OUT,509
+918,8,97,87,87,52,Indonesia,Trumpeter swan,59427369,eu massa donec dapibus duis at velit eu est congue,29271,70014,63777,217,96318,SOLD OUT,948
+919,59,15,53,65,7,Botswana,Ostrich,35665536,et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi,97654,16972,98095,873,50745,ACTIVE,865
+920,41,43,95,62,89,United States,Short-nosed bandicoot,59573706,nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta,74550,76791,31974,337,36720,REPORTING,563
+921,1,78,44,92,43,Philippines,Black-winged stilt,6385118,odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus,74511,48833,71741,389,83008,AVAILABLE,812
+922,45,51,69,47,90,Greece,Galapagos penguin,28698556,sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit,143,68197,55547,796,68277,REPORTING,193
+923,9,76,77,2,5,Belarus,"Sloth, hoffman's",5249255,aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris,50902,51241,42325,925,29356,VERIFYING,45
+924,88,24,2,13,26,Nigeria,Black-throated butcher bird,43700417,platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien,96166,52776,95598,431,67669,AVAILABLE,314
+925,53,72,37,87,68,Portugal,"Goose, canada",98758230,nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in,47094,83356,57856,454,30637,INACTIVE,484
+926,6,27,32,9,6,Indonesia,Bobcat,99882086,sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla,61888,77715,20254,149,95876,SOLD OUT,780
+927,13,2,59,50,86,Albania,Beisa oryx,39261335,metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra,38693,42755,42352,51,48316,VERIFYING,329
+928,67,90,90,67,26,Russia,"Spoonbill, white",36323876,vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed,80782,56480,68259,803,36556,ACTIVE,219
+929,21,53,98,37,69,China,Australian sea lion,37604669,vivamus tortor duis mattis egestas metus aenean fermentum donec ut,30479,39256,70997,760,81165,VERIFYING,349
+930,35,30,13,30,15,China,Crested porcupine,12816533,sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus,17061,58785,29333,610,48093,VERIFYING,834
+931,47,51,82,27,42,Japan,Margay,50383731,et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non,4561,63210,9549,735,76794,INACTIVE,290
+932,87,50,72,47,58,Indonesia,Black-faced kangaroo,56114112,in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere,68276,10009,75452,90,79791,AVAILABLE,547
+933,55,86,43,56,81,Angola,"Spoonbill, european",73960066,potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis,17271,19280,18302,854,64105,INACTIVE,323
+934,66,95,21,74,50,Armenia,Platypus,68178585,tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum,4893,98776,49088,930,35263,SOLD OUT,145
+935,78,6,69,54,15,Indonesia,"Albatross, galapagos",6075168,ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem,96465,3300,24913,116,60012,VERIFYING,739
+936,30,65,48,73,81,Indonesia,Blue-footed booby,9701942,magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum,63345,47902,37346,108,23831,SOLD OUT,518
+937,1,49,47,1,45,Philippines,"Francolin, swainson's",5458711,donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies,9645,15582,20526,227,60000,SOLD OUT,292
+938,37,48,57,80,90,Russia,Boat-billed heron,97201298,leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices,78414,99543,70087,378,78076,ACTIVE,930
+939,94,14,75,58,77,Thailand,Arctic ground squirrel,63595305,ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis,64021,5163,380,375,61116,INACTIVE,122
+940,43,62,61,23,34,Nigeria,Common goldeneye,6282,metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci,23360,65596,32416,605,71356,SOLD OUT,718
+941,84,31,67,34,68,Kazakhstan,"Tern, white-winged",67816935,vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur,31841,2349,26755,159,1998,VERIFYING,276
+942,10,98,29,44,17,Russia,"Sheep, stone",92029002,turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam,80312,30449,53747,377,71192,ACTIVE,468
+943,7,28,15,72,51,Czech Republic,"Badger, european",87189963,porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus,78502,52672,9556,784,93088,ACTIVE,230
+944,83,95,68,100,32,Brazil,Hanuman langur,61364446,nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac,54862,48430,5576,812,88558,VERIFYING,188
+945,93,88,56,73,84,Canada,Common seal,19962127,iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id,36200,59262,75634,607,52445,ACTIVE,844
+946,69,2,90,63,18,Philippines,Malagasy ground boa,41962886,eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti,70153,36331,84670,2,43765,AVAILABLE,894
+947,81,51,14,20,66,Colombia,Barasingha deer,68696358,nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper,81691,84295,35731,944,22579,INACTIVE,334
+948,52,20,53,88,81,Afghanistan,Wolf spider,47915803,in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis,97596,45107,29046,550,88018,SOLD OUT,746
+949,11,83,46,24,50,China,Chacma baboon,79029252,elementum pellentesque quisque porta volutpat erat quisque erat eros viverra,26632,24286,92535,979,24779,ACTIVE,55
+950,78,99,94,71,15,China,"Hedgehog, south african",64309603,et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum,21349,26602,46891,109,22899,REPORTING,784
+951,59,8,92,35,15,Mauritius,Pale-throated three-toed sloth,68929463,parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida,2538,2309,45514,253,8146,SOLD OUT,78
+952,97,29,63,87,78,Peru,"Nutcracker, clark's",333758,est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla,89035,69069,49330,328,95652,INACTIVE,21
+953,52,94,75,30,86,Ireland,Hummingbird (unidentified),84270093,nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac,34372,43555,47336,803,47544,VERIFYING,945
+954,4,60,19,73,4,Portugal,"Gull, swallow-tail",39501896,in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing,39843,79152,22245,611,53583,SOLD OUT,646
+955,14,70,92,51,80,Haiti,Clark's nutcracker,38897755,neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel,67085,98878,26652,27,80957,REPORTING,350
+956,3,74,46,92,59,Czech Republic,Tiger cat,31980837,proin leo odio porttitor id consequat in consequat ut nulla sed,93636,63563,21926,272,80537,AVAILABLE,402
+957,66,62,56,39,91,China,"Eagle, golden",54773425,mi pede malesuada in imperdiet et commodo vulputate justo in blandit,48959,72292,9342,144,72823,REPORTING,942
+958,67,85,59,26,16,China,Two-toed tree sloth,22643067,mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque,13796,17577,70570,398,35970,SOLD OUT,990
+959,47,37,81,55,33,Venezuela,American buffalo,48425913,etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate,19051,57334,95331,299,30580,REPORTING,404
+960,11,77,96,25,72,Colombia,"Gecko, barking",3904281,porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper,2387,12506,9659,650,27582,SOLD OUT,107
+961,77,91,52,68,76,Vietnam,Komodo dragon,20512441,in imperdiet et commodo vulputate justo in blandit ultrices enim,68777,81929,83875,817,75039,ACTIVE,445
+962,61,57,6,13,83,Argentina,"Lizard, collared",67317630,feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio,97383,5822,95708,229,49577,REPORTING,911
+963,5,55,59,51,79,France,White-browed owl,45045545,iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus,28023,29802,7838,249,28944,INACTIVE,193
+964,88,57,11,24,3,China,"Kangaroo, brush-tailed rat",83419517,luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et,11994,78247,46733,865,85113,REPORTING,812
+965,61,59,14,52,17,China,Square-lipped rhinoceros,6500106,aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta,88102,26500,88589,43,57086,REPORTING,71
+966,65,39,69,99,92,Togo,African wild cat,29986121,velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra,83094,24562,2666,725,81244,INACTIVE,447
+967,77,40,1,98,43,Indonesia,"Duck, blue",31535934,enim blandit mi in porttitor pede justo eu massa donec dapibus,96586,4222,41971,861,86841,AVAILABLE,264
+968,20,20,60,65,13,South Korea,"Peacock, blue",71527544,euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a,89065,24496,93219,604,89225,REPORTING,908
+969,10,68,2,55,34,United States,Madagascar hawk owl,30127765,a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce,64253,54767,30097,333,66763,REPORTING,110
+970,8,60,84,44,16,Portugal,Horned puffin,1769231,ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat,96087,2128,97803,631,98898,SOLD OUT,926
+971,30,97,65,65,15,Tanzania,"Dove, ring",96328523,et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin,43578,91916,28092,182,31205,INACTIVE,848
+972,37,57,54,24,2,China,White-throated kingfisher,78634527,lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna,25364,33168,75644,764,84780,ACTIVE,378
+973,95,85,7,9,53,Czech Republic,Red and blue macaw,37740907,nulla nisl nunc nisl duis bibendum felis sed interdum venenatis,6944,9229,30713,754,84114,INACTIVE,819
+974,63,67,94,33,16,Thailand,Yellow-crowned night heron,51115974,aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus,76797,82841,89303,409,48492,ACTIVE,263
+975,54,63,40,52,49,Greece,"Cormorant, flightless",78798012,bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel,11180,22034,73242,967,7331,SOLD OUT,861
+976,95,84,71,1,93,France,"Bee-eater, carmine",82146808,nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a,42257,16848,70053,852,44708,ACTIVE,692
+977,93,55,3,57,65,China,Blue-faced booby,49216322,consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non,90348,4365,52181,938,27711,AVAILABLE,294
+978,98,25,41,82,26,Indonesia,"Stilt, black-winged",51030629,mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede,78863,88330,85898,491,66378,INACTIVE,522
+979,35,81,21,78,26,China,"Hare, arctic",56606595,tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque,96674,75223,62633,569,81884,VERIFYING,111
+980,55,43,81,55,1,Finland,"Seal, harbor",48975073,pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed,75979,53065,72186,770,34982,VERIFYING,660
+981,88,70,17,77,56,Indonesia,"Starling, greater blue-eared",36673035,pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci,84683,57640,79324,13,352,VERIFYING,827
+982,95,63,76,76,55,China,Brown lemur,23806926,sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at,80719,73319,38433,217,43635,ACTIVE,543
+983,99,34,100,100,55,China,Violet-crested turaco,7702994,nulla ut erat id mauris vulputate elementum nullam varius nulla,56814,13346,93519,661,79959,INACTIVE,311
+984,3,5,85,4,51,Philippines,Numbat,7656726,vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio,66069,33131,88872,364,53665,ACTIVE,992
+985,89,49,39,34,2,Albania,"Lemur, sportive",22054116,augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet,64788,3817,16964,489,80624,SOLD OUT,446
+986,22,61,9,49,8,Indonesia,Bush dog,20592764,parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida,2115,44974,13986,344,11543,ACTIVE,273
+987,3,27,63,64,61,Czech Republic,"Sloth, two-toed tree",84490896,vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum,44935,67620,74053,796,66693,AVAILABLE,93
+988,72,4,45,48,94,Philippines,Sacred ibis,31818932,justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis,28409,69923,3532,787,64437,SOLD OUT,745
+989,72,14,64,7,48,Ethiopia,Little blue penguin,35819784,et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut,37864,98669,2764,721,4687,VERIFYING,620
+990,58,45,53,46,42,Czech Republic,Arctic hare,68464992,platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla,4818,12962,88300,986,19377,REPORTING,964
+991,10,31,77,79,41,Luxembourg,"Anteater, australian spiny",46878495,blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere,97420,10565,59160,137,43296,INACTIVE,755
+992,57,1,5,22,13,Albania,"Hyena, spotted",48663280,varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero,37195,80853,279,64,92835,INACTIVE,391
+993,52,26,4,96,67,France,Common wallaroo,71062563,pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo,99598,53981,49517,711,56665,INACTIVE,816
+994,3,7,57,1,15,China,Glossy starling (unidentified),41113508,nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat,59765,30309,57306,555,29003,SOLD OUT,608
+995,57,68,40,3,80,Tuvalu,Bengal vulture,39483269,in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue,35816,56340,48356,276,67963,VERIFYING,889
+996,32,82,67,36,6,Afghanistan,"Brocket, red",30082245,id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at,34127,11596,95185,360,64463,REPORTING,68
+997,3,92,51,42,74,Indonesia,Ground monitor (unidentified),78550377,at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat,19322,35711,83700,38,77863,VERIFYING,78
+998,50,10,27,82,70,China,"Tortoise, burmese black mountain",96414691,porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in,72938,58952,68245,95,35442,VERIFYING,612
+999,49,95,22,19,20,Iran,"Plover, three-banded",36881405,maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed,17902,16301,36916,312,19790,INACTIVE,351
+1000,20,12,83,48,15,Russia,Bleeding heart monkey,30027685,praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel,47026,43734,4462,887,64025,VERIFYING,930

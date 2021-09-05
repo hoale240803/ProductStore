@@ -14,6 +14,7 @@ using ProductStore.API.DBFirst.Configs;
 using ProductStore.API.DBFirst.DataModels;
 using ProductStore.API.DBFirst.Services.Authentications;
 using ProductStore.API.DBFirst.Services.Authentications.Email;
+using ProductStore.API.DBFirst.Services.Products;
 using System;
 using System.Text;
 
@@ -139,11 +140,14 @@ namespace ProductStore.API.DBFirst
             services.AddScoped<IEmailSender, EmailRepo>();
             // REPOSITORY SERVICES
             services.AddScoped<IAuthentication, AuthenRepo>();
+            services.AddScoped<IProductServices, ProductRepo>();
 
 
             services.Configure<DataProtectionTokenProviderOptions>(opt =>
                 opt.TokenLifespan = TimeSpan.FromHours(2));
+            // MAPPER
 
+            services.AddAutoMapper(typeof(Startup));
 
 
 

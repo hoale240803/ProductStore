@@ -46,7 +46,7 @@ namespace ProductStore.API.DBFirst.DataModels
             modelBuilder.Entity<Category>(entity =>
             {
                 entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("ID");
 
                 entity.Property(e => e.Alias)
@@ -63,7 +63,7 @@ namespace ProductStore.API.DBFirst.DataModels
             modelBuilder.Entity<Company>(entity =>
             {
                 entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("ID");
 
                 entity.Property(e => e.Address)
@@ -87,7 +87,7 @@ namespace ProductStore.API.DBFirst.DataModels
             modelBuilder.Entity<Employee>(entity =>
             {
                 entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("ID");
 
                 entity.Property(e => e.Address)
@@ -122,7 +122,7 @@ namespace ProductStore.API.DBFirst.DataModels
                 entity.ToTable("External_Shippers");
 
                 entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("ID");
 
                 entity.Property(e => e.IdMedia).HasColumnName("ID_MEDIA");
@@ -157,7 +157,7 @@ namespace ProductStore.API.DBFirst.DataModels
                 entity.ToTable("Internal_Shipper");
 
                 entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("ID");
 
                 entity.Property(e => e.Cmnd)
@@ -249,7 +249,7 @@ namespace ProductStore.API.DBFirst.DataModels
             modelBuilder.Entity<Order>(entity =>
             {
                 entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("ID");
 
                 entity.Property(e => e.CreateBy)
@@ -322,7 +322,7 @@ namespace ProductStore.API.DBFirst.DataModels
             modelBuilder.Entity<Product>(entity =>
             {
                 entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("ID");
 
                 entity.Property(e => e.Country)
@@ -343,8 +343,6 @@ namespace ProductStore.API.DBFirst.DataModels
                     .HasMaxLength(10)
                     .HasColumnName("ID_MATERIALS")
                     .IsFixedLength(true);
-
-                entity.Property(e => e.IdMedia).HasColumnName("ID_MEDIA");
 
                 entity.Property(e => e.IdTransporter).HasColumnName("ID_TRANSPORTER");
 
@@ -387,7 +385,7 @@ namespace ProductStore.API.DBFirst.DataModels
                 entity.ToTable("Products_Categories");
 
                 entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("ID");
 
                 entity.Property(e => e.Alias)

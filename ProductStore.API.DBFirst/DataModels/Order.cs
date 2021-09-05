@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -12,7 +13,9 @@ namespace ProductStore.API.DBFirst.DataModels
             OrdersProducts = new HashSet<OrdersProduct>();
         }
 
+        [Key]
         public int Id { get; set; }
+
         public int? IdPaymentMethod { get; set; }
         public int? IdInternalShipper { get; set; }
         public int? IdEmployee { get; set; }

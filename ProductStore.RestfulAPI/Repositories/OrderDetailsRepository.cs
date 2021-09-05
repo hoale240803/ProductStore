@@ -10,7 +10,7 @@
 //    public class OrderDetailsRepository : RepositoryBase<OrderDetails>, IOrderDetailsRepository
 //    {
 
-//        public OrderDetailsRepository(ProductStoreDbContext dbContext) 
+//        public OrderDetailsRepository(ProductStoreDbContext dbContext)
 //        {
 
 //        }

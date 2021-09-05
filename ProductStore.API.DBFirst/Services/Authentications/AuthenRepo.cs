@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using ProductStore.API.DBFirst.Authentication;
@@ -9,7 +8,6 @@ using ProductStore.API.DBFirst.DataModels.Models.Authentication;
 using ProductStore.API.DBFirst.Services.Authentications.Email;
 using ProductStore.API.DBFirst.Utils.GenerateToken;
 using ProductStore.API.DBFirst.ViewModels.Authentication;
-using ProductStore.API.DBFirst.ViewModels.Authentication.Email;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -39,8 +37,9 @@ namespace ProductStore.API.DBFirst.Services.Authentications
 
         public Task<List<RefreshToken>> GetById(string id)
         {
-            return  Task.FromResult(_context.RefreshTokens.Where(x => x.UserId == id).ToList()); 
+            return Task.FromResult(_context.RefreshTokens.Where(x => x.UserId == id).ToList());
         }
+
         /// <summary>
         /// LOGIN TWO STEP AUTHEN & REFRESH TOKEN
         /// </summary>
@@ -72,7 +71,6 @@ namespace ProductStore.API.DBFirst.Services.Authentications
                     var rolesList = await _userManager.GetRolesAsync(currentUser).ConfigureAwait(false);
                     authenticationModel.Roles = rolesList.ToList();
                     // checks if there are any active refresh tokens available for the authenticated user
-        
 
                     var activeRefreshToken = (_context.Users
                        .Join(_context.RefreshTokens,
@@ -97,7 +95,6 @@ namespace ProductStore.API.DBFirst.Services.Authentications
                         authenticationModel.RefreshToken = activeRefreshToken.ReToken.Token;
                         authenticationModel.RefreshTokenExpiration = activeRefreshToken.ReToken.Expires;
                     }
-
 
                     return authenticationModel;
                 }
@@ -188,7 +185,7 @@ namespace ProductStore.API.DBFirst.Services.Authentications
             }
         }
 
-        public async Task<Response> RegisterAsync(RegisterVM registerModel)
+        public async Task<bool> RegisterAsync(RegisterVM registerModel)
         {
             try
             {
@@ -203,22 +200,18 @@ namespace ProductStore.API.DBFirst.Services.Authentications
                     var result = await _userManager.CreateAsync(user, registerModel.Password);
                     if (result.Errors.Count() > 0)
                     {
-                        return new Response { Status = "Failed", ListMessage = result.Errors };
+                        return false;
                     }
                     await _userManager.AddToRoleAsync(user, "USER");
                     // SEND CONFIRMED EMAIL
-                    return new Response { Message = $"User Registered with username {user.UserName}", Status = "Success" };
                 }
-                else
-                {
-                    
-                    return new Response { Message = $"Email {user.Email } is already registered.", Status = "Failed" };
-                }
+               
             }
             catch (Exception ex)
             {
-                return new Response { Message = ex.Message, Status = "Failed" };
+                throw new Exception(ex.Message);
             }
+            return true;
         }
 
         public async Task<bool> RevokeToken(string token)
@@ -239,7 +232,6 @@ namespace ProductStore.API.DBFirst.Services.Authentications
                     // return false if no user found with token
                     if (users == null) return false;
 
-
                     // return false if token is not active
                     foreach (var user in users)
                     {
@@ -250,14 +242,12 @@ namespace ProductStore.API.DBFirst.Services.Authentications
                         {
                             user.ReToken.IsExpired = true;
                             _context.RefreshTokens.UpdateRange(user.ReToken);
-
                         }
                         else
                         {
                             user.ReToken.IsExpired = false;
                             _context.RefreshTokens.UpdateRange(user.ReToken);
                         }
-
                     }
                     await _context.SaveChangesAsync();
                     // Commit transaction if all commands succeed, transaction will auto-rollback
@@ -266,12 +256,11 @@ namespace ProductStore.API.DBFirst.Services.Authentications
                     return true;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 return false;
             }
-
         }
 
         private async Task<JwtSecurityToken> CreateJwtToken(StoreUser user)
@@ -315,9 +304,5 @@ namespace ProductStore.API.DBFirst.Services.Authentications
                 throw new Exception(ex.Message);
             }
         }
-
-        
-
-
     }
 }
