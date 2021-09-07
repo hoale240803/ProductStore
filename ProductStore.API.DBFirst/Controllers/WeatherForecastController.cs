@@ -40,7 +40,7 @@ namespace ProductStore.API.DBFirst.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Administrator")]
-        public async Task<IActionResult> PostSecuredData()
+        public IActionResult PostSecuredData()
         {
             return Ok("This Secured Data is available only for Administrators.");
         }

@@ -26,17 +26,5 @@ namespace ProductStore.API.DBFirst.DataModels
         public string Name { get; set; }
         public string FileId { get; set; }
         public string ExternalUrl { get; set; }
-
-        [NotMapped]
-        public virtual Employee IdEmployeeNavigation { get; set; }
-
-        [NotMapped]
-        public virtual ExternalShipper IdExternalShipperNavigation { get; set; }
-
-        [NotMapped]
-        public virtual InternalShipper IdInternalShipperNavigation { get; set; }
-
-        [NotMapped]
-        public virtual Product IdProductNavigation { get; set; }
     }
 }

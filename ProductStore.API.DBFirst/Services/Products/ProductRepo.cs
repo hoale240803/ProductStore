@@ -1,7 +1,9 @@
-﻿using ProductStore.API.DBFirst.DataModels;
+﻿using ClosedXML.Excel;
+using ProductStore.API.DBFirst.DataModels;
 using ProductStore.API.DBFirst.Services.Infrastructure;
-using System.Collections.Generic;
+using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace ProductStore.API.DBFirst.Services.Products
 {
@@ -18,6 +20,7 @@ namespace ProductStore.API.DBFirst.Services.Products
         {
             Add(Product);
         }
+
         //public void CreateMultiProduct(List<Product> productList)
         //{
         //    Add(productList);
@@ -39,35 +42,45 @@ namespace ProductStore.API.DBFirst.Services.Products
 
         public async Task SaveAsync()
         {
-           await _dbContext.SaveChangesAsync();
+            await _dbContext.SaveChangesAsync();
         }
 
         public async Task ExportWord()
         {
+        }
 
+        public async Task ExportCSV()
+        {
+            //var productList = GetAll();
+            //var builder = new StringBuilder();
+            //builder.AppendLine("Id,Username");
+            //foreach (var product in productList)
+            //{
+            //    builder.AppendLine($"{product.Id},{product.Name}");
+            //}
+
+            //return File(Encoding.UTF8.GetBytes(builder.ToString()), "text/csv", "users.csv");
         }
 
         public async Task ExportPDF()
         {
-
         }
 
         public async Task ExportExcel()
         {
-
+           
         }
 
         public async Task ImportWord()
         {
-
         }
+
         public async Task ImportPDF()
         {
-
         }
+
         public async Task ImportExcel()
         {
-
         }
 
         //public async IQueryable<Product> GetAllByPaging(int pageSize, int startIndex)

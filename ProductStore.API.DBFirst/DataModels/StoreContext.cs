@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using System;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 using ProductStore.API.DBFirst.Authentication;
+
 #nullable disable
 
 namespace ProductStore.API.DBFirst.DataModels
@@ -16,9 +19,17 @@ namespace ProductStore.API.DBFirst.DataModels
         {
         }
 
+        //public virtual DbSet<AspNetRoles> AspNetRoles { get; set; }
+        //public virtual DbSet<AspNetRoleClaims> AspNetRoleClaims { get; set; }
+        //public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
+        //public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
+        //public virtual DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
+        //public virtual DbSet<AspNetUserRole> AspNetUserRoles { get; set; }
+        //public virtual DbSet<AspNetUserTokens> AspNetUserTokens { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Company> Companys { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<ExportProductToExcel> ExportProductToExcels { get; set; }
         public virtual DbSet<ExternalShipper> ExternalShippers { get; set; }
         public virtual DbSet<InternalShipper> InternalShippers { get; set; }
         public virtual DbSet<Media> Medias { get; set; }
@@ -28,43 +39,125 @@ namespace ProductStore.API.DBFirst.DataModels
         public virtual DbSet<ProductsCategory> ProductsCategories { get; set; }
         public virtual DbSet<RefreshToken> RefreshTokens { get; set; }
 
-        //public virtual DbSet<StoreUser> StoreUsers { get; set; }
-
-        //        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //        {
-        //            if (!optionsBuilder.IsConfigured)
-        //            {
-        //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        //                optionsBuilder.UseSqlServer("Server=.;Database=Store;User Id=sa;Password=1234;");
-        //            }
-        //        }
+//        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+//        {
+//            if (!optionsBuilder.IsConfigured)
+//            {
+//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+//                optionsBuilder.UseSqlServer("Server=.;Database=Store;User Id=sa;Password=1234;");
+//            }
+//        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
 
+            //modelBuilder.Entity<AspNetRoles>(entity =>
+            //{
+            //    entity.HasIndex(e => e.NormalizedName, "RoleNameIndex")
+            //        .IsUnique()
+            //        .HasFilter("([NormalizedName] IS NOT NULL)");
+
+            //    entity.Property(e => e.Name).HasMaxLength(256);
+
+            //    entity.Property(e => e.NormalizedName).HasMaxLength(256);
+            //});
+
+            //modelBuilder.Entity<AspNetRoleClaims>(entity =>
+            //{
+            //    entity.HasIndex(e => e.RoleId, "IX_AspNetRoleClaims_RoleId");
+
+            //    entity.Property(e => e.RoleId).IsRequired();
+
+            //    entity.HasOne(d => d.Role)
+            //        .WithMany(p => p.AspNetRoleClaims)
+            //        .HasForeignKey(d => d.RoleId);
+            //});
+
+            //modelBuilder.Entity<AspNetUsers>(entity =>
+            //{
+            //    entity.HasIndex(e => e.NormalizedEmail, "EmailIndex");
+
+            //    entity.HasIndex(e => e.NormalizedUserName, "UserNameIndex")
+            //        .IsUnique()
+            //        .HasFilter("([NormalizedUserName] IS NOT NULL)");
+
+            //    entity.Property(e => e.Email).HasMaxLength(256);
+
+            //    entity.Property(e => e.NormalizedEmail).HasMaxLength(256);
+
+            //    entity.Property(e => e.NormalizedUserName).HasMaxLength(256);
+
+            //    entity.Property(e => e.UserName).HasMaxLength(256);
+            //});
+
+            //modelBuilder.Entity<AspNetUserClaim>(entity =>
+            //{
+            //    entity.HasIndex(e => e.UserId, "IX_AspNetUserClaims_UserId");
+
+            //    entity.Property(e => e.UserId).IsRequired();
+
+            //    entity.HasOne(d => d.User)
+            //        .WithMany(p => p.AspNetUserClaims)
+            //        .HasForeignKey(d => d.UserId);
+            //});
+
+            //modelBuilder.Entity<AspNetUserLogins>(entity =>
+            //{
+            //    entity.HasKey(e => new { e.LoginProvider, e.ProviderKey });
+
+            //    entity.HasIndex(e => e.UserId, "IX_AspNetUserLogins_UserId");
+
+            //    entity.Property(e => e.UserId).IsRequired();
+
+            //    entity.HasOne(d => d.User)
+            //        .WithMany(p => p.AspNetUserLogins)
+            //        .HasForeignKey(d => d.UserId);
+            //});
+
+            //modelBuilder.Entity<AspNetUserRole>(entity =>
+            //{
+            //    entity.HasKey(e => new { e.UserId, e.RoleId });
+
+            //    entity.HasIndex(e => e.RoleId, "IX_AspNetUserRoles_RoleId");
+
+            //    entity.HasOne(d => d.Role)
+            //        .WithMany(p => p.AspNetUserRoles)
+            //        .HasForeignKey(d => d.RoleId);
+
+            //    entity.HasOne(d => d.User)
+            //        .WithMany(p => p.AspNetUserRoles)
+            //        .HasForeignKey(d => d.UserId);
+            //});
+
+            //modelBuilder.Entity<AspNetUserTokens>(entity =>
+            //{
+            //    entity.HasKey(e => new { e.UserId, e.LoginProvider, e.Name });
+
+            //    entity.HasOne(d => d.User)
+            //        .WithMany(p => p.AspNetUserTokens)
+            //        .HasForeignKey(d => d.UserId);
+            //});
+
             modelBuilder.Entity<Category>(entity =>
             {
-                entity.Property(e => e.Id)
-                    .ValueGeneratedOnAdd()
-                    .HasColumnName("ID");
+                entity.Property(e => e.Id).HasColumnName("ID");
 
                 entity.Property(e => e.Alias)
-                    .HasMaxLength(50)
+                    .IsRequired()
+                    .HasMaxLength(150)
                     .HasColumnName("ALIAS");
 
                 entity.Property(e => e.IdCategoryParrent).HasColumnName("ID_CATEGORY_PARRENT");
 
                 entity.Property(e => e.Name)
-                    .HasMaxLength(255)
+                    .HasMaxLength(500)
                     .HasColumnName("NAME");
             });
 
             modelBuilder.Entity<Company>(entity =>
             {
-                entity.Property(e => e.Id)
-                    .ValueGeneratedOnAdd()
-                    .HasColumnName("ID");
+                entity.Property(e => e.Id).HasColumnName("ID");
 
                 entity.Property(e => e.Address)
                     .HasMaxLength(255)
@@ -86,9 +179,7 @@ namespace ProductStore.API.DBFirst.DataModels
 
             modelBuilder.Entity<Employee>(entity =>
             {
-                entity.Property(e => e.Id)
-                    .ValueGeneratedOnAdd()
-                    .HasColumnName("ID");
+                entity.Property(e => e.Id).HasColumnName("ID");
 
                 entity.Property(e => e.Address)
                     .HasMaxLength(255)
@@ -117,13 +208,71 @@ namespace ProductStore.API.DBFirst.DataModels
                     .HasColumnName("STATUS");
             });
 
-            modelBuilder.Entity<ExternalShipper>(entity =>
+            modelBuilder.Entity<ExportProductToExcel>(entity =>
             {
-                entity.ToTable("External_Shippers");
+                entity.HasNoKey();
+
+                entity.ToView("EXPORT_PRODUCT_TO_EXCEL");
+
+                entity.Property(e => e.Category)
+                    .HasMaxLength(500)
+                    .HasColumnName("CATEGORY");
+
+                entity.Property(e => e.Company)
+                    .HasMaxLength(255)
+                    .HasColumnName("COMPANY");
+
+                entity.Property(e => e.Country)
+                    .HasMaxLength(255)
+                    .HasColumnName("COUNTRY");
+
+                entity.Property(e => e.Description)
+                    .HasMaxLength(1000)
+                    .HasColumnName("DESCRIPTION");
+
+                entity.Property(e => e.Height).HasColumnName("HEIGHT");
 
                 entity.Property(e => e.Id)
                     .ValueGeneratedOnAdd()
                     .HasColumnName("ID");
+
+                entity.Property(e => e.Lenght).HasColumnName("LENGHT");
+
+                entity.Property(e => e.Material)
+                    .HasMaxLength(500)
+                    .HasColumnName("MATERIAL");
+
+                entity.Property(e => e.Name)
+                    .HasMaxLength(255)
+                    .HasColumnName("NAME");
+
+                entity.Property(e => e.Price)
+                    .HasColumnType("money")
+                    .HasColumnName("PRICE");
+
+                entity.Property(e => e.Quantity).HasColumnName("QUANTITY");
+
+                entity.Property(e => e.Status)
+                    .HasMaxLength(10)
+                    .HasColumnName("STATUS")
+                    .IsFixedLength(true);
+
+                entity.Property(e => e.Stock).HasColumnName("STOCK");
+
+                entity.Property(e => e.Transporter)
+                    .HasMaxLength(500)
+                    .HasColumnName("TRANSPORTER");
+
+                entity.Property(e => e.Weight).HasColumnName("WEIGHT");
+
+                entity.Property(e => e.Width).HasColumnName("WIDTH");
+            });
+
+            modelBuilder.Entity<ExternalShipper>(entity =>
+            {
+                entity.ToTable("External_Shippers");
+
+                entity.Property(e => e.Id).HasColumnName("ID");
 
                 entity.Property(e => e.IdMedia).HasColumnName("ID_MEDIA");
 
@@ -156,9 +305,7 @@ namespace ProductStore.API.DBFirst.DataModels
             {
                 entity.ToTable("Internal_Shipper");
 
-                entity.Property(e => e.Id)
-                    .ValueGeneratedOnAdd()
-                    .HasColumnName("ID");
+                entity.Property(e => e.Id).HasColumnName("ID");
 
                 entity.Property(e => e.Cmnd)
                     .HasMaxLength(50)
@@ -224,33 +371,11 @@ namespace ProductStore.API.DBFirst.DataModels
                 entity.Property(e => e.Type)
                     .HasMaxLength(255)
                     .HasColumnName("TYPE");
-
-                entity.HasOne(d => d.IdEmployeeNavigation)
-                    .WithMany(p => p.Media)
-                    .HasForeignKey(d => d.IdEmployee)
-                    .HasConstraintName("FK_Medias_Employees");
-
-                entity.HasOne(d => d.IdExternalShipperNavigation)
-                    .WithMany(p => p.Media)
-                    .HasForeignKey(d => d.IdExternalShipper)
-                    .HasConstraintName("FK_Medias_External_Shippers");
-
-                entity.HasOne(d => d.IdInternalShipperNavigation)
-                    .WithMany(p => p.Media)
-                    .HasForeignKey(d => d.IdInternalShipper)
-                    .HasConstraintName("FK_Medias_Internal_Shipper");
-
-                entity.HasOne(d => d.IdProductNavigation)
-                    .WithMany(p => p.Media)
-                    .HasForeignKey(d => d.IdProduct)
-                    .HasConstraintName("FK_Medias_Products");
             });
 
             modelBuilder.Entity<Order>(entity =>
             {
-                entity.Property(e => e.Id)
-                    .ValueGeneratedOnAdd()
-                    .HasColumnName("ID");
+                entity.Property(e => e.Id).HasColumnName("ID");
 
                 entity.Property(e => e.CreateBy)
                     .HasMaxLength(255)
@@ -275,7 +400,8 @@ namespace ProductStore.API.DBFirst.DataModels
                 entity.Property(e => e.Status)
                     .HasMaxLength(10)
                     .HasColumnName("STATUS")
-                    .IsFixedLength(true);
+                    .IsFixedLength(true)
+                    .HasComment("ORDERING, ORDERED, PACKAGING, READY TO SHIP, SHIPPING, SHIPPED,");
 
                 entity.HasOne(d => d.IdEmployeeNavigation)
                     .WithMany(p => p.Orders)
@@ -300,7 +426,9 @@ namespace ProductStore.API.DBFirst.DataModels
 
                 entity.ToTable("Orders_Products");
 
-                entity.Property(e => e.IdOrder).HasColumnName("ID_ORDER");
+                entity.Property(e => e.IdOrder)
+                    .ValueGeneratedOnAdd()
+                    .HasColumnName("ID_ORDER");
 
                 entity.Property(e => e.IdProduct).HasColumnName("ID_PRODUCT");
 
@@ -312,28 +440,28 @@ namespace ProductStore.API.DBFirst.DataModels
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Orders_Products_Orders");
 
-                entity.HasOne(d => d.IdProductNavigation)
-                    .WithMany(p => p.OrdersProducts)
-                    .HasForeignKey(d => d.IdProduct)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Orders_Products_Products");
+                //entity.HasOne(d => d.IdProductNavigation)
+                //    .WithMany(p => p.OrdersProducts)
+                //    .HasForeignKey(d => d.IdProduct)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("FK_Orders_Products_Products");
             });
 
             modelBuilder.Entity<Product>(entity =>
             {
-                entity.Property(e => e.Id)
-                    .ValueGeneratedOnAdd()
-                    .HasColumnName("ID");
+                entity.Property(e => e.Id).ValueGeneratedOnAdd().HasColumnName("ID");
 
                 entity.Property(e => e.Country)
-                    .HasMaxLength(50)
+                    .HasMaxLength(255)
                     .HasColumnName("COUNTRY");
 
                 entity.Property(e => e.Description)
                     .HasMaxLength(1000)
                     .HasColumnName("DESCRIPTION");
 
-                entity.Property(e => e.Height).HasColumnName("HEIGHT");
+                entity.Property(e => e.Height)
+                    .HasColumnName("HEIGHT")
+                    .HasComment("unit (cm)");
 
                 entity.Property(e => e.IdCategory).HasColumnName("ID_CATEGORY");
 
@@ -346,47 +474,56 @@ namespace ProductStore.API.DBFirst.DataModels
 
                 entity.Property(e => e.IdTransporter).HasColumnName("ID_TRANSPORTER");
 
-                entity.Property(e => e.Lenght).HasColumnName("LENGHT");
+                entity.Property(e => e.Lenght)
+                    .HasColumnName("LENGHT")
+                    .HasComment("unit (cm)");
 
                 entity.Property(e => e.Name)
-                    .HasMaxLength(10)
-                    .HasColumnName("NAME")
-                    .IsFixedLength(true);
+                    .HasMaxLength(255)
+                    .HasColumnName("NAME");
 
-                entity.Property(e => e.Price).HasColumnName("PRICE");
+                entity.Property(e => e.Price)
+                    .HasColumnType("money")
+                    .HasColumnName("PRICE")
+                    .HasComment("<100,000,000");
 
                 entity.Property(e => e.Quantity).HasColumnName("QUANTITY");
 
                 entity.Property(e => e.Status)
                     .HasMaxLength(10)
                     .HasColumnName("STATUS")
-                    .IsFixedLength(true);
+                    .IsFixedLength(true)
+                    .HasComment("AVAILABLE, VERIFYING, REPORTING, SOLD OUT, ACTIVE, INACTIVE");
 
-                entity.Property(e => e.Stock).HasColumnName("STOCK");
+                entity.Property(e => e.Stock)
+                    .HasColumnName("STOCK")
+                    .HasComment("<100,000");
 
-                entity.Property(e => e.Weight).HasColumnName("WEIGHT");
+                entity.Property(e => e.Weight)
+                    .HasColumnName("WEIGHT")
+                    .HasComment("unit (gram)");
 
-                entity.Property(e => e.Width).HasColumnName("WIDTH");
+                entity.Property(e => e.Width)
+                    .HasColumnName("WIDTH")
+                    .HasComment("unit (cm)");
 
-                entity.HasOne(d => d.IdCategoryNavigation)
-                    .WithMany(p => p.Products)
-                    .HasForeignKey(d => d.IdCategory)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Products_Products_Categories");
+                //entity.HasOne(d => d.IdCategoryNavigation)
+                //    .WithMany(p => p.Products)
+                //    .HasForeignKey(d => d.IdCategory)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("FK_Products_Categories");
 
-                entity.HasOne(d => d.IdCompanyNavigation)
-                    .WithMany(p => p.Products)
-                    .HasForeignKey(d => d.IdCompany)
-                    .HasConstraintName("FK_Products_Companys");
+                //entity.HasOne(d => d.IdCompanyNavigation)
+                //    .WithMany(p => p.Products)
+                //    .HasForeignKey(d => d.IdCompany)
+                //    .HasConstraintName("FK_Products_Companys");
             });
 
             modelBuilder.Entity<ProductsCategory>(entity =>
             {
                 entity.ToTable("Products_Categories");
 
-                entity.Property(e => e.Id)
-                    .ValueGeneratedOnAdd()
-                    .HasColumnName("ID");
+                entity.Property(e => e.Id).HasColumnName("ID");
 
                 entity.Property(e => e.Alias)
                     .HasMaxLength(255)
@@ -398,13 +535,10 @@ namespace ProductStore.API.DBFirst.DataModels
             });
 
 
-
-
             OnModelCreatingPartial(modelBuilder);
             base.OnModelCreating(modelBuilder);
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
-
     }
 }

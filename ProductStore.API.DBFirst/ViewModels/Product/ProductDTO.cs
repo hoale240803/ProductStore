@@ -1,5 +1,4 @@
-﻿using ProductStore.API.DBFirst.ViewModels.Media;
-using ProductStore.API.DBFirst.ViewModels.OrdersProduct;
+﻿using ProductStore.API.DBFirst.ViewModels.OrdersProduct;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -8,15 +7,19 @@ namespace ProductStore.API.DBFirst.ViewModels.Product
     public class ProductDTO
     {
         public int Id { get; set; }
-        public int IdMedia { get; set; }
+
         [NotMapped]
         public int IdCategory { get; set; }
+
         [NotMapped]
         public int? IdTransporter { get; set; }
+
         [NotMapped]
         public string IdMaterials { get; set; }
+
         [NotMapped]
         public int? IdCompany { get; set; }
+
         public string Country { get; set; }
         public string Name { get; set; }
         public decimal? Price { get; set; }
@@ -29,8 +32,6 @@ namespace ProductStore.API.DBFirst.ViewModels.Product
         public string Status { get; set; }
         public int? Height { get; set; }
 
-    
-        public IEnumerable<MediaDTO> MediaDTO { get; set; }
         [NotMapped]
         public IEnumerable<OrdersProductDTO> OrdersProductsDTO { get; set; }
     }

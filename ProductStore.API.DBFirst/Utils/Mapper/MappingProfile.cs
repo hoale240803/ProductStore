@@ -41,32 +41,21 @@ namespace ProductStore.API.DBFirst.Utils.Mapper
             //CreateMap<OrderDetailsVM, OrderDetails>();
 
             //CreateMap<OrdersVM, Orders>();
-            CreateMap<Product, ProductDTO>()
-              .ForMember(dest => dest.MediaDTO, opt =>
-                 opt.MapFrom(src => src.Media.Select(x =>
-                 new MediaDTO()
-                 {
-                     Id = x.Id,
-                     Type = x.Type,
-                     ExternalUrl = x.ExternalUrl,
-                     Name = x.Name,
-                     FileId = x.FileId,
-                 }
-                 ))
-              );
-            CreateMap<ProductDTO, Product>()
-              .ForMember(dest => dest.Media, opt =>
-                 opt.MapFrom(src => src.MediaDTO.Select(x =>
-                 new Media()
-                 {
-                     Id = x.Id,
-                     Type = x.Type,
-                     ExternalUrl = x.ExternalUrl,
-                     Name = x.Name,
-                     FileId = x.FileId,
-                 }
-                 ))
-               );
+            //CreateMap<Product, ProductDTO>()
+            //  .ForMember(dest => dest.MediaDTO, opt =>
+            //     opt.MapFrom(src => src.Media.Select(x =>
+            //     new MediaDTO()
+            //     {
+            //         Id = x.Id,
+            //         Type = x.Type,
+            //         ExternalUrl = x.ExternalUrl,
+            //         Name = x.Name,
+            //         FileId = x.FileId,
+            //     }
+            //     ))
+            //  );
+            CreateMap<Product, ProductDTO>();
+            CreateMap<ProductDTO, Product>();
 
 
 

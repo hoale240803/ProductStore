@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -8,7 +10,6 @@ namespace ProductStore.API.DBFirst.DataModels
     {
         [Key]
         public int IdOrder { get; set; }
-
         public int IdProduct { get; set; }
         public int Quantity { get; set; }
 

@@ -10,7 +10,6 @@ namespace ProductStore.API.DBFirst.DataModels
     {
         public Employee()
         {
-            Media = new HashSet<Media>();
             Orders = new HashSet<Order>();
         }
         [Key]
@@ -23,7 +22,6 @@ namespace ProductStore.API.DBFirst.DataModels
         public int? IdMedia { get; set; }
         public string Status { get; set; }
 
-        public virtual ICollection<Media> Media { get; set; }
         public virtual ICollection<Order> Orders { get; set; }
     }
 }

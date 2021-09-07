@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using ClosedXML.Excel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,9 @@ using ProductStore.API.DBFirst.ViewModels.PagingResult;
 using ProductStore.API.DBFirst.ViewModels.Product;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Net.Http.Headers;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace ProductStore.API.DBFirst.Controllers
@@ -85,7 +89,9 @@ namespace ProductStore.API.DBFirst.Controllers
             ProductDTO productResult = null;
             try
             {
+                //GET PRODUCT INFO
                 var productEntity = await _productServices.GetProductByIdAsync(id);
+                //GET IMAGE INFO
                 productResult = _mapper.Map<ProductDTO>(productEntity);
                 if (productEntity == null)
                 {
@@ -97,27 +103,6 @@ namespace ProductStore.API.DBFirst.Controllers
                 StatusCode(StatusCodes.Status500InternalServerError, new Response<ProductDTO> { Status = "Error", Message = ex.Message });
             }
             return Ok(new Response<ProductDTO> { Status = "200", Message = $"GET PRODUCT WITH {id} SUCCESS", Content = productResult });
-        }
-
-        // GET: api/Products/Exports
-        [HttpGet("Exports")]
-        public async Task<IActionResult> ExportsProduct()
-        {
-            ProductDTO productResult = null;
-            try
-            {
-                //var productEntity = await _productServices.GetProductByIdAsync(id);
-                //productResult = _mapper.Map<ProductDTO>(productEntity);
-                //if (productEntity == null)
-                //{
-                //    return Ok(new Response<ProductDTO> { Status = "200", Message = "NO RESULT" });
-                //}
-            }
-            catch (Exception ex)
-            {
-                StatusCode(StatusCodes.Status500InternalServerError, new Response<ProductDTO> { Status = "Error", Message = ex.Message });
-            }
-            return Ok(new Response<ProductDTO> { Status = "200", Message = $"Export PRODUCT WITH  SUCCESS", Content = productResult });
         }
 
         // PUT: api/Products/5
@@ -177,7 +162,7 @@ namespace ProductStore.API.DBFirst.Controllers
             try
             {   // MAPPER
                 var propductEntity = _mapper.Map<Product>(product);
-                var imageProductEntites = propductEntity.Media;
+                //var imageProductEntites = propductEntity.Media;
                 // SAVE IMAGE FILES TO CLOUD
 
                 // SAVE IMAGE INFO
@@ -270,6 +255,264 @@ namespace ProductStore.API.DBFirst.Controllers
                 StatusCode(StatusCodes.Status500InternalServerError, new Response<ProductDTO> { Status = "Error", Message = ex.Message });
             }
             return Ok(new Response<ProductDTO> { Message = $"DELETE PRODUCTS SUCCESS", Status = "200" });
+        }
+
+        [HttpGet("exportExcel")]
+        public async Task<IActionResult> ExportToExcel()
+        {
+            var productList = await _productServices.GetMultiPaging(null, out int total).ToListAsync();
+            using (var workbook = new XLWorkbook())
+            {
+                var worksheet = workbook.Worksheets.Add("Products");
+
+                // SET HEADER EXCEL FILE
+                var currentRow = 1;
+                const int IdCol = 1;
+                const int NameCol = 2;
+                const int CategoryCol = 3;
+                const int TransporterCol = 4;
+                const int MaterialCol = 5;
+                const int CompanyCol = 6;
+                const int CountryCol = 7;
+                const int PriceCol = 8;
+                const int DescriptionCol = 9;
+                const int QuantityCol = 10;
+                const int StockCol = 11;
+                const int WeightCol = 12;
+                const int WidthCol = 13;
+                const int LenghtCol = 14;
+                const int StatusCol = 15;
+                const int HeightCol = 16;
+                worksheet.Cell(currentRow, IdCol).Value = "Id";
+                worksheet.Cell(currentRow, NameCol).Value = "Name";
+                worksheet.Cell(currentRow, CategoryCol).Value = "Category";
+                worksheet.Cell(currentRow, TransporterCol).Value = "Transporters";
+                worksheet.Cell(currentRow, MaterialCol).Value = "Materials";
+                worksheet.Cell(currentRow, CompanyCol).Value = "Company";
+                worksheet.Cell(currentRow, CountryCol).Value = "Country";
+                worksheet.Cell(currentRow, PriceCol).Value = "Price";
+                worksheet.Cell(currentRow, DescriptionCol).Value = "Description";
+                worksheet.Cell(currentRow, QuantityCol).Value = "Quantity";
+                worksheet.Cell(currentRow, StockCol).Value = "Stock";
+                worksheet.Cell(currentRow, WeightCol).Value = "Weight";
+                worksheet.Cell(currentRow, WidthCol).Value = "Width";
+                worksheet.Cell(currentRow, LenghtCol).Value = "Lenght";
+                worksheet.Cell(currentRow, StatusCol).Value = "Status";
+                worksheet.Cell(currentRow, HeightCol).Value = "Height";
+
+                //SET DATA FOR EACH ROW FROM VIEW
+                foreach (var user in productList)
+                {
+                    currentRow++;
+                    worksheet.Cell(currentRow, IdCol).Value = user.Id;
+                    worksheet.Cell(currentRow, NameCol).Value = user.Name;
+                    worksheet.Cell(currentRow, CategoryCol).Value = user.IdCategory;
+                    worksheet.Cell(currentRow, TransporterCol).Value = user.IdTransporter;
+                    worksheet.Cell(currentRow, MaterialCol).Value = user.IdMaterials;
+                    worksheet.Cell(currentRow, CompanyCol).Value = user.IdCompany;
+                    worksheet.Cell(currentRow, CountryCol).Value = user.Country;
+                    worksheet.Cell(currentRow, PriceCol).Value = user.Price;
+                    worksheet.Cell(currentRow, DescriptionCol).Value = user.Description;
+                    worksheet.Cell(currentRow, QuantityCol).Value = user.Quantity;
+                    worksheet.Cell(currentRow, StockCol).Value = user.Stock;
+                    worksheet.Cell(currentRow, WeightCol).Value = user.Weight;
+                    worksheet.Cell(currentRow, WidthCol).Value = user.Width;
+                    worksheet.Cell(currentRow, LenghtCol).Value = user.Lenght;
+                    worksheet.Cell(currentRow, StatusCol).Value = user.Status;
+                    worksheet.Cell(currentRow, HeightCol).Value = user.Height;
+                }
+
+                // PUSH TO STREAM AND RETURN EXCEL FILE
+                using (var stream = new System.IO.MemoryStream())
+                {
+                    workbook.SaveAs(stream);
+                    var content = stream.ToArray();
+
+                    return File(stream.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "ExcelFile.xlsx");
+                }
+            }
+        }
+
+        [HttpGet("exportCSV")]
+        public async Task<IActionResult> ExportToCSV()
+        {
+            var productList = await _productServices.GetMultiPaging(null, out int total).ToListAsync();
+            var builder = new StringBuilder();
+            builder.AppendLine("Id,Username");
+            foreach (var product in productList)
+            {
+                builder.AppendLine($"{product.Id},{product.Name}");
+            }
+
+            return File(Encoding.UTF8.GetBytes(builder.ToString()), "text/csv", "products.csv");
+        }
+
+        [HttpPost("importExcel")]
+        public async Task<IActionResult> ImportExcel(IFormFile formFile)
+        {
+            if (formFile == null)
+            {
+                return StatusCode(StatusCodes.Status400BadRequest, new Response<ProductDTO> { Status = "Error", Message = "No chosen file to upload" });
+            }
+            //get file name
+            var filename = ContentDispositionHeaderValue.Parse(formFile.ContentDisposition).FileName.Trim('"');
+
+            //get path
+            var MainPath = Path.Combine(Directory.GetCurrentDirectory(), "Resources", "Files");
+
+            //create directory "Uploads" if it doesn't exists
+            if (!Directory.Exists(MainPath))
+            {
+                Directory.CreateDirectory(MainPath);
+            }
+
+            //get file path
+            var filePath = Path.Combine(MainPath, formFile.FileName);
+            using (System.IO.Stream stream = new FileStream(filePath, FileMode.Create))
+            {
+                await formFile.CopyToAsync(stream);
+            }
+
+            //get extension
+            string extension = Path.GetExtension(filename);
+
+            string conString = string.Empty;
+
+            switch (extension)
+            {
+                case ".xls": //Excel 97-03.
+                    conString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + filePath + ";Extended Properties='Excel 8.0;HDR=YES'";
+                    break;
+
+                case ".xlsx": //Excel 07 and above.
+                    conString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + filePath + ";Extended Properties='Excel 8.0;HDR=YES'";
+                    break;
+            }
+
+            using (XLWorkbook workbook = new XLWorkbook(filePath))
+            {
+                IXLWorksheet worksheet = workbook.Worksheet(1);
+                bool FirstRow = true;
+                //Range for reading the cells based on the last cell used.
+                string readRange = "1:1";
+                List<Product> producEntitytList = new List<Product>();
+                foreach (IXLRow row in worksheet.RowsUsed())
+                {
+                    //If Reading the First Row (used) then add them as column name
+                    if (FirstRow)
+                    {
+                        //Checking the Last cellused for column generation in datatable
+                        readRange = string.Format("{0}:{1}", 1, row.LastCellUsed().Address.ColumnNumber);
+                        //foreach (IXLCell cell in row.Cells(readRange))
+                        //{
+                        //    var cellValue = cell.Value.ToString();
+                        //    var cellValue2 = cell.Value.ToString();
+                        //}
+                        FirstRow = false;
+                    }
+                    else
+                    {
+                        //Adding a Row in datatable
+                        //dt.Rows.Add();
+                        int cellIndex = 1;
+                        Product newProduct = new Product();
+                        //Updating the values of datatable
+                        foreach (IXLCell cell in row.Cells(readRange))
+                        {
+                            //dt.Rows[dt.Rows.Count - 1][cellIndex] = cell.Value.ToString();
+                            var cellValue = cell.Value.ToString();
+                            var cellValu1e = cell.Value.ToString();
+
+                            //if (cellIndex==0)
+                            //        newProduct.Id = Convert.ToInt32(cell.Value.ToString());
+                            //    else if(cellIndex==1)
+                            //        newProduct.Name = cell.Value.ToString();
+                            //const int IdCol = 1;
+                            const int NameCol = 2;
+                            const int CategoryCol = 3;
+                            const int TransporterCol = 4;
+                            const int MaterialCol = 5;
+                            const int CompanyCol = 6;
+                            const int CountryCol = 7;
+                            const int PriceCol = 8;
+                            const int DescriptionCol = 9;
+                            const int QuantityCol = 10;
+                            const int StockCol = 11;
+                            const int WeightCol = 12;
+                            const int WidthCol = 13;
+                            const int LenghtCol = 14;
+                            const int StatusCol = 15;
+                            const int HeightCol = 16;
+
+                            switch (cellIndex)
+                            {
+                                //case IdCol:
+                                //    newProduct.Id = Convert.ToInt32(cell.Value.ToString());
+                                //    break;
+                                case NameCol:
+                                    newProduct.Name = cell.Value.ToString();
+                                    break;
+
+                                case CategoryCol:
+                                    newProduct.IdCategory = cell.Value.ToString() != ""? Convert.ToInt32(cell.Value.ToString()):0;
+                                    break;
+                                case TransporterCol:
+                                    newProduct.IdTransporter = cell.Value.ToString() != "" ? Convert.ToInt32(cell.Value.ToString()) : 0;
+                                    break;
+                                case MaterialCol:
+                                    newProduct.IdMaterials = cell.Value.ToString();
+                                    break;
+                                case CompanyCol:
+                                    var companyCell = await _context.Categories.FirstOrDefaultAsync(x => x.Name.Contains(cell.Value.ToString()));
+                                    newProduct.IdCompany = companyCell != null ? companyCell.Id : 0 ;
+                                    break;
+                                case CountryCol:
+                                    newProduct.Country = cell.Value.ToString();
+                                    break;
+                                case PriceCol:
+                                    newProduct.Price = cell.Value.ToString() != "" ? Convert.ToInt32(cell.Value.ToString()) : 0;
+                                    break;
+                                case DescriptionCol:
+                                    newProduct.Description = cell.Value.ToString();
+                                    break;
+                                case QuantityCol:
+                                    newProduct.Quantity = cell.Value.ToString() != "" ? Convert.ToInt32(cell.Value.ToString()) : 0;
+                                    break;
+                                case StockCol:
+                                    newProduct.Stock = cell.Value.ToString() != "" ? Convert.ToInt32(cell.Value.ToString()) : 0;
+                                    break;
+                                case WeightCol:
+                                    newProduct.Weight= cell.Value.ToString() != "" ? Convert.ToInt32(cell.Value.ToString()) : 0; 
+                                    break;
+                                case WidthCol:
+                                    newProduct.Width = cell.Value.ToString() != "" ? Convert.ToInt32(cell.Value.ToString()) : 0;
+                                    break;
+                                case LenghtCol:
+                                    newProduct.Lenght= cell.Value.ToString() != "" ? Convert.ToInt32(cell.Value.ToString()) : 0;
+                                    break;
+                                case StatusCol:
+                                    newProduct.Status= cell.Value.ToString();
+                                    break;
+                                case HeightCol:
+                                    newProduct.Height= cell.Value.ToString() != "" ? Convert.ToInt32(cell.Value.ToString()) : 0;
+                                    break;
+                               
+                            }
+
+                            cellIndex = cellIndex + 1;
+                        }
+                        producEntitytList.Add(newProduct);
+                    }
+                }
+                //If no data in Excel file
+                if (FirstRow)
+                {
+                    return StatusCode(StatusCodes.Status400BadRequest, new Response<ProductDTO> { Status = "Error", Message = "File is empty!" });
+                }
+                _productServices.AddMulti(producEntitytList);
+                await _productServices.SaveAsync();
+            }
+            return Ok(new Response<ProductDTO> { Status = "200", Message = "UPLOAD FILE SUCCESS" });
         }
 
         private bool ProductExists(int id)
