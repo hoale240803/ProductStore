@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication.Google;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -11,6 +8,7 @@ using Microsoft.IdentityModel.Tokens;
 using ProductStore.API.DBFirst.Authentication;
 using ProductStore.API.DBFirst.DataModels;
 using ProductStore.API.DBFirst.DataModels.Models;
+using ProductStore.API.DBFirst.DataModels.Models.Authentication;
 using ProductStore.API.DBFirst.Services.Authentications;
 using ProductStore.API.DBFirst.Services.Authentications.Email;
 using ProductStore.API.DBFirst.Utils.Errors;
@@ -18,7 +16,6 @@ using ProductStore.API.DBFirst.ViewModels;
 using ProductStore.API.DBFirst.ViewModels.Authentication;
 using ProductStore.API.DBFirst.ViewModels.Authentication.Email;
 using ProductStore.API.DBFirst.ViewModels.Authentication.ResetPassword;
-using ProductStore.API.DBFirst.ViewModels.Authentication.TwoStepAuthen;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -98,13 +95,13 @@ namespace ProductStore.API.DBFirst.Controllers
             var isUserNameExist = await _userManager.FindByNameAsync(user.Username);
             if (isUserNameExist != null)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response<Object> { Status = "Error", Message = "UserName already exists!" });
+                return StatusCode(StatusCodes.Status400BadRequest, new Response<Object> { Status = "400", Message = "UserName already exists!" });
             }
             // check exist email
             var isEmailExist = await _userManager.FindByEmailAsync(user.Email);
             if (isEmailExist != null)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response<Object> { Status = "Error", Message = "Email already exists!" });
+                return StatusCode(StatusCodes.Status400BadRequest, new Response<Object> { Status = "400", Message = "Email already exists!" });
             }
             // create StoreUser (user entity)
             StoreUser storeUser = new StoreUser
@@ -117,15 +114,16 @@ namespace ProductStore.API.DBFirst.Controllers
             var result = await _userManager.CreateAsync(storeUser, user.Password);
             if (!result.Succeeded)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response<Object> { Status = "Error", ListMessage = result.Errors });
+                var error = result.Errors.First();
+                return StatusCode(StatusCodes.Status400BadRequest, new Response<Object> { Status = "400", ListMessage = result.Errors, Message = error.Description });
             }
 
             // response
-            return Ok(new Response<Object> { Status = "Success", Message = "User created successfully!" });
+            return Ok(new Response<Object> { Status = "200", Message = "User created successfully!" });
         }
 
         [HttpPost("loginRefreshtoken")]
-        public async Task<IActionResult> GetTokenAsync(DataModels.Models.Authentication.LoginVM model)
+        public async Task<IActionResult> GetTokenAsync(LoginVM model)
         {
             var result = await _authentication.LoginAsync(model);
 
@@ -141,15 +139,15 @@ namespace ProductStore.API.DBFirst.Controllers
             return Ok(result);
         }
 
-        [HttpPost("registerHasRole")]
-        public async Task<ActionResult> RegisterAsync(DataModels.Models.Authentication.RegisterVM registerModel)
+        [HttpPost("registerConfirmedEmail")]
+        public async Task<ActionResult> RegisterAsync(RegisterVM registerModel)
         {
             using var transaction = _context.Database.BeginTransaction();
             try
             {
                 string token = "";
                 if (!ModelState.IsValid)
-                    return StatusCode(StatusCodes.Status400BadRequest, new Response<Object> { Status = "Error", Message = "Form not valid! Please try again!" });
+                    return StatusCode(StatusCodes.Status400BadRequest, new Response<Object> { Status = "400", Message = "Form not valid! Please try again!" });
 
                 var newUser = new StoreUser
                 {
@@ -160,7 +158,7 @@ namespace ProductStore.API.DBFirst.Controllers
 
                 if (user != null)
                 {
-                    return StatusCode(StatusCodes.Status400BadRequest, new Response<Object> { Status = "FAILED", Message = "Email exist" });
+                    return StatusCode(StatusCodes.Status400BadRequest, new Response<Object> { Status = "400", Message = "Email exist" });
                 }
 
                 var result = await _userManager.CreateAsync(newUser, registerModel.Password);
@@ -168,7 +166,7 @@ namespace ProductStore.API.DBFirst.Controllers
                 {
                     foreach (var error in result.Errors)
                     {
-                        return StatusCode(StatusCodes.Status400BadRequest, new Response<Object> { Status = "Error", Message = "Confirm email not success", ListMessage = result.Errors });
+                        return StatusCode(StatusCodes.Status400BadRequest, new Response<Object> { Status = "400", Message = "Confirm email not success", ListMessage = result.Errors });
                     }
                 }
                 //generate token
@@ -184,15 +182,14 @@ namespace ProductStore.API.DBFirst.Controllers
                 await _userManager.AddToRoleAsync(newUser, "Visitor");
                 transaction.Commit();
                 return StatusCode(StatusCodes.Status200OK, new RegisterResponseVM { Message = "Register Success", Status = "200", Token = codeEncoded, ListMessage = null });
-
             }
             catch (Exception ex)
             {
                 transaction.Rollback();
                 throw new AppErrors(ex.Message, ex);
-                //return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Form not valid! Please try again!" });
             }
         }
+
         [HttpPost("confirmed-email")]
         public async Task<IActionResult> ConfirmEmail(string token, string email)
         {
@@ -203,7 +200,6 @@ namespace ProductStore.API.DBFirst.Controllers
             var codeDecodedBytes = WebEncoders.Base64UrlDecode(token);
             var codeDecoded = Encoding.UTF8.GetString(codeDecodedBytes);
             var result = await _userManager.ConfirmEmailAsync(user, codeDecoded);
-
 
             if (!result.Succeeded)
             {
@@ -244,6 +240,7 @@ namespace ProductStore.API.DBFirst.Controllers
             var listToken = _authentication.GetById(id);
             return Ok(listToken.Result);
         }
+
         [HttpPost("revoke-token")]
         public async Task<IActionResult> RevokeToken([FromBody] RevokeTokenRequest model)
         {
@@ -261,17 +258,16 @@ namespace ProductStore.API.DBFirst.Controllers
         public async Task<IActionResult> ForgotPassword(ForgotPasswordVM forgotPasswordModel)
         {
             if (!ModelState.IsValid)
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response<Object> { Status = "Error", Message = "Form not valid! Please try again!" });
+                return StatusCode(StatusCodes.Status400BadRequest, new Response<Object> { Status = "400", Message = "Form not valid! Please try again!" });
             var user = await _userManager.FindByEmailAsync(forgotPasswordModel.Email);
             if (user == null)
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response<Object> { Status = "Error", Message = "Your email not exist" });
+                return StatusCode(StatusCodes.Status400BadRequest, new Response<Object> { Status = "400", Message = "Your email not exist" });
 
             var token = await _userManager.GeneratePasswordResetTokenAsync(user);
             //string testEmail = "hoale240803@gmail.com";
             var callback = Url.Action(nameof(ResetPassword), "Authentication", new { token, email = user.Email }, Request.Scheme);
             var message = new MessageVM(new string[] { user.Email }, "Reset password token", callback, null);
             await _emailSender.SendEmailAsync(message);
-
             return Ok(token);
         }
 
@@ -279,7 +275,6 @@ namespace ProductStore.API.DBFirst.Controllers
         [HttpPost("reset-password")]
         public async Task<IActionResult> ResetPassword(ResetPasswordVM resetPasswordModel)
         {
-
             if (!ModelState.IsValid)
                 return StatusCode(StatusCodes.Status400BadRequest, new Response<Object> { Status = "400", Message = "Form not valid! Please try again!" });
 
@@ -299,87 +294,23 @@ namespace ProductStore.API.DBFirst.Controllers
             return Ok(resetPassResult);
         }
 
-        //[HttpPost("google-login")]
-        //[AllowAnonymous]
-        //[ValidateAntiForgeryToken]
-        //public IActionResult ExternalLogin(string provider, string returnUrl = null)
-        //{
-        //    // Request a redirect to the external login provider.
-        //    var redirectUrl = Url.Action(nameof(ExternalLoginCallback), "Authentication", new { returnUrl });
-        //    var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
-        //    return Challenge(properties, provider);
-        //}
-        //[HttpGet("google-login")]
-        //[AllowAnonymous]
-        //public async Task<IActionResult> ExternalLoginCallback(string returnUrl = null, string remoteError = null)
-        //{
-        //    if (remoteError != null)
-        //    {
-        //        return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = $"Error from external provider: {remoteError}" });
-        //    }
-        //    var info = await _signInManager.GetExternalLoginInfoAsync();
-        //    if (info == null)
-        //    {
-        //        return RedirectToAction(nameof(ExternalLogin));
-        //    }
-        //    // Sign in the user with this external login provider if the user already has a login.
-        //    var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, isPersistent: false, bypassTwoFactor: true);
-        //    if (result.Succeeded)
-        //    {
-        //        return Ok(new Response { Status = "Success", Message = "Login with google success" });
-        //        //_logger.LogInformation("User logged in with {Name} provider.", info.LoginProvider);
-        //        //return RedirectToAction(nameof(returnUrl));
-        //    }
-        //    return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = $"Error from external provider: {remoteError}" });
-
-        //}
-
-
-        //[HttpGet("login-two-step")]
-        //public async Task<IActionResult> LoginTwoStep(string email, bool rememberMe, string returnUrl = null)
-        //{
-        //    var user = await _userManager.FindByEmailAsync(email);
-        //    if (user == null)
-        //    {
-        //        return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Email not found!" });
-        //    }
-        //    var providers = await _userManager.GetValidTwoFactorProvidersAsync(user);
-        //    if (!providers.Contains("Email"))
-        //    {
-        //        return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "System error" });
-        //    }
-        //    var token = await _userManager.GenerateTwoFactorTokenAsync(user, "Email");
-        //    var message = new MessageVM(new string[] { email }, "Authentication token", token, null);
-        //    await _emailSender.SendEmailAsync(message);
-        //    return Ok(new Response { Status="Success", Message="verifying code"});
-        //}
-        //[HttpPost("login-two-step")]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> LoginTwoStep(TwoStepAuthenVM twoStepModel, string returnUrl = null)
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Model error" });
-        //    }
-        //    var user = await _signInManager.GetTwoFactorAuthenticationUserAsync();
-        //    if (user == null)
-        //    {
-        //        return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Code Invalid!" });
-        //    }
-        //    var result = await _signInManager.TwoFactorSignInAsync("Email", twoStepModel.TwoFactorCode, twoStepModel.RememberMe, rememberClient: false);
-
-        //    if (result.IsLockedOut)
-        //    {
-        //        return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Your account was Lockdown!" });
-        //    }
-        //    else if(result.IsNotAllowed)
-        //    {
-        //        return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Your account was not allowed login!" });
-        //    }
-        //    else
-        //    {
-        //        return Ok(new Response { Status = "Success", Message = "Login two step successfully!" });
-        //    }
-        //}
+        [HttpGet("login-two-step")]
+        public async Task<IActionResult> LoginTwoStep(string email, bool rememberMe, string returnUrl = null)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+            if (user == null)
+            {
+                return StatusCode(StatusCodes.Status400BadRequest, new Response<Object> { Status = "400", Message = "Email not found!" });
+            }
+            var providers = await _userManager.GetValidTwoFactorProvidersAsync(user);
+            if (!providers.Contains("Email"))
+            {
+                return StatusCode(StatusCodes.Status400BadRequest, new Response<Object> { Status = "400", Message = "System error" });
+            }
+            var token = await _userManager.GenerateTwoFactorTokenAsync(user, "Email");
+            var message = new MessageVM(new string[] { email }, "Authentication token", token, null);
+            await _emailSender.SendEmailAsync(message);
+            return Ok(new Response<Object> { Status = "200", Message = "verifying code" });
+        }
     }
 }
