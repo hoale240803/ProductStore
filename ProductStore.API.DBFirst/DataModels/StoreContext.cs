@@ -516,6 +516,7 @@ namespace ProductStore.API.DBFirst.DataModels
                 //entity.HasOne(d => d.IdCompanyNavigation)
                 //    .WithMany(p => p.Products)
                 //    .HasForeignKey(d => d.IdCompany)
+                //     .OnDelete(DeleteBehavior.ClientSetNull)
                 //    .HasConstraintName("FK_Products_Companys");
             });
 

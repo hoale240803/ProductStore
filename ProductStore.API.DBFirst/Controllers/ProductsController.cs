@@ -427,7 +427,7 @@ namespace ProductStore.API.DBFirst.Controllers
                             //        newProduct.Id = Convert.ToInt32(cell.Value.ToString());
                             //    else if(cellIndex==1)
                             //        newProduct.Name = cell.Value.ToString();
-                            //const int IdCol = 1;
+                            const int IdCol = 1;
                             const int NameCol = 2;
                             const int CategoryCol = 3;
                             const int TransporterCol = 4;
@@ -446,9 +446,9 @@ namespace ProductStore.API.DBFirst.Controllers
 
                             switch (cellIndex)
                             {
-                                //case IdCol:
-                                //    newProduct.Id = Convert.ToInt32(cell.Value.ToString());
-                                //    break;
+                                case IdCol:
+                                    newProduct.Id = 0;
+                                    break;
                                 case NameCol:
                                     newProduct.Name = cell.Value.ToString();
                                     break;
@@ -464,7 +464,7 @@ namespace ProductStore.API.DBFirst.Controllers
                                     break;
                                 case CompanyCol:
                                     var companyCell = await _context.Categories.FirstOrDefaultAsync(x => x.Name.Contains(cell.Value.ToString()));
-                                    newProduct.IdCompany = companyCell != null ? companyCell.Id : 0 ;
+                                    newProduct.IdCompany = companyCell != null ? companyCell.Id : 1 ;
                                     break;
                                 case CountryCol:
                                     newProduct.Country = cell.Value.ToString();
@@ -510,6 +510,7 @@ namespace ProductStore.API.DBFirst.Controllers
                     return StatusCode(StatusCodes.Status400BadRequest, new Response<ProductDTO> { Status = "Error", Message = "File is empty!" });
                 }
                 _productServices.AddMulti(producEntitytList);
+                //await _productServices.SaveAsync();
                 await _productServices.SaveAsync();
             }
             return Ok(new Response<ProductDTO> { Status = "200", Message = "UPLOAD FILE SUCCESS" });

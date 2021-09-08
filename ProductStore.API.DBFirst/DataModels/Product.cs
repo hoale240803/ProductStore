@@ -9,14 +9,14 @@ namespace ProductStore.API.DBFirst.DataModels
 
     public partial class Product
     {
-        public Product()
-        {
-            OrdersProducts = new HashSet<OrdersProduct>();
-        }
+        //public Product()
+        //{
+        //    OrdersProducts = new HashSet<OrdersProduct>();
+        //}
 
         //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        //[Key]
+        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         public int IdCategory { get; set; }
@@ -37,11 +37,11 @@ namespace ProductStore.API.DBFirst.DataModels
         public int? Height { get; set; }
 
 
-        [ForeignKey("IdCategory")]
-        public virtual Category IdCategoryNavigation { get; set; }
-        [ForeignKey("IdCompany")]
-        public virtual Company IdCompanyNavigation { get; set; }
+        //[ForeignKey("IdCategory")]
+        //public virtual Category IdCategoryNavigation { get; set; }
+        ////[ForeignKey("IdCompany")]
+        //public virtual Company IdCompanyNavigation { get; set; }
 
-        public virtual ICollection<OrdersProduct> OrdersProducts { get; set; }
+        //public virtual ICollection<OrdersProduct> OrdersProducts { get; set; }
     }
 }

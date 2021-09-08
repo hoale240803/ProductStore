@@ -7,7 +7,7 @@ namespace ProductStore.API.DBFirst.DataModels
 {
     public partial class RefreshToken
     {
-        [Key]
+
         public int Id { get; set; }
 
         public string UserId { get; set; }
