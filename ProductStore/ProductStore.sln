@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductStore", "ProductStore.csproj", "{89D2EF2B-44EF-437C-9333-43F665BE6B01}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{2B1AA124-FED7-4237-9B26-F5009A4B616B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{3367B1D7-DDD4-416D-9D84-8CA6C16A2403}"
@@ -21,9 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductStore.Datas", "..\Pr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductStore.Models", "..\ProductStore.Models\ProductStore.Models.csproj", "{A460F1AF-3FA1-4F8D-AF7E-E2BC7CBEB083}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductStore.RestfulAPI", "..\ProductStore.RestfulAPI\ProductStore.RestfulAPI.csproj", "{C0F9EA84-C2EB-4515-9DBA-170D9EAF343E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductStore.API.DBFirst", "..\ProductStore.API.DBFirst\ProductStore.API.DBFirst.csproj", "{F58A3D30-B2F2-4C67-89CB-5F8BF10ADE73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductStore.API.DBFirst", "..\ProductStore.API.DBFirst\ProductStore.API.DBFirst.csproj", "{F58A3D30-B2F2-4C67-89CB-5F8BF10ADE73}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +27,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{89D2EF2B-44EF-437C-9333-43F665BE6B01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{89D2EF2B-44EF-437C-9333-43F665BE6B01}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{89D2EF2B-44EF-437C-9333-43F665BE6B01}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{89D2EF2B-44EF-437C-9333-43F665BE6B01}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FA23A808-9A31-4231-B37E-A0159073C355}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FA23A808-9A31-4231-B37E-A0159073C355}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA23A808-9A31-4231-B37E-A0159073C355}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -55,10 +47,6 @@ Global
 		{A460F1AF-3FA1-4F8D-AF7E-E2BC7CBEB083}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A460F1AF-3FA1-4F8D-AF7E-E2BC7CBEB083}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A460F1AF-3FA1-4F8D-AF7E-E2BC7CBEB083}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C0F9EA84-C2EB-4515-9DBA-170D9EAF343E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C0F9EA84-C2EB-4515-9DBA-170D9EAF343E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C0F9EA84-C2EB-4515-9DBA-170D9EAF343E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C0F9EA84-C2EB-4515-9DBA-170D9EAF343E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F58A3D30-B2F2-4C67-89CB-5F8BF10ADE73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F58A3D30-B2F2-4C67-89CB-5F8BF10ADE73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F58A3D30-B2F2-4C67-89CB-5F8BF10ADE73}.Release|Any CPU.ActiveCfg = Release|Any CPU
