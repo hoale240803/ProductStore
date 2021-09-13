@@ -37,7 +37,7 @@ namespace ProductStore.API.DBFirst
             services.AddControllers();
 
             //Adding DB Context with MS SQL
-            services.AddDbContext<StoreContext>(item => item.UseSqlServer(Configuration.GetConnectionString("StoreDBConnection")));
+            services.AddDbContext<StoreContext>(item => item.UseSqlServer(Configuration.GetConnectionString("AppDbContext")));
             // For Identity  
             services.AddIdentity<StoreUser, IdentityRole>(opt =>
             {

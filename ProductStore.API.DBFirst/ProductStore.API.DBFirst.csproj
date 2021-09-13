@@ -3,13 +3,14 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <UserSecretsId>53881bd7-75c7-48f3-9d3e-078380ea5f0f</UserSecretsId>
-    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
     <DockerfileContext>..\ProductStore</DockerfileContext>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
     <PackageReference Include="ClosedXML" Version="0.95.4" />
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.13.1" />
     <PackageReference Include="EntityFramework" Version="6.4.4" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="5.0.9" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="5.0.9" />
@@ -36,6 +37,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="scripts\" />
     <Folder Include="Resources\Images\" />
   </ItemGroup>
 

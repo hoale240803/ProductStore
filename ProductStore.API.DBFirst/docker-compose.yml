@@ -1,0 +1,43 @@
+﻿version: "3"
+services:
+
+    dotnet-app:
+        container_name: dotnet-core5.0
+        build: .
+        image: productstore/init_feature:v_1.0
+        environment:
+            LOCAL_URL: 'loclhost'
+        ports:
+            - '5001:80'
+        #depends_on:
+        #    - ms-sqlserver
+        networks:
+            - store-network
+        command: sh -c app/import_data.sh
+        entrypoint: dotnet ProductStore.API.DBFirst.dll
+
+             
+        #volumes:
+        #  - .:/src
+
+        #command: sh -c "/usr/local/bin/import_data.sh && exec ./import_data.sh"
+    ms-sqlserver:
+        container_name: ms-sql
+        image: mcr.microsoft.com/mssql/server:2019-latest
+        ports:
+            - 1433:1433
+        environment:
+            ACCEPT_EULA: 'Y'
+            MSSQL_USER: 'sa'
+            SA_PASSWORD: Secret1234
+            MSSQL_PID: Express
+            DATABASE: Store
+            DATA_SCRIPT: /home/store.sql
+        networks:
+            - store-network
+volumes:
+    dbdata:
+    app:
+networks:
+    store-network:
+        driver: bridge
