@@ -25,15 +25,18 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 
+
+ENTRYPOINT ["dotnet", "ProductStore.API.DBFirst.dll"]
+
 # copy script file to image
-COPY ["ProductStore.API.DBFirst/scripts/import_data.sh","/app/"]
-COPY ["ProductStore.API.DBFirst/db/store.sql","/app/"]
+#COPY ["ProductStore.API.DBFirst/scripts/import_data.sh","/app/"]
+#COPY ["ProductStore.API.DBFirst/db/store.sql","/app/"]
 #RUN ["chmod", "+x", "/app/import_data.sh"]
 #RUN ["chmod", "+x", "/app/store.sql"]
-RUN sed -i 's/\r$//' $app/import_data.sh  && \  
-        chmod +x $app/import_data.sh
-RUN sed -i 's/\r$//' $app/store.sql  && \  
-        chmod +x $app/store.sql
+#RUN sed -i 's/\r$//' $app/import_data.sh  && \  
+        #chmod +x $app/import_data.sh
+#RUN sed -i 's/\r$//' $app/store.sql  && \  
+        #chmod +x $app/store.sql
 
 
 #COPY entrypoint.sh /entrypoint.sh

@@ -8,7 +8,7 @@ using ProductStore.API.DBFirst.Authentication;
 
 namespace ProductStore.API.DBFirst.DataModels
 {
-    public partial class StoreContext : IdentityDbContext<StoreUser>
+    public partial class StoreContext : IdentityDbContext<StoreUser> 
     {
         public StoreContext()
         {

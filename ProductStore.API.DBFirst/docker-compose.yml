@@ -3,17 +3,21 @@ services:
 
     dotnet-app:
         container_name: dotnet-core5.0
-        build: .
         image: productstore/init_feature:v_1.0
-        environment:
-            LOCAL_URL: 'loclhost'
+        build:
+          context: .
+          dockerfile: Dockerfile
+        
+        #environment:
+        #    LOCAL_URL: 'locolhost'
         ports:
-            - '5001:80'
-        #depends_on:
-        #    - ms-sqlserver
+            - '5000:80'
+        depends_on:
+            - ms-sqlserver
         networks:
             - store-network
-        command: sh -c app/import_data.sh
+        #volumes:
+        #    - ./db/store.sql:/var/store.sql
         entrypoint: dotnet ProductStore.API.DBFirst.dll
 
              
@@ -22,8 +26,12 @@ services:
 
         #command: sh -c "/usr/local/bin/import_data.sh && exec ./import_data.sh"
     ms-sqlserver:
-        container_name: ms-sql
-        image: mcr.microsoft.com/mssql/server:2019-latest
+        container_name: ms-sql1
+        #image: mcr.microsoft.com/mssql/server:2019-latest
+        image: my/db/image/mssql:2019-latest
+        build:
+          context: .
+          dockerfile: CICD/data/Dockerfile
         ports:
             - 1433:1433
         environment:
@@ -32,11 +40,15 @@ services:
             SA_PASSWORD: Secret1234
             MSSQL_PID: Express
             DATABASE: Store
-            DATA_SCRIPT: /home/store.sql
+            DATA_SCRIPT: /db/store.sql
         networks:
             - store-network
+        volumes:
+            - mssqldata:/var/opt/mssql
+
+        #command: sh -c /var/www/html/import_data.sh
 volumes:
-    dbdata:
+    mssqldata:
     app:
 networks:
     store-network:

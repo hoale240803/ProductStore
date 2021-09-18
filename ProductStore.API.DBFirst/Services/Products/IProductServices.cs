@@ -1,4 +1,5 @@
 ﻿using ProductStore.API.DBFirst.DataModels;
+using ProductStore.API.DBFirst.DataModels.EmployeeVM;
 using ProductStore.API.DBFirst.Services.Infrastructure;
 using System.Threading.Tasks;
 
@@ -30,5 +31,7 @@ namespace ProductStore.API.DBFirst.Services.Products
         public Task ImportPDF();
 
         public Task ImportExcel();
+
+        public Task<EmployeeGroupByCategory> GetProductByEmployeeCategory();
     }
 }

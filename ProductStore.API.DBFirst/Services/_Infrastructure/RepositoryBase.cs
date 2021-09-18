@@ -12,7 +12,7 @@ namespace ProductStore.API.DBFirst.Services.Infrastructure
     {
         #region Properties
 
-        private StoreContext _dbContext { get; set; }
+        protected StoreContext _dbContext { get; set; }
 
         protected RepositoryBase(StoreContext dbContext)
         {
