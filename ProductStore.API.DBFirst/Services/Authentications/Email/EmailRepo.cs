@@ -79,8 +79,8 @@ namespace ProductStore.API.DBFirst.Services.Authentications.Email
             string mailText = str.ReadToEnd();
             str.Close();
             // Replace username & email for specific ones
-            mailText = mailText.Replace("[username]", message.To[0].Address.Split('@')[0]).Replace("[email]", message.To[0].Address).Replace("[link_confirm]", message.Content);
-            
+            mailText = mailText.Replace("[username]", message.To[0].Address.Split('@')[0]).Replace("[email]", message.To[0].Address);
+            mailText = mailText.Replace("[linkconfirm]", message.Content);
             // setup addresss of sender and recipient, content of email.
             var emailMessage = new MimeMessage();
             emailMessage.From.Add(new MailboxAddress(_emailConfig.From));

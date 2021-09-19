@@ -139,6 +139,7 @@ namespace ProductStore.API.DBFirst.Controllers
             return Ok(result);
         }
 
+        #region register
         [HttpPost("registerConfirmedEmail")]
         public async Task<ActionResult> RegisterAsync(RegisterVM registerModel)
         {
@@ -174,7 +175,7 @@ namespace ProductStore.API.DBFirst.Controllers
                 byte[] tokenGeneratedBytes = Encoding.UTF8.GetBytes(token);
                 var codeEncoded = WebEncoders.Base64UrlEncode(tokenGeneratedBytes);
 
-                var confirmationLink = Url.Action(nameof(ConfirmEmail), "Authentication", new { codeEncoded, email = newUser.Email }, Request.Scheme);
+                var confirmationLink = Url.Action(nameof(ConfirmEmail), "Authentication", new { token=codeEncoded, email = newUser.Email }, Request.Scheme);
                 var message = new MessageVM(new string[] { newUser.Email }, "Confirmation Email", confirmationLink, null);
                 // SEND CONFIRMED EMAIL
                 await _emailSender.SendConfirmedEmailAsync(message);
@@ -190,7 +191,7 @@ namespace ProductStore.API.DBFirst.Controllers
             }
         }
 
-        [HttpPost("confirmed-email")]
+        [HttpGet("confirmed-email")]
         public async Task<IActionResult> ConfirmEmail(string token, string email)
         {
             var user = await _userManager.FindByEmailAsync(email);
@@ -211,6 +212,7 @@ namespace ProductStore.API.DBFirst.Controllers
             }
             return Ok(result);
         }
+        #endregion register
 
         [HttpPost("refresh-token")]
         public async Task<IActionResult> RefreshToken()
