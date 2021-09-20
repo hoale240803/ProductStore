@@ -23,6 +23,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace ProductStore.API.DBFirst.Controllers
 {
@@ -122,6 +123,7 @@ namespace ProductStore.API.DBFirst.Controllers
             return Ok(new Response<Object> { Status = "200", Message = "User created successfully!" });
         }
 
+        #region login with refresh token
         [HttpPost("loginRefreshtoken")]
         public async Task<IActionResult> GetTokenAsync(LoginVM model)
         {
@@ -138,6 +140,7 @@ namespace ProductStore.API.DBFirst.Controllers
             }
             return Ok(result);
         }
+        #endregion
 
         #region register
         [HttpPost("registerConfirmedEmail")]
@@ -256,6 +259,7 @@ namespace ProductStore.API.DBFirst.Controllers
             return Ok(new { message = "Token revoked" });
         }
 
+        #region Forgot password
         [HttpPost("forgot-password")]
         public async Task<IActionResult> ForgotPassword(ForgotPasswordVM forgotPasswordModel)
         {
@@ -267,13 +271,40 @@ namespace ProductStore.API.DBFirst.Controllers
 
             var token = await _userManager.GeneratePasswordResetTokenAsync(user);
             //string testEmail = "hoale240803@gmail.com";
-            var callback = Url.Action(nameof(ResetPassword), "Authentication", new { token, email = user.Email }, Request.Scheme);
-            var message = new MessageVM(new string[] { user.Email }, "Reset password token", callback, null);
-            await _emailSender.SendEmailAsync(message);
-            return Ok(token);
-        }
+            //var callback = Url.Action(nameof(ResetPassword), "Authentication", new { token, email = user.Email }, Request.Scheme);
+            //create return url
+            //var queryString = System.Web.HttpUtility.ParseQueryString("http://localhost:8081/#/resetpassword");
+            //queryString.Add("token", token);
+            //queryString.Add("email", user.Email);
 
-        // RESET PASSWORD
+            //string longurl = "http://localhost:8081/#/";
+            //Uri url = new Uri("http://localhost/rest/something/browse").
+            //  AddQuery("page", "0").
+            //  AddQuery("pageSize", "200");
+            //var uriBuilder = new UriBuilder(longurl);
+            //var query = HttpUtility.ParseQueryString(uriBuilder.Query);
+            //query.Add(resetpassword);
+            //query["token"] = token;
+            //query["email"] = user.Email;
+            //uriBuilder.Query = query.ToString();
+            //longurl = uriBuilder.ToString();
+
+            const string url = "http://localhost:8081/resetpassword";
+            var param = new Dictionary<string, string>() { { "token", token }, { "email", user.Email } };
+
+            var newUrl = new Uri(QueryHelpers.AddQueryString(url, param));
+            var message = new MessageVM(new string[] { user.Email }, "Reset password token", newUrl.ToString(), null);
+
+            await _emailSender.SendLinkForgotPasswordAsync(message);
+            //return Ok(new { token= token});
+            return StatusCode(StatusCodes.Status200OK, new ForgotPasswordResponse { Message = "Success", Status = "200", Token = token, Email = forgotPasswordModel.Email });
+            //string Url = $"http://localhost:8081/#/resetpassword?token={0}&email={1}";
+            //string redirectUrl = string.Format(Url, token, user.Email);
+            //return Redirect(redirectUrl);
+        }
+        #endregion
+
+        #region Reset Password
         [HttpPost("reset-password")]
         public async Task<IActionResult> ResetPassword(ResetPasswordVM resetPasswordModel)
         {
@@ -282,7 +313,7 @@ namespace ProductStore.API.DBFirst.Controllers
 
             var user = await _userManager.FindByEmailAsync(resetPasswordModel.Email);
             if (user == null)
-                return StatusCode(StatusCodes.Status404NotFound, new Response<Object> { Status = "404", Message = $"user {resetPasswordModel.Email} not found " });
+                return StatusCode(StatusCodes.Status404NotFound, new Response<Object> { Status = "404", Message = $"Email {resetPasswordModel.Email} not found " });
 
             var resetPassResult = await _userManager.ResetPasswordAsync(user, resetPasswordModel.Token, resetPasswordModel.Password);
             if (!resetPassResult.Succeeded)
@@ -291,11 +322,13 @@ namespace ProductStore.API.DBFirst.Controllers
                 {
                     ModelState.TryAddModelError(error.Code, error.Description);
                 }
+                // NOTE: REFRACTOR ONLY RETURN ONE ERROR
                 return StatusCode(StatusCodes.Status500InternalServerError, new Response<Object> { Status = "Error", Message = "Reset password not success", ListMessage = resetPassResult.Errors });
             }
-            return Ok(resetPassResult);
-        }
 
+            return StatusCode(StatusCodes.Status200OK, new Response<object> { Message = "Success", Status = "200", Content= resetPassResult });
+        }
+        #endregion
         [HttpGet("login-two-step")]
         public async Task<IActionResult> LoginTwoStep(string email, bool rememberMe, string returnUrl = null)
         {

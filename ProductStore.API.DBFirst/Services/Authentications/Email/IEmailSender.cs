@@ -9,6 +9,7 @@ namespace ProductStore.API.DBFirst.Services.Authentications.Email
 
         Task SendEmailAsync(MessageVM message);
 
+        Task SendLinkForgotPasswordAsync(MessageVM message);
         Task SendConfirmedEmailAsync(MessageVM message);
 
 

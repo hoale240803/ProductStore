@@ -92,6 +92,27 @@ namespace ProductStore.API.DBFirst.Services.Authentications.Email
             emailMessage.Body = builder.ToMessageBody();
             return emailMessage;
         }
+        private MimeMessage CreateLinkForgotPasswordMessage(MessageVM message)
+        {
+            // Read confirm email content
+            string FilePath = Directory.GetCurrentDirectory() + "\\Resources\\EmailContents\\ResetPassword.html";
+            StreamReader str = new StreamReader(FilePath);
+            string mailText = str.ReadToEnd();
+            str.Close();
+            // Replace username & email for specific ones
+            //mailText = mailText.Replace("[username]", message.To[0].Address.Split('@')[0]).Replace("[email]", message.To[0].Address);
+            mailText = mailText.Replace("[linkResetPassword]", message.Content);
+            // setup addresss of sender and recipient, content of email.
+            var emailMessage = new MimeMessage();
+            emailMessage.From.Add(new MailboxAddress(_emailConfig.From));
+            emailMessage.To.Add(MailboxAddress.Parse(message.To[0].Address));
+            emailMessage.Subject = message.Subject;
+            var builder = new BodyBuilder();
+            builder.HtmlBody = mailText;
+
+            emailMessage.Body = builder.ToMessageBody();
+            return emailMessage;
+        }
 
         private void Send(MimeMessage mailMessage)
         {
@@ -132,6 +153,32 @@ namespace ProductStore.API.DBFirst.Services.Authentications.Email
                 catch(Exception ex)
                 {
                     //log an error message or throw an exception, or both.
+                    throw new AppErrors(ex.Message, ex);
+                }
+                finally
+                {
+                    await client.DisconnectAsync(true);
+                    client.Dispose();
+                }
+            }
+        }
+
+        public async Task SendLinkForgotPasswordAsync(MessageVM message)
+        {
+            using (var client = new SmtpClient())
+            {
+                try
+                {
+                    string email = message.To[0].Address;
+                    var user = _userManager.FindByEmailAsync(email);
+                    var emailMessage = CreateLinkForgotPasswordMessage(message);
+                    await client.ConnectAsync(_emailConfig.SmtpServer, _emailConfig.Port, true);
+                    client.AuthenticationMechanisms.Remove("XOAUTH2");
+                    await client.AuthenticateAsync(_emailConfig.UserName, _emailConfig.Password);
+                    await client.SendAsync(emailMessage);
+                }
+                catch (Exception ex)
+                {
                     throw new AppErrors(ex.Message, ex);
                 }
                 finally
