@@ -6,8 +6,8 @@ using Microsoft.EntityFrameworkCore;
 using ProductStore.API.DBFirst.DataModels;
 using ProductStore.API.DBFirst.DataModels.Models;
 using ProductStore.API.DBFirst.Services.Products;
-using ProductStore.API.DBFirst.ViewModels.PagingResult;
 using ProductStore.API.DBFirst.ViewModels.Product;
+using ProductStore.API.DBFirst.ViewModels.QueryString;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -24,6 +24,7 @@ namespace ProductStore.API.DBFirst.Controllers
         private readonly StoreContext _context;
         private readonly IProductServices _productServices;
         private IMapper _mapper;
+        //private ILoggerManager _logger;
 
         public ProductsController(StoreContext context, IProductServices productServices, IMapper mapper)
         {
@@ -34,53 +35,58 @@ namespace ProductStore.API.DBFirst.Controllers
 
         // Post: api/Products/SearchPaging
         [HttpPost("search/paging")]
-        public async Task<IActionResult> SearchProductsPaging(PagingResultVM<ProductDTO> pagingResultVM)
+        public IActionResult SearchProductsPaging(ProductParameters productParameters)
         {
             try
             {
-                if (pagingResultVM == null)
+                if (productParameters == null)
                 {
                     return BadRequest();
                 }
-                IEnumerable<ProductDTO> productResults = new List<ProductDTO>();
-                var productEntities = await _productServices.GetMultiPaging(x =>
-                x.Name.Contains(pagingResultVM.Keyword)
-                || x.Description.Contains(pagingResultVM.Keyword),
-                out int total,
-                pagingResultVM.CurrentPage,
-                pagingResultVM.PageSize,
-                null).ToListAsync();
+                //IEnumerable<ProductDTO> productResults = new List<ProductDTO>();
+                //var productEntities = await _productServices.GetMultiPaging(x =>
+                //x.Name.Contains(productParameters.Keyword)
+                //|| x.Description.Contains(productParameters.Keyword),
+                //out int total,
+                //searchCateria.CurrentPage,
+                //searchCateria.PageSize,
+                //null).ToListAsync();
 
-                productResults = _mapper.Map<IEnumerable<ProductDTO>>(productEntities);
-                pagingResultVM.Results = productResults;
-                pagingResultVM.TotalCount = total;
+                //productResults = _mapper.Map<List<ProductDTO>>(productEntities);
+                //searchCateria.Results = productResults;
+                //searchCateria.TotalCount = total;
+
+                //PagedList<Product>.ToPagedList( _productServices.GetMultiPaging(x => (x.Name.Contains(searchCateria.Keyword) || x.Description.Contains(searchCateria.Keyword),out int total, searchCateria.CurrentPage, searchCateria.PageSize), null,searchCateria.CurrentPage,
+                //searchCateria.PageSize);
+                var _result = _productServices.GetProducts(productParameters);
+                return Ok(_result);
             }
             catch (Exception ex)
             {
-                StatusCode(StatusCodes.Status500InternalServerError, new Response<ProductDTO> { Status = "Error", Message = ex.Message });
+                return StatusCode(500, "Internal server error"+ ex.Message);
             }
-            return Ok(new Response<ProductDTO> { Status = "200", Message = "SEARCH PRODUCT LIST SUCCESS", Results = pagingResultVM });
+        
         }
 
-        // GET: api/Products
-        [HttpPost("getAll")]
-        public async Task<IActionResult> GetProducts(PagingResultVM<ProductDTO> pagingResultVM)
-        {
-            IEnumerable<ProductDTO> productResults = new List<ProductDTO>();
-            try
-            {
-                var productEntities = await _productServices.GetMultiPaging(null, out int total, pagingResultVM.CurrentPage, pagingResultVM.PageSize, null).ToListAsync();
-                productResults = _mapper.Map<IEnumerable<ProductDTO>>(productEntities);
-                pagingResultVM.Results = productResults;
-                pagingResultVM.TotalCount = total;
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response<ProductDTO> { Status = "Error", Message = ex.Message });
-            }
+        //// GET: api/Products
+        //[HttpPost("getAll")]
+        //public async Task<IActionResult> GetProducts(ProductParameters pagingResultVM)
+        //{
+        //    IEnumerable<ProductDTO> productResults = new List<ProductDTO>();
+        //    try
+        //    {
+        //        //var productEntities = await _productServices.GetMultiPaging(null, out int total, pagingResultVM.CurrentPage, pagingResultVM.PageSize, null).ToListAsync();
+        //        //productResults = _mapper.Map<IEnumerable<ProductDTO>>(productEntities);
+        //        //pagingResultVM.Results = productResults;
+        //        //pagingResultVM.TotalCount = total;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return StatusCode(StatusCodes.Status500InternalServerError, new Response<ProductDTO> { Status = "Error", Message = ex.Message });
+        //    }
 
-            return Ok(new Response<ProductDTO> { Results = pagingResultVM, Status = "200", Message = "GET LIST PRODUCT SUCCESS" });
-        }
+        //    return Ok(new Response<ProductDTO> { Results = pagingResultVM, Status = "200", Message = "GET LIST PRODUCT SUCCESS" });
+        //}
 
         // GET: api/Products/5
         [HttpGet("{id}")]
@@ -449,54 +455,67 @@ namespace ProductStore.API.DBFirst.Controllers
                                 case IdCol:
                                     newProduct.Id = 0;
                                     break;
+
                                 case NameCol:
                                     newProduct.Name = cell.Value.ToString();
                                     break;
 
                                 case CategoryCol:
-                                    newProduct.IdCategory = cell.Value.ToString() != ""? Convert.ToInt32(cell.Value.ToString()):0;
+                                    newProduct.IdCategory = cell.Value.ToString() != "" ? Convert.ToInt32(cell.Value.ToString()) : 0;
                                     break;
+
                                 case TransporterCol:
                                     newProduct.IdTransporter = cell.Value.ToString() != "" ? Convert.ToInt32(cell.Value.ToString()) : 0;
                                     break;
+
                                 case MaterialCol:
                                     newProduct.IdMaterials = cell.Value.ToString();
                                     break;
+
                                 case CompanyCol:
                                     var companyCell = await _context.Categories.FirstOrDefaultAsync(x => x.Name.Contains(cell.Value.ToString()));
-                                    newProduct.IdCompany = companyCell != null ? companyCell.Id : 1 ;
+                                    newProduct.IdCompany = companyCell != null ? companyCell.Id : 1;
                                     break;
+
                                 case CountryCol:
                                     newProduct.Country = cell.Value.ToString();
                                     break;
+
                                 case PriceCol:
                                     newProduct.Price = cell.Value.ToString() != "" ? Convert.ToInt32(cell.Value.ToString()) : 0;
                                     break;
+
                                 case DescriptionCol:
                                     newProduct.Description = cell.Value.ToString();
                                     break;
+
                                 case QuantityCol:
                                     newProduct.Quantity = cell.Value.ToString() != "" ? Convert.ToInt32(cell.Value.ToString()) : 0;
                                     break;
+
                                 case StockCol:
                                     newProduct.Stock = cell.Value.ToString() != "" ? Convert.ToInt32(cell.Value.ToString()) : 0;
                                     break;
+
                                 case WeightCol:
-                                    newProduct.Weight= cell.Value.ToString() != "" ? Convert.ToInt32(cell.Value.ToString()) : 0; 
+                                    newProduct.Weight = cell.Value.ToString() != "" ? Convert.ToInt32(cell.Value.ToString()) : 0;
                                     break;
+
                                 case WidthCol:
                                     newProduct.Width = cell.Value.ToString() != "" ? Convert.ToInt32(cell.Value.ToString()) : 0;
                                     break;
+
                                 case LenghtCol:
-                                    newProduct.Lenght= cell.Value.ToString() != "" ? Convert.ToInt32(cell.Value.ToString()) : 0;
+                                    newProduct.Lenght = cell.Value.ToString() != "" ? Convert.ToInt32(cell.Value.ToString()) : 0;
                                     break;
+
                                 case StatusCol:
-                                    newProduct.Status= cell.Value.ToString();
+                                    newProduct.Status = cell.Value.ToString();
                                     break;
+
                                 case HeightCol:
-                                    newProduct.Height= cell.Value.ToString() != "" ? Convert.ToInt32(cell.Value.ToString()) : 0;
+                                    newProduct.Height = cell.Value.ToString() != "" ? Convert.ToInt32(cell.Value.ToString()) : 0;
                                     break;
-                               
                             }
 
                             cellIndex = cellIndex + 1;

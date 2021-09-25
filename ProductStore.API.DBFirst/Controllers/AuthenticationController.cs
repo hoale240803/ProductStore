@@ -116,7 +116,7 @@ namespace ProductStore.API.DBFirst.Controllers
             if (!result.Succeeded)
             {
                 var error = result.Errors.First();
-                return StatusCode(StatusCodes.Status400BadRequest, new Response<Object> { Status = "400", ListMessage = result.Errors, Message = error.Description });
+                return StatusCode(StatusCodes.Status400BadRequest, new Response<Object> { Status = "400", Message = error.Description });
             }
 
             // response
@@ -170,7 +170,7 @@ namespace ProductStore.API.DBFirst.Controllers
                 {
                     foreach (var error in result.Errors)
                     {
-                        return StatusCode(StatusCodes.Status400BadRequest, new Response<Object> { Status = "400", Message = "Confirm email not success", ListMessage = result.Errors });
+                        return StatusCode(StatusCodes.Status400BadRequest, new Response<Object> { Status = "400", Message = "Confirm email not success", });
                     }
                 }
                 //generate token
@@ -185,7 +185,7 @@ namespace ProductStore.API.DBFirst.Controllers
 
                 await _userManager.AddToRoleAsync(newUser, "Visitor");
                 transaction.Commit();
-                return StatusCode(StatusCodes.Status200OK, new RegisterResponseVM { Message = "Register Success", Status = "200", Token = codeEncoded, ListMessage = null });
+                return StatusCode(StatusCodes.Status200OK, new RegisterResponseVM { Message = "Register Success", Status = "200", Token = codeEncoded });
             }
             catch (Exception ex)
             {
@@ -211,7 +211,7 @@ namespace ProductStore.API.DBFirst.Controllers
                 {
                     ModelState.TryAddModelError(error.Code, error.Description);
                 }
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response<Object> { Status = "404", Message = "Confirm email not success", ListMessage = result.Errors });
+                return StatusCode(StatusCodes.Status500InternalServerError, new Response<Object> { Status = "404", Message = "Confirm email not success"});
             }
             return Ok(result);
         }
@@ -323,7 +323,7 @@ namespace ProductStore.API.DBFirst.Controllers
                     ModelState.TryAddModelError(error.Code, error.Description);
                 }
                 // NOTE: REFRACTOR ONLY RETURN ONE ERROR
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response<Object> { Status = "Error", Message = "Reset password not success", ListMessage = resetPassResult.Errors });
+                return StatusCode(StatusCodes.Status500InternalServerError, new Response<Object> { Status = "Error", Message = "Reset password not success" });
             }
 
             return StatusCode(StatusCodes.Status200OK, new Response<object> { Message = "Success", Status = "200", Content= resetPassResult });

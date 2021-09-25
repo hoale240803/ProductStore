@@ -1,11 +1,13 @@
 ﻿using ProductStore.API.DBFirst.DataModels;
 using ProductStore.API.DBFirst.DataModels.EmployeeVM;
 using ProductStore.API.DBFirst.Services.Infrastructure;
+using ProductStore.API.DBFirst.ViewModels;
+using ProductStore.API.DBFirst.ViewModels.QueryString;
 using System.Threading.Tasks;
 
 namespace ProductStore.API.DBFirst.Services.Products
 {
-    public interface IProductServices : IRepository<Product>
+    public interface IProductServices : IRepositoryBase<Product>
     {
         //Task<IEnumerable<Product>> GetAllProducts();
         //Task<IEnumerable<Product>> GetAllProductsAndPaging(Expression<Func<Product, bool>> predicate, out int total, int index = 0, int size = 50, string[] includes = null);
@@ -33,5 +35,7 @@ namespace ProductStore.API.DBFirst.Services.Products
         public Task ImportExcel();
 
         public Task<EmployeeGroupByCategory> GetProductByEmployeeCategory();
+
+        public PagedList<Product> GetProducts(ProductParameters productParameters);
     }
 }

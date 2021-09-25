@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -37,13 +36,13 @@ namespace ProductStore.API.DBFirst
             services.AddControllers();
 
             //Adding DB Context with MS SQL
-            services.AddDbContext<StoreContext>(item => item.UseSqlServer(Configuration.GetConnectionString("StoreDBConnection")));
-            // For Identity  
+            services.AddDbContext<StoreContext>(options => options.UseSqlServer(Configuration.GetConnectionString("StoreDBConnection")));
+
+            // For Identity
             services.AddIdentity<StoreUser, IdentityRole>(opt =>
             {
                 opt.User.RequireUniqueEmail = false;
                 opt.SignIn.RequireConfirmedEmail = false;
-
             })
             .AddEntityFrameworkStores<StoreContext>()
             .AddDefaultTokenProviders();
@@ -69,7 +68,6 @@ namespace ProductStore.API.DBFirst
                     ValidAudience = Configuration["JWT:ValidAudience"],
                     ValidIssuer = Configuration["JWT:ValidIssuer"],
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:Secret"])),
-
                 };
             })
             // Adding social login
@@ -82,7 +80,6 @@ namespace ProductStore.API.DBFirst
                 options.CallbackPath = "/google-login";
             });
             // Adding social login
-
 
             //.AddFacebook(options =>
             //{
@@ -142,29 +139,22 @@ namespace ProductStore.API.DBFirst
             services.AddScoped<IAuthentication, AuthenRepo>();
             services.AddScoped<IProductServices, ProductRepo>();
 
-
             services.Configure<DataProtectionTokenProviderOptions>(opt =>
                 opt.TokenLifespan = TimeSpan.FromHours(2));
             // MAPPER
 
             services.AddAutoMapper(typeof(Startup));
-
-
-
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ASP.NET 5 Web API v1"));
             }
-
 
             app.UseHttpsRedirection();
             app.UseRouting();
@@ -183,7 +173,6 @@ namespace ProductStore.API.DBFirst
             {
                 endpoints.MapControllers();
             });
-
         }
     }
 }

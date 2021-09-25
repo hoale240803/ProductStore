@@ -1,14 +1,12 @@
-﻿using System;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 using ProductStore.API.DBFirst.Authentication;
 
 #nullable disable
 
 namespace ProductStore.API.DBFirst.DataModels
 {
-    public partial class StoreContext : IdentityDbContext<StoreUser> 
+    public partial class StoreContext : IdentityDbContext<StoreUser>
     {
         public StoreContext()
         {
@@ -27,6 +25,7 @@ namespace ProductStore.API.DBFirst.DataModels
         //public virtual DbSet<AspNetUserRole> AspNetUserRoles { get; set; }
         //public virtual DbSet<AspNetUserTokens> AspNetUserTokens { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
+
         public virtual DbSet<Company> Companys { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<ExportProductToExcel> ExportProductToExcels { get; set; }
@@ -39,14 +38,14 @@ namespace ProductStore.API.DBFirst.DataModels
         public virtual DbSet<ProductsCategory> ProductsCategories { get; set; }
         public virtual DbSet<RefreshToken> RefreshTokens { get; set; }
 
-//        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-//        {
-//            if (!optionsBuilder.IsConfigured)
-//            {
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-//                optionsBuilder.UseSqlServer("Server=.;Database=Store;User Id=sa;Password=1234;");
-//            }
-//        }
+        //        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //        {
+        //            if (!optionsBuilder.IsConfigured)
+        //            {
+        //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+        //                optionsBuilder.UseSqlServer("Server=.;Database=Store;User Id=sa;Password=1234;");
+        //            }
+        //        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -534,7 +533,6 @@ namespace ProductStore.API.DBFirst.DataModels
                     .HasMaxLength(255)
                     .HasColumnName("NAME");
             });
-
 
             OnModelCreatingPartial(modelBuilder);
             base.OnModelCreating(modelBuilder);

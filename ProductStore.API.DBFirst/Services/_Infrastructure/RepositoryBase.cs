@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace ProductStore.API.DBFirst.Services.Infrastructure
 {
-    public abstract class RepositoryBase<T> : IRepository<T> where T : class
+    public abstract class RepositoryBase<T> : IRepositoryBase<T> where T : class
     {
         #region Properties
 
-        protected StoreContext _dbContext { get; set; }
+        protected StoreContext DbContext { get; set; }
 
         protected RepositoryBase(StoreContext dbContext)
         {
-            _dbContext = dbContext;
+            this.DbContext = dbContext;
         }
 
         #endregion Properties
@@ -25,34 +25,32 @@ namespace ProductStore.API.DBFirst.Services.Infrastructure
 
         public void Add(T entity)
         {
-           _dbContext.Add(entity);
-
+            this.DbContext.Add(entity);
         }
 
         public void AddMulti(List<T> entity)
         {
-            _dbContext.AddRange(entity);
-
+            this.DbContext.AddRange(entity);
         }
 
         public bool CheckContains(Expression<Func<T, bool>> predicate)
         {
-            return _dbContext.Set<T>().Count<T>(predicate) > 0;
+            return this.DbContext.Set<T>().Count<T>(predicate) > 0;
         }
 
         public int Count(Expression<Func<T, bool>> where)
         {
-            return _dbContext.Set<T>().Count(where);
+            return this.DbContext.Set<T>().Count(where);
         }
 
         public void Delete(T entity)
         {
-            _dbContext.Remove(entity);
+            this.DbContext.Remove(entity);
         }
 
         public virtual IEnumerable<T> GetMany(Expression<Func<T, bool>> where, string includes)
         {
-            return _dbContext.Set<T>().Where(where).ToList();
+            return this.DbContext.Set<T>().Where(where).ToList();
         }
 
         public IQueryable<T> GetMulti(Expression<Func<T, bool>> predicate, string[] includes = null)
@@ -60,13 +58,13 @@ namespace ProductStore.API.DBFirst.Services.Infrastructure
             //HANDLE INCLUDES FOR ASSOCIATED OBJECTS IF APPLICABLE
             if (includes != null && includes.Count() > 0)
             {
-                var query = _dbContext.Set<T>().Include(includes.First());
+                var query = this.DbContext.Set<T>().Include(includes.First());
                 foreach (var include in includes.Skip(1))
                     query = query.Include(include);
                 return query.Where<T>(predicate).AsQueryable<T>();
             }
 
-            return _dbContext.Set<T>().Where<T>(predicate).AsQueryable<T>();
+            return this.DbContext.Set<T>().Where<T>(predicate).AsQueryable<T>();
         }
 
         public IQueryable<T> GetMultiPaging(Expression<Func<T, bool>> predicate, out int total, int index = 0, int size = 50, string[] includes = null)
@@ -77,18 +75,18 @@ namespace ProductStore.API.DBFirst.Services.Infrastructure
             //HANDLE INCLUDES FOR ASSOCIATED OBJECTS IF APPLICABLE
             if (includes != null && includes.Count() > 0)
             {
-                var query = _dbContext.Set<T>().Include(includes.First());
+                var query = this.DbContext.Set<T>().Include(includes.First());
                 foreach (var include in includes.Skip(1))
                     query = query.Include(include);
                 _resetSet = predicate != null ? query.Where<T>(predicate).AsQueryable() : query.AsQueryable();
             }
             else
             {
-                _resetSet = predicate != null ? _dbContext.Set<T>().Where<T>(predicate).AsQueryable() : _dbContext.Set<T>().AsQueryable();
+                _resetSet = predicate != null ? this.DbContext.Set<T>().Where<T>(predicate).AsQueryable() : this.DbContext.Set<T>().AsQueryable();
             }
 
             _resetSet = skipCount == 0 ? _resetSet.Take(size) : _resetSet.Skip(skipCount).Take(size);
-            total = _dbContext.Products.Count();
+            total = this.DbContext.Set<T>().Count();
             return _resetSet.AsQueryable();
         }
 
@@ -100,14 +98,14 @@ namespace ProductStore.API.DBFirst.Services.Infrastructure
             //HANDLE INCLUDES FOR ASSOCIATED OBJECTS IF APPLICABLE
             if (includes != null && includes.Count() > 0)
             {
-                var query = _dbContext.Set<T>().Include(includes.First());
+                var query = this.DbContext.Set<T>().Include(includes.First());
                 foreach (var include in includes.Skip(1))
                     query = query.Include(include);
                 _resetSet = predicate != null ? query.Where<T>(predicate).AsQueryable() : query.AsQueryable();
             }
             else
             {
-                _resetSet = predicate != null ? _dbContext.Set<T>().Where<T>(predicate).AsQueryable() : _dbContext.Set<T>().AsQueryable();
+                _resetSet = predicate != null ? this.DbContext.Set<T>().Where<T>(predicate).AsQueryable() : this.DbContext.Set<T>().AsQueryable();
             }
 
             _resetSet = skipCount == 0 ? _resetSet.Take(size) : _resetSet.Skip(skipCount).Take(size);
@@ -117,13 +115,13 @@ namespace ProductStore.API.DBFirst.Services.Infrastructure
 
         public async Task<T> GetSingleById(int id)
         {
-            return await _dbContext.Set<T>().FindAsync(id);
+            return await this.DbContext.Set<T>().FindAsync(id);
         }
 
         public void Update(T entity)
         {
-            _dbContext.Set<T>().Attach(entity);
-            _dbContext.Entry(entity).State = EntityState.Modified;
+            this.DbContext.Set<T>().Attach(entity);
+            this.DbContext.Entry(entity).State = EntityState.Modified;
         }
 
         //public IQueryable<T> GetSingleByCondition(Expression<Func<T, bool>> expression)
@@ -133,17 +131,17 @@ namespace ProductStore.API.DBFirst.Services.Infrastructure
 
         public IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression)
         {
-            return _dbContext.Set<T>()
+            return this.DbContext.Set<T>()
                 .Where(expression).AsQueryable<T>();
         }
 
         public T GetSingleByCondition(Expression<Func<T, bool>> expression, string[] includes = null)
         {
-            var query = _dbContext.Set<T>().Include(includes.First());
+            var query = this.DbContext.Set<T>().Include(includes.First());
             foreach (var include in includes.Skip(1))
                 query = query.Include(include);
 
-            return  _dbContext.Set<T>().Where(expression).AsQueryable<T>().FirstOrDefault();
+            return this.DbContext.Set<T>().Where(expression).AsQueryable<T>().FirstOrDefault();
         }
 
         public IQueryable<T> GetAll(string[] includes = null)
@@ -151,26 +149,25 @@ namespace ProductStore.API.DBFirst.Services.Infrastructure
             //HANDLE INCLUDES FOR ASSOCIATED OBJECTS IF APPLICABLE
             if (includes != null && includes.Count() > 0)
             {
-                var query = _dbContext.Set<T>().Include(includes.First());
+                var query = this.DbContext.Set<T>().Include(includes.First());
                 foreach (var include in includes.Skip(1))
                     query = query.Include(include);
                 return query.AsNoTracking();
             }
 
-            return _dbContext.Set<T>().AsNoTracking();
+            return this.DbContext.Set<T>().AsNoTracking();
         }
 
         public void UpdateMultiById(IEnumerable<T> listT)
         {
-            _dbContext.Set<T>().UpdateRange(listT);
+            this.DbContext.Set<T>().UpdateRange(listT);
         }
 
         public void DeleteMulti(Expression<Func<T, bool>> expression, IEnumerable<T> listT)
         {
-            var listToRemove=_dbContext.Set<T>().Where(expression).AsQueryable(); 
-            _dbContext.RemoveRange(listToRemove);
+            var listToRemove = this.DbContext.Set<T>().Where(expression).AsQueryable();
+            this.DbContext.RemoveRange(listToRemove);
         }
-
 
         #endregion Implementation
     }
