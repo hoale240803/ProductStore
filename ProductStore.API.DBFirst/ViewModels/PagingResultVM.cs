@@ -11,7 +11,8 @@ namespace ProductStore.API.DBFirst.ViewModels
         public int TotalPages { get; private set; }
         public int PageSize { get; private set; }
         public int TotalCount { get; private set; }
- 
+        public List<T> Result { get; private set; }
+
         public bool HasPrevious => CurrentPage > 1;
         public bool HasNext => CurrentPage < TotalPages;
         public PagedList(List<T> items, int count, int pageNumber, int pageSize)
@@ -20,7 +21,8 @@ namespace ProductStore.API.DBFirst.ViewModels
             PageSize = pageSize;
             CurrentPage = pageNumber;
             TotalPages = (int)Math.Ceiling(count / (double)pageSize);
-            AddRange(items);
+            Result = items;
+
         }
         public static PagedList<T> ToPagedList(IQueryable<T> source, int pageNumber, int pageSize)
         {

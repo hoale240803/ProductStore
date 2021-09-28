@@ -59,7 +59,7 @@ namespace ProductStore.API.DBFirst.Controllers
                 //PagedList<Product>.ToPagedList( _productServices.GetMultiPaging(x => (x.Name.Contains(searchCateria.Keyword) || x.Description.Contains(searchCateria.Keyword),out int total, searchCateria.CurrentPage, searchCateria.PageSize), null,searchCateria.CurrentPage,
                 //searchCateria.PageSize);
                 var _result = _productServices.GetProducts(productParameters);
-                return Ok(_result);
+                return Ok(_result.Result);
             }
             catch (Exception ex)
             {

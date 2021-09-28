@@ -35,18 +35,15 @@ services:
         ports:
             - 1433:1433
         environment:
-            ACCEPT_EULA: 'Y'
-            MSSQL_USER: 'sa'
-            SA_PASSWORD: Secret1234
-            MSSQL_PID: Express
-            DATABASE: Store
-            DATA_SCRIPT: /db/store.sql
+           - ID=SA
+           - PASSWORD=Secret1234
+           - ACCEPT_EULA=Y
         networks:
             - store-network
         volumes:
             - mssqldata:/var/opt/mssql
 
-        #command: sh -c /var/www/html/import_data.sh
+        #command: sh -c /data/init-db-off.sh
 volumes:
     mssqldata:
     app:
