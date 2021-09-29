@@ -3,7 +3,7 @@
 #FROM mcr.microsoft.com/mssql/server# for window server
 #FROM mcr.microsoft.com/mssql/server:2019-latest # for window server
 ENV ACCEPT_EULA=Y
-ENV SA_PASSWORD=Secret1234
+ENV MSSQL_SA_PASSWORD=Secret1234
 
 
 #USER root

@@ -9,7 +9,7 @@ services:
           dockerfile: Dockerfile
         
         #environment:
-        #    LOCAL_URL: 'locolhost'
+        #    LOCAL_URL: 'localhost'
         ports:
             - '5000:5000'
         depends_on:
@@ -26,22 +26,22 @@ services:
 
         #command: sh -c "/usr/local/bin/import_data.sh && exec ./import_data.sh"
     ms-sqlserver:
-        container_name: ms-sql1
-        #image: mcr.microsoft.com/mssql/server:2019-latest
-        image: my/db/image/mssql:2019-latest
-        build:
-          context: .
-          dockerfile: CICD/data/Dockerfile
+        container_name: ms-sqldb1
+        image: mcr.microsoft.com/mssql/server:2019-latest
+        #image: my/db/image/mssql:2019-latest
+        #build:
+        #  context: .
+        #  dockerfile: CICD/data/Dockerfile
         ports:
             - 1433:1433
         environment:
            - ID=SA
-           - PASSWORD=Secret1234
+           - MSSQL_SA_PASSWORD=Secret1234
            - ACCEPT_EULA=Y
         networks:
             - store-network
-        volumes:
-            - mssqldata:/var/opt/mssql
+        #volumes:
+        #    - mssqldata:/var/opt/mssql
 
         #command: sh -c /data/init-db-off.sh
 volumes:
