@@ -14,8 +14,8 @@ services:
             - '5000:5000'
         depends_on:
             - ms-sqlserver
-        networks:
-            - store-network
+        #networks:
+        #    - store-network
         #volumes:
         #    - ./db/store.sql:/var/store.sql
         entrypoint: dotnet ProductStore.API.DBFirst.dll
@@ -27,26 +27,32 @@ services:
         #command: sh -c "/usr/local/bin/import_data.sh && exec ./import_data.sh"
     ms-sqlserver:
         container_name: ms-sqldb1
-        image: mcr.microsoft.com/mssql/server:2019-latest
+        #image: mcr.microsoft.com/mssql/server:2019-latest
         #image: my/db/image/mssql:2019-latest
+        image: mcr.microsoft.com/mssql/server:2019-latest
         #build:
         #  context: .
         #  dockerfile: CICD/data/Dockerfile
         ports:
             - 1433:1433
         environment:
-           - ID=SA
-           - MSSQL_SA_PASSWORD=Secret1234
-           - ACCEPT_EULA=Y
-        networks:
-            - store-network
+           ACCEPT_EULA: 'Y'
+           MSSQL_SA_PASSWORD: Secret1234
+           MSSQL_PID: Express
+           #- ID=SA
+           #- MSSQL_SA_PASSWORD=Secret1234
+           #- ACCEPT_EULA=Y
+           #- MSSQL_PID=Express
+
+        #networks:
+        #    - store-network
         #volumes:
         #    - mssqldata:/var/opt/mssql
 
         #command: sh -c /data/init-db-off.sh
-volumes:
-    mssqldata:
-    app:
-networks:
-    store-network:
-        driver: bridge
+#volumes:
+#    mssqldata:
+#    app:
+#networks:
+#    store-network:
+#        driver: bridge

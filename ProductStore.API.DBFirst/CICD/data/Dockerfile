@@ -1,10 +1,11 @@
-﻿FROM mcr.microsoft.com/mssql/server:2017-CU24-ubuntu-16.04
+﻿#FROM mcr.microsoft.com/mssql/server:2017-CU24-ubuntu-16.04
 #FROM mcr.microsoft.com/mssql/server:2017-latest
 #FROM mcr.microsoft.com/mssql/server# for window server
-#FROM mcr.microsoft.com/mssql/server:2019-latest # for window server
+FROM mcr.microsoft.com/mssql/server:2019-latest # for window server
 ENV ACCEPT_EULA=Y
+#ENV MSSQL_SA_PASSWORD=Secret1234
 ENV MSSQL_SA_PASSWORD=Secret1234
-
+ENV MSSQL_PID=Express
 
 #USER root
 #RUN mkdir -p /data

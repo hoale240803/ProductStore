@@ -1,3 +1,5 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -14,6 +16,8 @@ using ProductStore.API.DBFirst.DataModels;
 using ProductStore.API.DBFirst.Services.Authentications;
 using ProductStore.API.DBFirst.Services.Authentications.Email;
 using ProductStore.API.DBFirst.Services.Products;
+using ProductStore.API.DBFirst.ViewModels;
+using ProductStore.API.DBFirst.ViewModels.Product;
 using System;
 using System.Text;
 
@@ -144,6 +148,12 @@ namespace ProductStore.API.DBFirst
             // MAPPER
 
             services.AddAutoMapper(typeof(Startup));
+
+            // fluent validator
+            services.AddMvc().AddFluentValidation();
+
+            services.AddTransient<IValidator<ProductDTO>, ProductDTOValidator>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
