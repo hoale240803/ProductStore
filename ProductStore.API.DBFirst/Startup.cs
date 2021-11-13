@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -150,7 +151,10 @@ namespace ProductStore.API.DBFirst
             services.AddAutoMapper(typeof(Startup));
 
             // fluent validator
-            services.AddMvc().AddFluentValidation();
+            services.AddLocalization(options => options.ResourcesPath = "Resources");
+            services.AddMvc().AddFluentValidation()
+                .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+                .AddDataAnnotationsLocalization(); 
 
             services.AddTransient<IValidator<ProductDTO>, ProductDTOValidator>();
 
@@ -178,6 +182,13 @@ namespace ProductStore.API.DBFirst
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            //localization
+            var supportedCultures = new[] { "en-US", "fr","vi" };
+            var localizationOptions = new RequestLocalizationOptions().SetDefaultCulture(supportedCultures[0])
+                .AddSupportedCultures(supportedCultures)
+                .AddSupportedUICultures(supportedCultures);
+            app.UseRequestLocalization(localizationOptions);
 
             app.UseEndpoints(endpoints =>
             {
