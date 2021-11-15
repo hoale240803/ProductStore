@@ -1,3 +1,5 @@
+using Amazon.S3;
+using Amazon.S3.Transfer;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -16,6 +18,7 @@ using ProductStore.API.DBFirst.Configs;
 using ProductStore.API.DBFirst.DataModels;
 using ProductStore.API.DBFirst.Services.Authentications;
 using ProductStore.API.DBFirst.Services.Authentications.Email;
+using ProductStore.API.DBFirst.Services.AwsService.S3Service;
 using ProductStore.API.DBFirst.Services.Products;
 using ProductStore.API.DBFirst.ViewModels;
 using ProductStore.API.DBFirst.ViewModels.Product;
@@ -157,6 +160,13 @@ namespace ProductStore.API.DBFirst
                 .AddDataAnnotationsLocalization(); 
 
             services.AddTransient<IValidator<ProductDTO>, ProductDTOValidator>();
+
+            // aws s3
+            services.Configure<AWSS3ConfigKeys>(Configuration.GetSection("ConfigAwsKeys"));
+            services.AddDefaultAWSOptions(Configuration.GetAWSOptions());
+            services.AddAWSService<IAmazonS3>();
+            services.AddTransient<IS3FileService, S3FileService>();
+            services.AddTransient<TransferUtility>();
 
         }
 
